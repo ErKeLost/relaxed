@@ -10,7 +10,7 @@
     "build": "turbo run build",
     "build:docs": "pnpm build --filter docs",
     "build:cli": "pnpm build --filter vite-cli",
-    "docs": "vitepress dev docs",
+    "docs:dev": "vitepress dev docs",
     "clear": "rimraf 'packages/*/{lib,node_modules}' && rimraf node_modules",
     "changeset": "changeset",
     "version-packages": "changeset version",
@@ -29,6 +29,7 @@
     "@commitlint/config-conventional": "^17.0.3",
     "@typescript-eslint/eslint-plugin": "^5.30.0",
     "@typescript-eslint/parser": "^5.30.0",
+    "@vueuse/core": "^8.9.2",
     "commitizen": "^4.2.4",
     "commitlint": "^17.0.3",
     "commitlint-config-cz": "^0.13.3",
@@ -39,10 +40,11 @@
     "eslint-plugin-prettier": "^4.1.0",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
+    "naive-ui": "^2.31.0",
     "prettier": "latest",
     "turbo": "latest",
-    "vitepress": "^1.0.0-alpha.4",
-    "typescript": "^4.7.4"
+    "typescript": "^4.7.4",
+    "vitepress": "^1.0.0-alpha.4"
   },
   "engines": {
     "npm": ">=7.0.0",
