@@ -7,7 +7,7 @@ titleTemplate: Next Generation Frontend Tooling
 hero:
   name: Relaxed
   text: Stay Relaxed
-  tagline: 实战工具函数， HOOK， Directive， Component.
+  tagline: 实战工具Function， Hook， Directive， Component.
   image:
     src: /logo-with-shadow.png
     alt: Vite

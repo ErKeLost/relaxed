@@ -1,12 +1,43 @@
 {
-  "name": "directives",
-  "version": "1.0.0",
-  "description": "",
+  "name": "@relaxed/directives",
+  "version": "0.0.0",
+  "description": "vue 兼容2 3 工具库 函数库",
   "main": "index.js",
+  "module": "dist/index.vite.js",
+  "sideEffects": false,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup -c",
+    "copy": "cp package.json README.md dist",
+    "publish:directive": "node scripts/publish.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ErKeLost/relaxed.git"
+  },
+  "keywords": [
+    "vue-adny",
+    "vue2",
+    "vue3",
+    "TypeScript",
+    "rollup",
+    "directives",
+    "plugins"
+  ],
+  "author": "erkelost",
+  "license": "MIT",
+  "browser": "dist/index.js",
+  "devDependencies": {
+    "commander": "^8.2.0",
+    "rollup-plugin-vue": "^6.0.0",
+    "shelljs": "^0.8.4",
+    "tslib": "^2.3.1",
+    "vue": "^3.2.26"
+  },
+  "dependencies": {
+    "@relaxed/utils":"workspace:*",
+    "@vueuse/core": "^7.3.0",
+    "clipboard": "^2.0.8",
+    "dayjs": "^1.10.7"
+  }
 }
