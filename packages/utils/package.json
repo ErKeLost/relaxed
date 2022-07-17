@@ -1,12 +1,16 @@
 {
   "name": "@relaxed/utils",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.ts",
+  "version": "0.0.1",
+  "main": "dist/utils.umd.min.js",
+  "module": "dist/utils.es.min.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup --config"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "license": "MIT",
+  "dependencies": {
+    "@vueuse/core": "^7.3.0",
+    "dayjs": "^1.10.7"
+  }
 }
