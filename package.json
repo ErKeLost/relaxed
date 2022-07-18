@@ -7,6 +7,7 @@
     "packages/*"
   ],
   "scripts": {
+    "prebuild": "rimraf packages/*/dist",
     "build": "turbo run build",
     "build:docs": "pnpm build --filter docs",
     "build:cli": "pnpm build --filter vite-cli",
@@ -21,6 +22,7 @@
     "prettier": "prettier --write .",
     "prettier-watch": "onchange '**/*.js' -- prettier --write {{changed}}",
     "eslint": "eslint . --ext .ts,.vue,.js,.tsx",
+    "clean": "rimraf node_modules **/*/node_modules",
     "prepare": "husky install",
     "commit": "git add . && cz",
     "preinstall": "npx only-allow pnpm"
@@ -38,6 +40,7 @@
     "commitlint-config-cz": "^0.13.3",
     "cz-conventional-changelog": "^3.3.0",
     "cz-customizable": "^6.6.0",
+    "esbuild": "^0.14.49",
     "eslint": "^8.18.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.1.0",
@@ -45,10 +48,11 @@
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
     "naive-ui": "^2.31.0",
+    "pnpm": "^7.5.2",
     "prettier": "latest",
+    "rimraf": "^3.0.2",
     "turbo": "latest",
     "typescript": "^4.7.4",
-    "pnpm": "^7.5.2",
     "vitepress": "^1.0.0-alpha.4"
   },
   "engines": {

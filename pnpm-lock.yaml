@@ -16,6 +16,7 @@ importers:
       commitlint-config-cz: ^0.13.3
       cz-conventional-changelog: ^3.3.0
       cz-customizable: ^6.6.0
+      esbuild: ^0.14.49
       eslint: ^8.18.0
       eslint-config-prettier: ^8.5.0
       eslint-plugin-prettier: ^4.1.0
@@ -25,6 +26,7 @@ importers:
       naive-ui: ^2.31.0
       pnpm: ^7.5.2
       prettier: latest
+      rimraf: ^3.0.2
       turbo: latest
       typescript: ^4.7.4
       vitepress: ^1.0.0-alpha.4
@@ -41,6 +43,7 @@ importers:
       commitlint-config-cz: 0.13.3
       cz-conventional-changelog: 3.3.0
       cz-customizable: 6.9.0
+      esbuild: 0.14.49
       eslint: 8.19.0
       eslint-config-prettier: 8.5.0_eslint@8.19.0
       eslint-plugin-prettier: 4.2.1_7uxdfn2xinezdgvmbammh6ev5i
@@ -50,6 +53,7 @@ importers:
       naive-ui: 2.31.0_vue@3.2.37
       pnpm: 7.5.2
       prettier: 2.7.1
+      rimraf: 3.0.2
       turbo: 1.3.1
       typescript: 4.7.4
       vitepress: 1.0.0-alpha.4
