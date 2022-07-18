@@ -53,7 +53,10 @@ importers:
       vitepress: 1.0.0-alpha.4_tbq7qqbbedk3tko5ldgdax3r7a
 
   docs:
-    specifiers: {}
+    specifiers:
+      pnpm: ^7.5.2
+    dependencies:
+      pnpm: 7.5.2
 
   packages/components:
     specifiers: {}
@@ -3646,6 +3649,12 @@ packages:
     dependencies:
       find-up: 4.1.0
     dev: true
+
+  /pnpm/7.5.2:
+    resolution: {integrity: sha512-tTLvMnu1zIAWrD87Q/Dgw0+d71Brhlm+aM62KkDr/EPNZyA7dBIsu7tS9pNfRSvwgVF7V1Dhc8jJLAsTNTXnDQ==}
+    engines: {node: '>=14.6'}
+    hasBin: true
+    dev: false
 
   /postcss/8.4.14:
     resolution: {integrity: sha512-E398TUmfAYFPBSdzgeieK2Y1+1cpdxJx8yXbK/m57nRhKSmk1GB2tO4lbLBtlkfPQTDKfe4Xqv1ASWPpayPEig==}
