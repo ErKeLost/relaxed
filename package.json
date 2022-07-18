@@ -48,6 +48,7 @@
     "prettier": "latest",
     "turbo": "latest",
     "typescript": "^4.7.4",
+    "pnpm": "^7.5.2",
     "vitepress": "^1.0.0-alpha.4"
   },
   "engines": {
