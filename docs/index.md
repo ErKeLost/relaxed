@@ -9,7 +9,7 @@ hero:
   text: Stay Relaxed
   tagline: 实战工具Function， Hook， Directive， Component.
   image:
-    src: /logo-with-shadow.png
+    src: /Relaxed.png
     alt: Vite
   actions:
     - theme: brand
