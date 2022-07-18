@@ -13,5 +13,16 @@
   "license": "ISC",
   "dependencies": {
     "pnpm": "^7.5.2"
+  },
+  "packageManager": "pnpm@7.2.1",
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "@algolia/client-search",
+        "react",
+        "react-dom",
+        "@types/react"
+      ]
+    }
   }
 }
