@@ -1,2 +1,2 @@
-import Adny from './src/plugins/vue-plugin/index'
+import Adny from './src/index'
 export default Adny
