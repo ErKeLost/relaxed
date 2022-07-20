@@ -90,7 +90,10 @@ importers:
       vue: 3.2.37
 
   packages/hook:
-    specifiers: {}
+    specifiers:
+      vue: 3.2.37
+    devDependencies:
+      vue: 3.2.37
 
   packages/utils:
     specifiers: {}
