@@ -1,0 +1,37 @@
+{
+  "name": "@relaxed/eslint-config-ts",
+  "version": "0.0.1",
+  "description": "",
+  "keywords": [],
+  "license": "MIT",
+  "homepage": "https://github.com/erkelost/eslint-config#readme",
+  "bugs": {
+    "url": "https://github.com/erkelost/eslint-config/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/erkelost/eslint-config.git"
+  },
+  "author": "erkelost <erkelost@relaxed.moe> (https://github.com/erkelost/)",
+  "files": [
+    "index.js"
+  ],
+  "main": "index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "eslint": ">=7.4.0",
+    "typescript": ">=3.9"
+  },
+  "dependencies": {
+    "@relaxed/eslint-config-basic": "workspace:*",
+    "@typescript-eslint/eslint-plugin": "^5.35.1",
+    "@typescript-eslint/parser": "^5.35.1",
+    "eslint-define-config": "^1.6.0",
+    "typescript": "^4.8.2"
+  },
+  "devDependencies": {
+    "eslint": "8.23.0"
+  }
+}
