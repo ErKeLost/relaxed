@@ -1,8 +1,13 @@
 {
-  "name": "@relaxed/eslint-config-vue",
-  "version": "0.0.5",
-  "description": "",
-  "keywords": [],
+  "name": "@relaxed/eslint-config",
+  "version": "0.0.1",
+  "description": "erkelost's ESLint config",
+  "keywords": [
+    "eslint",
+    "config",
+    "preset",
+    "erkelost"
+  ],
   "license": "MIT",
   "homepage": "https://github.com/erkelost/eslint-config#readme",
   "bugs": {
@@ -21,21 +26,16 @@
     "access": "public"
   },
   "peerDependencies": {
-    "eslint": ">=7.4.0",
-    "vue": "^2.0.0 || ^3.0.0"
-  },
-  "peerDependenciesMeta": {
-    "vue": {
-      "optional": true
-    }
+    "eslint": ">=8.0.0"
   },
   "dependencies": {
+    "@relaxed/eslint-config-prettier": "workspace:*",
     "@relaxed/eslint-config-ts": "workspace:*",
     "eslint-define-config": "^1.6.0",
     "eslint-plugin-vue": "^9.4.0",
     "local-pkg": "^0.4.2"
   },
   "devDependencies": {
-    "eslint": "8.23.0"
+    "eslint": "^8.23.0"
   }
 }

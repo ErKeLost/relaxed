@@ -1,6 +1,6 @@
 {
   "name": "turborepo-template",
-  "version": "0.0.7",
+  "version": "0.0.1",
   "private": true,
   "workspaces": [
     "apps/*",
@@ -38,7 +38,7 @@
     "cs:tag": "changeset tag",
     "prerelease": "pnpm build",
     "release": "changeset publish",
-    "release:bumpp": "bumpp packages/*/package.json && pnpm publish -r"
+    "release:bumpp": "bumpp packages/*/*/package.json && pnpm publish -r"
   },
   "devDependencies": {
     "@changesets/cli": "^2.23.0",

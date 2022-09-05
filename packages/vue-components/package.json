@@ -1,6 +1,6 @@
 {
-  "name": "@relaxed/hook",
-  "version": "1.0.0",
+  "name": "@relaxed/vue-components",
+  "version": "0.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -11,8 +11,5 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "vue": "3.2.37"
-  }
+  "license": "ISC"
 }

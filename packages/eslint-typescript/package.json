@@ -1,7 +1,7 @@
 {
-  "name": "@relaxed/eslint-config-prettier",
-  "version": "1.0.0",
-  "description": "Prettier Config",
+  "name": "@relaxed/eslint-config-ts",
+  "version": "0.0.1",
+  "description": "",
   "keywords": [],
   "license": "MIT",
   "homepage": "https://github.com/erkelost/eslint-config#readme",
@@ -21,14 +21,15 @@
     "access": "public"
   },
   "peerDependencies": {
-    "eslint": ">=7.4.0"
+    "eslint": ">=7.4.0",
+    "typescript": ">=3.9"
   },
   "dependencies": {
-    "eslint-config-prettier": "^8.5.0",
+    "@relaxed/eslint-config-basic": "workspace:*",
+    "@typescript-eslint/eslint-plugin": "^5.35.1",
+    "@typescript-eslint/parser": "^5.35.1",
     "eslint-define-config": "^1.6.0",
-    "eslint-plugin-prettier": "^4.2.1",
-    "eslint-plugin-yml": "^1.1.0",
-    "prettier": "^2.7.1"
+    "typescript": "^4.8.2"
   },
   "devDependencies": {
     "eslint": "8.23.0"
