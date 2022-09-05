@@ -1,6 +1,6 @@
 {
   "name": "@relaxed/eslint-config",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "erkelost's ESLint config",
   "keywords": [
     "eslint",
