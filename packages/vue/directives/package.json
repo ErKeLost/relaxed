@@ -1,6 +1,6 @@
 {
   "name": "@relaxed/directives",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "vue 兼容2 3 工具库 函数库",
   "main": "index.js",
   "module": "dist/index.vite.js",
@@ -35,7 +35,7 @@
     "vue": "^3.2.26"
   },
   "dependencies": {
-    "@relaxed/utils":"workspace:*",
+    "@relaxed/utils": "workspace:*",
     "@vueuse/core": "^7.3.0",
     "clipboard": "^2.0.8",
     "dayjs": "^1.10.7"

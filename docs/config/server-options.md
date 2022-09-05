@@ -16,7 +16,7 @@ There are cases when other servers might respond instead of Vite.
 
 The first case is when `localhost` is used. Node.js below v17 reorders the result of DNS-resolved address by default. When accessing `localhost`, browsers use DNS to resolve the address and that address might differ from the address which Vite is listening. Vite prints the resolved address when it differs.
 
-You could set [`dns.setDefaultResultOrder('verbatim')`](https://nodejs.org/api/dns.html#dns_dns_setdefaultresultorder_order) to disable the reordering behavior. Or you could set `server.host` to `127.0.0.1` explicitly.
+You could set [`dns.setDefaultResultOrder('verbatim')`](https://nodejs.org/api/dns.html#dns_dns_setdefaultresultorder_order) to disable the reordering behavior. Or you could set `server.host` to `127.1.0.0` explicitly.
 
 ```js
 // vite.config.js
@@ -298,7 +298,7 @@ Defines the origin of the generated asset URLs during development.
 ```js
 export default defineConfig({
   server: {
-    origin: 'http://127.0.0.1:8080'
+    origin: 'http://127.1.0.0:8080'
   }
 })
 ```

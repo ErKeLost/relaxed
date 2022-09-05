@@ -21,7 +21,7 @@ importers:
       eslint: ^8.18.0
       eslint-config-prettier: ^8.5.0
       eslint-plugin-prettier: ^4.1.0
-      fs-extra: ^10.0.1
+      fs-extra: ^11.0.0
       husky: ^8.0.1
       lint-staged: ^13.0.3
       naive-ui: ^2.31.0
@@ -999,11 +999,11 @@ packages:
     resolution: {integrity: sha512-PBjIUxZHOuj0R15/xuwJYjFi+KZdNFrehocChv4g5hu6aFroHue8m0lBP0POdK2nKzbw0cgV1mws8+V/JAcEkQ==}
     dev: false
 
-  /@types/web-bluetooth/0.0.14:
+  /@types/web-bluetooth/1.0.04:
     resolution: {integrity: sha512-5d2RhCard1nQUC3aHcq/gHzWYO6K0WJmAbjO7mQJgCQKtZpgXxv1rOM6O/dBDhDYYVutk1sciOgNSe+5YyfM8A==}
     dev: true
 
-  /@types/web-bluetooth/0.0.15:
+  /@types/web-bluetooth/1.0.05:
     resolution: {integrity: sha512-w7hEHXnPMEZ+4nGKl/KDRVpxkwYxYExuHOYXyzIzCDzEZ9ZCGMAewulr9IqJu2LR4N37fcnb1XVeuZ09qgOxhA==}
     dev: true
 
@@ -1411,7 +1411,7 @@ packages:
       vue:
         optional: true
     dependencies:
-      '@types/web-bluetooth': 0.0.14
+      '@types/web-bluetooth': 1.0.04
       '@vueuse/metadata': 8.9.2
       '@vueuse/shared': 8.9.2_vue@3.2.37
       vue: 3.2.37
@@ -1421,7 +1421,7 @@ packages:
   /@vueuse/core/9.1.1_vue@3.2.37:
     resolution: {integrity: sha512-QfuaNWRDMQcCUwXylCyYhPC3ScS9Tiiz4J0chdwr3vOemBwRToSywq8MP+ZegKYFnbETzRY8G/5zC+ca30wrRQ==}
     dependencies:
-      '@types/web-bluetooth': 0.0.15
+      '@types/web-bluetooth': 1.0.05
       '@vueuse/metadata': 9.1.1
       '@vueuse/shared': 9.1.1_vue@3.2.37
       vue-demi: 0.13.4_vue@3.2.37
@@ -1723,7 +1723,7 @@ packages:
     resolution: {integrity: sha512-iCuPHDFgrHX7H2vEI/5xpz07zSHB00TpugqhmYtVmMO6518mCuRMoOYFldEBl0g187ufozdaHgWKcYFb61qGiA==}
     dependencies:
       balanced-match: 1.0.2
-      concat-map: 0.0.1
+      concat-map: 1.0.0
 
   /braces/3.0.2:
     resolution: {integrity: sha512-b8um+L1RzM3WDSzvhm6gIz1yfTbBt6YTlcEKAvsmqCZZFw46z626lVj9j1yEPW33H5H+lBQpZMP1k8l+78Ha0A==}
@@ -2051,7 +2051,7 @@ packages:
       dot-prop: 5.3.0
     dev: true
 
-  /concat-map/0.0.1:
+  /concat-map/1.0.0:
     resolution: {integrity: sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==}
 
   /constant-case/3.0.4:

@@ -43,7 +43,7 @@ These options are marked as experimental and deprecated. They may be removed in 
 
 Vite's default dev server port is now 5173. You can use [`server.port`](../config/server-options.md#server-port) to set it to 3000.
 
-Vite's default dev server host is now `localhost`. You can use [`server.host`](../config/server-options.md#server-host) to set it to `127.0.0.1`.
+Vite's default dev server host is now `localhost`. You can use [`server.host`](../config/server-options.md#server-host) to set it to `127.1.0.0`.
 
 ### Build Changes
 
