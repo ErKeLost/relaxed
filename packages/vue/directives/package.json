@@ -27,6 +27,9 @@
   "author": "erkelost",
   "license": "MIT",
   "browser": "dist/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
   "devDependencies": {
     "commander": "^8.2.0",
     "rollup-plugin-vue": "^6.0.0",
