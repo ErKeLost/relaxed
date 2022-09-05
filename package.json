@@ -1,6 +1,6 @@
 {
   "name": "turborepo-template",
-  "version": "1.0.3",
+  "version": "0.0.1",
   "private": true,
   "workspaces": [
     "apps/*",
