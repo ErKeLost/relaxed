@@ -58,4 +58,8 @@ const DEFAULT_PLUGIN_OPTIONS: IVDrbouncePluginOption = {
   callback: null
 }
 // METHOD 方法 不指定 默认值  可以 直接 调用 方法 或者对象
-export { DEFAULT_PLUGIN_OPTIONS, IVDrbouncePluginOption, IVDrbounceDirectiveOption }
+export {
+  DEFAULT_PLUGIN_OPTIONS,
+  IVDrbouncePluginOption,
+  IVDrbounceDirectiveOption
+}

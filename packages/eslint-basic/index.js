@@ -4,14 +4,14 @@ module.exports = defineConfig({
   env: {
     es6: true,
     browser: true,
-    node: true,
+    node: true
   },
   extends: [
     'eslint:recommended',
     'plugin:eslint-comments/recommended',
     'plugin:jsonc/recommended-with-jsonc',
     'plugin:yml/standard',
-    'plugin:markdown/recommended',
+    'plugin:markdown/recommended'
   ],
   ignorePatterns: [
     '*.min.*',
@@ -28,18 +28,20 @@ module.exports = defineConfig({
     '__snapshots__',
     '!.github',
     '!.vitepress',
-    '!.vscode',
+    '!.vscode'
   ],
   plugins: ['import', 'html', 'unicorn'],
   settings: {
     'import/resolver': {
-      node: { extensions: ['.js', '.mjs', '.ts', '.d.ts'] },
-    },
+      node: {
+        extensions: ['.js', '.mjs', '.ts', '.d.ts']
+      }
+    }
   },
   overrides: [
     {
       files: ['*.json', '*.json5', '*.jsonc', '*rc'],
-      parser: 'jsonc-eslint-parser',
+      parser: 'jsonc-eslint-parser'
     },
     {
       files: ['package.json'],
@@ -88,27 +90,29 @@ module.exports = defineConfig({
               'pnpm',
               'husky',
               'lint-staged',
-              'eslintConfig',
-            ],
+              'eslintConfig'
+            ]
           },
           {
             pathPattern: '^(?:dev|peer|optional|bundled)?[Dd]ependencies$',
-            order: { type: 'asc' },
-          },
-        ],
-      },
+            order: {
+              type: 'asc'
+            }
+          }
+        ]
+      }
     },
     {
       files: ['scripts/**/*.*', 'cli.*'],
       rules: {
-        'no-console': 'off',
-      },
+        'no-console': 'off'
+      }
     },
     {
       files: ['*.test.ts', '*.test.js', '*.spec.ts', '*.spec.js'],
       rules: {
-        'no-unused-expressions': 'off',
-      },
+        'no-unused-expressions': 'off'
+      }
     },
     {
       // Code blocks in markdown file
@@ -123,9 +127,9 @@ module.exports = defineConfig({
         'no-restricted-imports': 'off',
         'no-undef': 'off',
         'no-unused-expressions': 'off',
-        'no-unused-vars': 'off',
-      },
-    },
+        'no-unused-vars': 'off'
+      }
+    }
   ],
   rules: {
     // import
@@ -143,26 +147,41 @@ module.exports = defineConfig({
           'sibling',
           'index',
           'object',
-          'type',
+          'type'
         ],
-        pathGroups: [{ pattern: '@/**', group: 'internal' }],
-        pathGroupsExcludedImportTypes: ['type'],
-      },
+        pathGroups: [
+          {
+            pattern: '@/**',
+            group: 'internal'
+          }
+        ],
+        pathGroupsExcludedImportTypes: ['type']
+      }
     ],
 
     // Common
     'no-unused-vars': 'warn',
     'no-constant-condition': 'warn',
     'no-debugger': 'warn',
-    'no-console': ['warn', { allow: ['warn', 'error'] }],
+    'no-console': [
+      'warn',
+      {
+        allow: ['warn', 'error']
+      }
+    ],
     'no-restricted-syntax': [
       'error',
       'ForInStatement',
       'LabeledStatement',
-      'WithStatement',
+      'WithStatement'
     ],
     'no-return-await': 'warn',
-    'no-empty': ['error', { allowEmptyCatch: true }],
+    'no-empty': [
+      'error',
+      {
+        allowEmptyCatch: true
+      }
+    ],
     'sort-imports': [
       'error',
       {
@@ -170,24 +189,33 @@ module.exports = defineConfig({
         ignoreDeclarationSort: true,
         ignoreMemberSort: false,
         memberSyntaxSortOrder: ['none', 'all', 'multiple', 'single'],
-        allowSeparatedGroups: false,
-      },
+        allowSeparatedGroups: false
+      }
     ],
 
     // es6
     'no-var': 'error',
     'prefer-const': [
       'warn',
-      { destructuring: 'all', ignoreReadBeforeAssign: true },
+      {
+        destructuring: 'all',
+        ignoreReadBeforeAssign: true
+      }
     ],
     'prefer-arrow-callback': [
       'error',
-      { allowNamedFunctions: false, allowUnboundThis: true },
+      {
+        allowNamedFunctions: false,
+        allowUnboundThis: true
+      }
     ],
     'object-shorthand': [
       'error',
       'always',
-      { ignoreConstructors: false, avoidQuotes: true },
+      {
+        ignoreConstructors: false,
+        avoidQuotes: true
+      }
     ],
     'prefer-rest-params': 'error',
     'prefer-spread': 'error',
@@ -199,7 +227,12 @@ module.exports = defineConfig({
     eqeqeq: ['error', 'smart'],
     'no-alert': 'warn',
     'no-case-declarations': 'error',
-    'no-fallthrough': ['warn', { commentPattern: 'break[\\s\\w]*omitted' }],
+    'no-fallthrough': [
+      'warn',
+      {
+        commentPattern: 'break[\\s\\w]*omitted'
+      }
+    ],
     'no-multi-str': 'error',
     'no-with': 'error',
     'no-void': 'error',
@@ -262,6 +295,6 @@ module.exports = defineConfig({
     'jsonc/quote-props': 'off',
     'jsonc/quotes': 'off',
 
-    'yml/no-empty-mapping-value': 'off',
-  },
+    'yml/no-empty-mapping-value': 'off'
+  }
 })

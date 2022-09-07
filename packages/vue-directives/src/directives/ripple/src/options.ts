@@ -87,4 +87,9 @@ const DEFAULT_PLUGIN_OPTIONS: IRipplePluginOptions = {
   disabled: false
 }
 
-export { DEFAULT_PLUGIN_OPTIONS, IRipplePluginOptions, IRippleDirectiveOptions, IRippleDirectiveOptionWithBinding }
+export {
+  DEFAULT_PLUGIN_OPTIONS,
+  IRipplePluginOptions,
+  IRippleDirectiveOptions,
+  IRippleDirectiveOptionWithBinding
+}

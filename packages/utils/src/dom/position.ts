@@ -16,7 +16,7 @@ export const isInContainer = (
       top: 0,
       right: window.innerWidth,
       bottom: window.innerHeight,
-      left: 0,
+      left: 0
     }
   }
   return (
@@ -61,6 +61,6 @@ export const getClientXY = (event: MouseEvent | TouchEvent) => {
   }
   return {
     clientX,
-    clientY,
+    clientY
   }
 }

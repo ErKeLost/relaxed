@@ -581,7 +581,9 @@ export default defineConfig({
         server.ws.on('my:from-client', (data, client) => {
           console.log('Message from client:', data.msg) // Hey!
           // reply only to the client (if needed)
-          client.send('my:ack', { msg: 'Hi! I got your message!' })
+          client.send('my:ack', {
+            msg: 'Hi! I got your message!'
+          })
         })
       }
     }
@@ -599,7 +601,9 @@ import 'vite/types/customEvent'
 
 declare module 'vite/types/customEvent' {
   interface CustomEventMap {
-    'custom:foo': { msg: string }
+    'custom:foo': {
+      msg: string
+    }
     // 'event-key': payload
   }
 }

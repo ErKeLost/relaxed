@@ -21,5 +21,7 @@ export const VThrottle = {
   install: function (app: App | Vue2, options: any) {
     VThrottleDirective(app) // 点击outside
   }
-} as Plugin & { installed: boolean }
+} as Plugin & {
+  installed: boolean
+}
 export default VThrottleDirective

@@ -26,4 +26,6 @@ export const VFormatTime = {
   install: function (app: App | Vue2, options: any) {
     VFormatTimeDirective(app) // 点击outside
   }
-} as Plugin & { installed: boolean }
+} as Plugin & {
+  installed: boolean
+}

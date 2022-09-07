@@ -4,7 +4,7 @@ const basic = require('@relaxed/eslint-config-basic')
 module.exports = defineConfig({
   extends: [
     '@relaxed/eslint-config-basic',
-    'plugin:@typescript-eslint/recommended',
+    'plugin:@typescript-eslint/recommended'
   ],
   ignorePatterns: ['auto-import.d.ts', 'components.d.ts'],
   overrides: [
@@ -12,21 +12,21 @@ module.exports = defineConfig({
     {
       files: ['*.ts'],
       rules: {
-        'no-undef': 'off',
-      },
+        'no-undef': 'off'
+      }
     },
     {
       files: ['*.d.ts'],
       rules: {
-        'import/no-duplicates': 'off',
-      },
+        'import/no-duplicates': 'off'
+      }
     },
     {
       files: ['*.js', '*.cjs'],
       rules: {
-        '@typescript-eslint/no-var-requires': 'off',
-      },
-    },
+        '@typescript-eslint/no-var-requires': 'off'
+      }
+    }
   ],
   rules: {
     'no-unused-vars': 'off',
@@ -38,11 +38,13 @@ module.exports = defineConfig({
     '@typescript-eslint/ban-types': 'off',
     '@typescript-eslint/consistent-type-imports': [
       'error',
-      { disallowTypeAnnotations: false },
+      {
+        disallowTypeAnnotations: false
+      }
     ],
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
     '@typescript-eslint/no-non-null-assertion': 'off',
-    '@typescript-eslint/prefer-as-const': 'warn',
-  },
+    '@typescript-eslint/prefer-as-const': 'warn'
+  }
 })

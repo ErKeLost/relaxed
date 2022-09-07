@@ -2,10 +2,19 @@ import { createContainer } from './utils/create-container-element'
 import { createrippleElement } from './utils/create-ripple-element'
 import { getDistanceToFurthestCorner } from './utils/getdistance-tofurthestcorner'
 import { getRelativePointer } from './utils/getrelative-pointer'
-import { decrementRippleCount, deleteRippleCount, getRippleCount, incrementRippleCount } from './utils/ripple-count'
+import {
+  decrementRippleCount,
+  deleteRippleCount,
+  getRippleCount,
+  incrementRippleCount
+} from './utils/ripple-count'
 import { IRippleDirectiveOptions } from './options'
 const MULTIPLE_NUMBER = 2.05
-const ripple = (event: PointerEvent, el: HTMLElement, options: IRippleDirectiveOptions) => {
+const ripple = (
+  event: PointerEvent,
+  el: HTMLElement,
+  options: IRippleDirectiveOptions
+) => {
   const rect = el.getBoundingClientRect()
   const computedStyles = window.getComputedStyle(el)
   const { x, y } = getRelativePointer(event, rect)

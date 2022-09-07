@@ -5,7 +5,9 @@ import { DEFAULT_PLUGIN_OPTIONS } from './src/options'
 
 const VClickOutSideDirective = (app: any) => {
   const hooks = getHooks(app)
-  const globalOptions = { ...DEFAULT_PLUGIN_OPTIONS }
+  const globalOptions = {
+    ...DEFAULT_PLUGIN_OPTIONS
+  }
   app.directive(globalOptions.directive, {
     [hooks.mounted](el: HTMLElement, { value }: any) {
       clickoutside(el, value)
@@ -27,5 +29,7 @@ export const VClickoutside = {
   install: function (app: App | Vue2, options: any) {
     VClickOutSideDirective(app) // 点击outside
   }
-} as Plugin & { installed: boolean }
+} as Plugin & {
+  installed: boolean
+}
 export default VClickOutSideDirective

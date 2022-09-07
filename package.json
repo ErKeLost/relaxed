@@ -24,7 +24,7 @@
     "dev": "turbo run dev --parallel",
     "play": "pnpm dev --filter playground",
     "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "format": "prettier --write \"**/*.{ts,tsx,js,vue,md}\"",
     "prettier": "prettier --write .",
     "prettier-watch": "onchange '**/*.js' -- prettier --write {{changed}}",
     "eslint": "eslint . --ext .ts,.vue,.js,.tsx",
@@ -70,6 +70,12 @@
     "commitizen": {
       "path": "node_modules/cz-customizable"
     }
+  },
+  "lint-staged": {
+    "packages/**/{*.vue,*.js,*.ts,*.jsx,*.tsx}": [
+      "prettier --write \"**/*.{ts,js,vue,jsx,tsx}\"",
+      "git add ."
+    ]
   },
   "pnpm": {
     "peerDependencyRules": {

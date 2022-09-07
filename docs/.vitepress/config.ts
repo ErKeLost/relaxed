@@ -10,16 +10,77 @@ export default defineConfig({
   description: 'Next Generation Frontend Tooling',
 
   head: [
-    ['link', { rel: 'icon', type: 'image/svg+xml', href: '/logo.svg' }],
-    ['meta', { property: 'og:type', content: 'website' }],
-    ['meta', { property: 'og:title', content: ogTitle }],
-    ['meta', { property: 'og:image', content: ogImage }],
-    ['meta', { property: 'og:url', content: ogUrl }],
-    ['meta', { property: 'twitter:description', content: ogDescription }],
-    ['meta', { property: 'twitter:title', content: ogTitle }],
-    ['meta', { property: 'twitter:card', content: 'summary_large_image' }],
-    ['meta', { property: 'twitter:image', content: ogImage }],
-    ['meta', { property: 'twitter:url', content: ogUrl }]
+    [
+      'link',
+      {
+        rel: 'icon',
+        type: 'image/svg+xml',
+        href: '/logo.svg'
+      }
+    ],
+    [
+      'meta',
+      {
+        property: 'og:type',
+        content: 'website'
+      }
+    ],
+    [
+      'meta',
+      {
+        property: 'og:title',
+        content: ogTitle
+      }
+    ],
+    [
+      'meta',
+      {
+        property: 'og:image',
+        content: ogImage
+      }
+    ],
+    [
+      'meta',
+      {
+        property: 'og:url',
+        content: ogUrl
+      }
+    ],
+    [
+      'meta',
+      {
+        property: 'twitter:description',
+        content: ogDescription
+      }
+    ],
+    [
+      'meta',
+      {
+        property: 'twitter:title',
+        content: ogTitle
+      }
+    ],
+    [
+      'meta',
+      {
+        property: 'twitter:card',
+        content: 'summary_large_image'
+      }
+    ],
+    [
+      'meta',
+      {
+        property: 'twitter:image',
+        content: ogImage
+      }
+    ],
+    [
+      'meta',
+      {
+        property: 'twitter:url',
+        content: ogUrl
+      }
+    ]
   ],
 
   vue: {
@@ -35,9 +96,18 @@ export default defineConfig({
     },
 
     socialLinks: [
-      { icon: 'twitter', link: 'https://twitter.com/vite_js' },
-      { icon: 'discord', link: 'https://chat.vitejs.dev' },
-      { icon: 'github', link: 'https://github.com/vitejs/vite' }
+      {
+        icon: 'twitter',
+        link: 'https://twitter.com/vite_js'
+      },
+      {
+        icon: 'discord',
+        link: 'https://chat.vitejs.dev'
+      },
+      {
+        icon: 'github',
+        link: 'https://github.com/vitejs/vite'
+      }
     ],
 
     algolia: {
@@ -56,9 +126,18 @@ export default defineConfig({
     localeLinks: {
       text: 'English',
       items: [
-        { text: '简体中文', link: 'https://cn.vitejs.dev' },
-        { text: '日本語', link: 'https://ja.vitejs.dev' },
-        { text: 'Español', link: 'https://es.vitejs.dev' }
+        {
+          text: '简体中文',
+          link: 'https://cn.vitejs.dev'
+        },
+        {
+          text: '日本語',
+          link: 'https://ja.vitejs.dev'
+        },
+        {
+          text: 'Español',
+          link: 'https://es.vitejs.dev'
+        }
       ]
     },
 
@@ -68,9 +147,21 @@ export default defineConfig({
     },
 
     nav: [
-      { text: 'Guide', link: '/guide/', activeMatch: '/guide/' },
-      { text: 'Config', link: '/config/', activeMatch: '/config/' },
-      { text: 'Plugins', link: '/plugins/', activeMatch: '/plugins/' },
+      {
+        text: 'Guide',
+        link: '/guide/',
+        activeMatch: '/guide/'
+      },
+      {
+        text: 'Config',
+        link: '/config/',
+        activeMatch: '/config/'
+      },
+      {
+        text: 'Plugins',
+        link: '/plugins/',
+        activeMatch: '/plugins/'
+      },
       {
         text: 'Links',
         items: [

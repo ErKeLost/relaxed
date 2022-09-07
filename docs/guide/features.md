@@ -371,7 +371,10 @@ const modules = {
 When combined with `eager` it's even possible to have tree-shaking enabled for those modules.
 
 ```ts
-const modules = import.meta.glob('./dir/*.js', { import: 'setup', eager: true })
+const modules = import.meta.glob('./dir/*.js', {
+  import: 'setup',
+  eager: true
+})
 ```
 
 ```ts
@@ -409,7 +412,10 @@ You can also use the `query` option to provide custom queries to imports for oth
 
 ```ts
 const modules = import.meta.glob('./dir/*.js', {
-  query: { foo: 'bar', bar: true }
+  query: {
+    foo: 'bar',
+    bar: true
+  }
 })
 ```
 

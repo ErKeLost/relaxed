@@ -98,7 +98,9 @@ interface ViteDevServer {
    */
   ssrLoadModule(
     url: string,
-    options?: { fixStacktrace?: boolean }
+    options?: {
+      fixStacktrace?: boolean
+    }
   ): Promise<Record<string, any>>
   /**
    * Fix ssr error stacktrace.

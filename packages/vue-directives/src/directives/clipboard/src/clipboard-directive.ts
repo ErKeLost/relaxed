@@ -65,7 +65,10 @@ export const VClipBoardDirective = (app: App) => {
   })
 }
 
-export const toClipboard = (text: string, action: any = 'copy'): Promise<unknown> => {
+export const toClipboard = (
+  text: string,
+  action: any = 'copy'
+): Promise<unknown> => {
   return new Promise((resolve, reject) => {
     const fakeElement = document.createElement('button')
     const clipboard = new ClipboardJS(fakeElement, {
@@ -98,4 +101,6 @@ export const VClipBoard = {
   install: function (app: App | Vue2, options: any) {
     VClipBoardDirective(app) // 点击outside
   }
-} as Plugin & { installed: boolean }
+} as Plugin & {
+  installed: boolean
+}

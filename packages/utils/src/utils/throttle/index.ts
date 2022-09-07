@@ -1,7 +1,11 @@
 function throttle(
   fn,
   interval: number = 1000,
-  options: { leading: true; tailing: false; resCallback: (any) => any }
+  options: {
+    leading: true
+    tailing: false
+    resCallback: (any) => any
+  }
 ) {
   const { leading, tailing, resCallback } = options
   let lastTime = 0

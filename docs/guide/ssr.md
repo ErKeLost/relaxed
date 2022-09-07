@@ -41,7 +41,9 @@ A typical SSR application will have the following source file structure:
 The `index.html` will need to reference `entry-client.js` and include a placeholder where the server-rendered markup should be injected:
 
 ```html
-<div id="app"><!--ssr-outlet--></div>
+<div id="app">
+  <!--ssr-outlet-->
+</div>
 <script type="module" src="/src/entry-client.js"></script>
 ```
 
@@ -130,7 +132,12 @@ app.use('*', async (req, res, next) => {
     const html = template.replace(`<!--ssr-outlet-->`, appHtml)
 
     // 6. Send the rendered HTML back.
-    res.status(200).set({ 'Content-Type': 'text/html' }).end(html)
+    res
+      .status(200)
+      .set({
+        'Content-Type': 'text/html'
+      })
+      .end(html)
   } catch (e) {
     // If an error is caught, let Vite fix the stack trace so it maps back to
     // your actual source code.

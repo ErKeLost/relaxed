@@ -206,7 +206,9 @@ async function createServer() {
 
   // Create Vite server in middleware mode
   const vite = await createViteServer({
-    server: { middlewareMode: true },
+    server: {
+      middlewareMode: true
+    },
     appType: 'custom' // don't include Vite's default HTML handling middlewares
   })
   // Use vite's connect instance as middleware

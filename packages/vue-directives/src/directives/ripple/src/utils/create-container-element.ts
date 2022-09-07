@@ -1,4 +1,9 @@
-export const createContainer = ({ borderTopLeftRadius, borderTopRightRadius, borderBottomLeftRadius, borderBottomRightRadius }: CSSStyleDeclaration): HTMLElement => {
+export const createContainer = ({
+  borderTopLeftRadius,
+  borderTopRightRadius,
+  borderBottomLeftRadius,
+  borderBottomRightRadius
+}: CSSStyleDeclaration): HTMLElement => {
   const rippleContainer = document.createElement('div')
   rippleContainer.style.top = '0'
   rippleContainer.style.left = '0'
@@ -10,7 +15,8 @@ export const createContainer = ({ borderTopLeftRadius, borderTopRightRadius, bor
   rippleContainer.style.pointerEvents = 'none'
 
   // 兼容 ie  苹果
-  rippleContainer.style.webkitMaskImage = '-webkit-radial-gradient(white, black)'
+  rippleContainer.style.webkitMaskImage =
+    '-webkit-radial-gradient(white, black)'
 
   return rippleContainer
 }

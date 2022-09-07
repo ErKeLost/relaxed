@@ -15,7 +15,7 @@ module.exports = defineConfig({
     $shallowRef: 'readonly',
     $computed: 'readonly',
     $customRef: 'readonly',
-    $toRef: 'readonly',
+    $toRef: 'readonly'
   },
   overrides: [
     {
@@ -25,8 +25,8 @@ module.exports = defineConfig({
         parser: '@typescript-eslint/parser',
         extraFileExtensions: ['.vue'],
         ecmaFeatures: {
-          jsx: true,
-        },
+          jsx: true
+        }
       },
       globals: {
         // script setup
@@ -36,16 +36,16 @@ module.exports = defineConfig({
         withDefaults: 'readonly',
 
         // RFC: https://github.com/vuejs/rfcs/discussions/430
-        defineOptions: 'readonly',
+        defineOptions: 'readonly'
       },
       rules: {
-        'no-undef': 'off',
-      },
-    },
+        'no-undef': 'off'
+      }
+    }
   ],
   extends: [
     vueVersion === 3 ? 'plugin:vue/vue3-recommended' : 'plugin:vue/recommended',
-    '@relaxed/eslint-config-ts',
+    '@relaxed/eslint-config-ts'
   ],
   rules: {
     'vue/max-attributes-per-line': 'off',
@@ -57,14 +57,14 @@ module.exports = defineConfig({
         html: {
           void: 'always',
           normal: 'always',
-          component: 'always',
+          component: 'always'
         },
         svg: 'always',
-        math: 'always',
-      },
+        math: 'always'
+      }
     ],
 
     // Reactivity Transform
-    'vue/no-setup-props-destructure': 'off',
-  },
+    'vue/no-setup-props-destructure': 'off'
+  }
 })

@@ -30,6 +30,8 @@ const Adny = {
     VLongPressDirective(app) // 长按
     VFormatTimeDirective(app) // 格式化时间
   }
-} as Plugin & { installed: boolean }
+} as Plugin & {
+  installed: boolean
+}
 
 export default Adny

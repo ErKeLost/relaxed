@@ -1,4 +1,9 @@
-const throttle = (event: keyof HTMLElementEventMap = 'click', el: HTMLElement, delay: number = 1000, callback: () => void) => {
+const throttle = (
+  event: keyof HTMLElementEventMap = 'click',
+  el: HTMLElement,
+  delay: number = 1000,
+  callback: () => void
+) => {
   el.addEventListener(event, (...arg) => {
     let lastTime: number = 0
     const nowTime = new Date().getTime()

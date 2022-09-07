@@ -14,7 +14,11 @@ const VLongPressDirective = (app: App) => {
         //e.type表示触发的事件类型如mousedown,touchstart等
         //pc端: e.button表示是哪个键按下0为鼠标左键，1为中键，2为右键
         //移动端: e.touches表示同时按下的键为个数
-        if ((e.type === 'mousedown' && e.button && e.button !== 0) || (e.type === 'touchstart' && e.touches && e.touches.length > 1)) return
+        if (
+          (e.type === 'mousedown' && e.button && e.button !== 0) ||
+          (e.type === 'touchstart' && e.touches && e.touches.length > 1)
+        )
+          return
         //定时长按n秒后执行事件
         if (el._timer === null) {
           el._timer = setTimeout(() => {
@@ -64,5 +68,7 @@ export const VLongPress = {
   install: function (app: App | Vue2, options: any) {
     VLongPressDirective(app) // 点击outside
   }
-} as Plugin & { installed: boolean }
+} as Plugin & {
+  installed: boolean
+}
 export default VLongPressDirective
