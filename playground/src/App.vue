@@ -2,11 +2,8 @@
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
 import HelloWorld from './components/HelloWorld.vue'
-import { ref } from 'vue'
-const dis = ref(true)
-function click() {
-  // dis.value = !dis.value
-}
+import ScopeSlot from './components/ScopeSlot.vue'
+function click() {}
 </script>
 
 <template>
@@ -18,7 +15,18 @@ function click() {
       <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
     </a>
   </div>
-  <n-button v-if="dis" v-clickoutside="click">clickOutSide</n-button>
+  <ScopeSlot
+    :item="{
+      name: 'erkelost'
+    }"
+  >
+    <template #a>
+      <n-button @click="click">clickOutSide</n-button>
+    </template>
+    <template #b="{ item }">
+      <n-button>{{ item }}</n-button>
+    </template>
+  </ScopeSlot>
   <HelloWorld msg="Vite + Vue" />
 </template>
 
