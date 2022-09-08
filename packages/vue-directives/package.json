@@ -2,8 +2,8 @@
   "name": "@relaxed/vue-directives",
   "version": "1.0.6",
   "description": "vue 兼容2 3 工具库 函数库",
-  "main": "index.js",
-  "module": "dist/index.vite.js",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
   "sideEffects": false,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
