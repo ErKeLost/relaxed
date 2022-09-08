@@ -2,8 +2,11 @@
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
 import HelloWorld from './components/HelloWorld.vue'
-import a from '@relaxed/utils'
-console.log(a)
+import { ref } from 'vue'
+const dis = ref(true)
+function click() {
+  // dis.value = !dis.value
+}
 </script>
 
 <template>
@@ -15,6 +18,7 @@ console.log(a)
       <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
     </a>
   </div>
+  <n-button v-if="dis" v-clickoutside="click">clickOutSide</n-button>
   <HelloWorld msg="Vite + Vue" />
 </template>
 

@@ -11,6 +11,8 @@
   "dependencies": {
     "@relaxed/utils": "workspace:*",
     "@relaxed/vue-directives": "workspace:*",
+    "@vueuse/core": "^7.3.0",
+    "naive-ui": "^2.33.2",
     "vue": "^3.2.37"
   },
   "devDependencies": {

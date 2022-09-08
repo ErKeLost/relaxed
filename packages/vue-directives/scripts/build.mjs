@@ -4,9 +4,8 @@ await esbuild.build({
   bundle: true,
   entryPoints: ['src/index.ts'],
   outfile: 'dist/index.js',
-  format: 'cjs',
-  platform: 'browser',
-  target: 'node16',
+  format: 'esm',
+  target: 'esnext',
   treeShaking: true,
   plugins: []
 })
