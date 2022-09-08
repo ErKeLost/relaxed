@@ -1,7 +1,7 @@
 import ClipboardJS from 'clipboard'
 import { App, Plugin } from 'vue'
 import type { ObjectDirective } from 'vue'
-import { getHooks } from '../../../compatible/vue/hookKey'
+import { getHooks } from '../../../compatible/hookKey'
 
 interface Vue2 {
   default: {

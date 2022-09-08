@@ -1,4 +1,4 @@
-import { getHooks } from '../../../compatible/vue/hookKey'
+import { getHooks } from '../../../compatible/hookKey'
 import { App } from 'vue'
 
 const VLongPressDirective = (app: App) => {

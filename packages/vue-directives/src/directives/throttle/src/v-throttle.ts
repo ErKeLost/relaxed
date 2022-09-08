@@ -1,4 +1,4 @@
-import { getHooks } from '../../../compatible/vue/hookKey'
+import { getHooks } from '../../../compatible/hookKey'
 import { throttle } from './throttle-directive'
 import { App } from 'vue'
 // import { DEFAULT_PLUGIN_OPTIONS, IVDrbouncePluginOption } from './options'

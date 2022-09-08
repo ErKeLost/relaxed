@@ -1,5 +1,5 @@
 // can export function.  解构参数类型冗余 新定义insterface IRippleDirectiveOptionWithBinding
-import { getHooks } from '../../../compatible/vue/hookKey'
+import { getHooks } from '../../../compatible/hookKey'
 import { App } from 'vue'
 import {
   DEFAULT_PLUGIN_OPTIONS,

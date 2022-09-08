@@ -1,4 +1,4 @@
-import { getHooks } from '../../compatible/vue/hookKey'
+import { getHooks } from '../../compatible/hookKey'
 import { App, Plugin } from 'vue'
 import { clickoutside, deleteClickOutside } from './src/v-clickoutside'
 import { DEFAULT_PLUGIN_OPTIONS } from './src/options'

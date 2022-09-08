@@ -15,7 +15,7 @@
     "build:docs": "pnpm build --filter docs",
     "build:components": "pnpm build --filter components",
     "build:utils": "pnpm build --filter utils",
-    "build:directives": "pnpm build --filter directives",
+    "build:directives": "pnpm build --filter @relaxed/vue-directives",
     "build:hooks": "pnpm build --filter hooks",
     "docs:dev": "vitepress dev docs",
     "clear": "rimraf 'packages/*/{lib,node_modules}' && rimraf node_modules",
@@ -41,9 +41,9 @@
     "release:bumpp": "bumpp packages/*/package.json && pnpm publish -r"
   },
   "devDependencies": {
-    "@relaxed/eslint-config-prettier": "workspace:*",
     "@changesets/cli": "^2.23.0",
     "@commitlint/config-conventional": "^17.0.3",
+    "@relaxed/eslint-config": "workspace:*",
     "@types/node": "^17.0.23",
     "bumpp": "^8.2.1",
     "commitizen": "^4.2.4",
@@ -51,7 +51,7 @@
     "commitlint-config-cz": "^0.13.3",
     "cz-conventional-changelog": "^3.3.0",
     "cz-customizable": "^6.6.0",
-    "esbuild": "^0.14.49",
+    "esbuild": "^0.15.7",
     "eslint": "^8.18.0",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
@@ -59,7 +59,8 @@
     "rimraf": "^3.0.2",
     "turbo": "latest",
     "typescript": "^4.7.4",
-    "vitepress": "^1.0.0-alpha.13"
+    "vitepress": "^1.0.0-alpha.13",
+    "zx": "^7.0.8"
   },
   "engines": {
     "npm": ">=7.0.0",

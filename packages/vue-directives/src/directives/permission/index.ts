@@ -1,4 +1,4 @@
-import { getHooks } from '../../compatible/vue/hookKey'
+import { getHooks } from '../../compatible/hookKey'
 import { permission } from './src/v-permission'
 import { App } from 'vue'
 import { DEFAULT_PLUGIN_OPTIONS } from './src/options'

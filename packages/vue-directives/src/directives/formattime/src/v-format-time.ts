@@ -1,4 +1,4 @@
-import { getHooks } from '../../../compatible/vue/hookKey'
+import { getHooks } from '../../../compatible/hookKey'
 import { App } from 'vue'
 import { Plugin } from 'vue'
 import { formatTimeMounted, formatTimeCreated } from './format-time-directive'

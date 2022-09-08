@@ -1,4 +1,4 @@
-import { getHooks } from '../../../compatible/vue/hookKey'
+import { getHooks } from '../../../compatible/hookKey'
 import debounce from './debounce-directive'
 import { App } from 'vue'
 import { Plugin } from 'vue'

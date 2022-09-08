@@ -1,5 +1,5 @@
 import { log, featLog, debugLog } from './src/log'
-import { isVue3 } from '../../compatible/vue/isVue3'
+import { isVue3 } from '../../compatible/isVue3'
 const logKeys: any = {
   log,
   debugLog,
