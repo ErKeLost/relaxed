@@ -71,12 +71,6 @@
       "path": "node_modules/cz-customizable"
     }
   },
-  "lint-staged": {
-    "packages/**/{*.vue,*.js,*.ts,*.jsx,*.tsx}": [
-      "prettier --write \"**/*.{ts,js,vue,jsx,tsx}\"",
-      "git add ."
-    ]
-  },
   "pnpm": {
     "peerDependencyRules": {
       "ignoreMissing": [
