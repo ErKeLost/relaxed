@@ -3,7 +3,14 @@
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
 import HelloWorld from './components/HelloWorld.vue'
 import ScopeSlot from './components/ScopeSlot.vue'
+import { reactive, ref } from 'vue'
+const music = ref([])
+const a = ['123', '456']
 function click() {}
+function clickReactive () {
+  music.value = a
+}
+
 </script>
 
 <template>
@@ -15,6 +22,8 @@ function click() {}
       <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
     </a>
   </div>
+  {{ music }}
+  <n-button @click="clickReactive">clickReactive</n-button>
   <ScopeSlot
     :item="{
       name: 'erkelost'
