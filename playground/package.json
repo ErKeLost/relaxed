@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "format": "prettier --write \"**/*.{ts,tsx,js,vue,md}\"",
+    "eslint": "eslint . --ext .ts,.vue,.js,.tsx"
   },
   "dependencies": {
     "@relaxed/utils": "workspace:*",
@@ -17,6 +19,8 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^3.0.0",
+    "eslint": "^8.23.0",
+    "eslint-config-relaxed-vue": "workspace:^1.0.8",
     "typescript": "^4.6.4",
     "vite": "^3.0.0",
     "vue-tsc": "^0.38.4"

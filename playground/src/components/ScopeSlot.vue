@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-const props = defineProps({
+defineProps({
   item: {
     type: Object,
     default: () => ({})
@@ -11,10 +10,9 @@ const props = defineProps({
 <template>
   <div>
     <slot name="a"></slot>
-    <br/>
+    <br />
     <slot name="b" :item="item.name"></slot>
-    <slot name="c">
-    </slot>
+    <slot name="c"> </slot>
   </div>
 </template>
 

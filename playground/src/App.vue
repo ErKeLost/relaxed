@@ -1,16 +1,16 @@
 <script setup lang="ts">
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
+import { ref } from 'vue'
 import HelloWorld from './components/HelloWorld.vue'
 import ScopeSlot from './components/ScopeSlot.vue'
-import { reactive, ref } from 'vue'
-const music = ref([])
+const music = ref<string[]>()
 const a = ['123', '456']
 function click() {}
-function clickReactive () {
+function clickReactive() {
   music.value = a
 }
-
+console.log(666)
 </script>
 
 <template>

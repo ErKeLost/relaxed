@@ -592,7 +592,7 @@ module.exports = {
      * @description Disallow the use of `console`
      * @link https://eslint.org/docs/latest/rules/no-console
      */
-    'no-console': 'warn',
+    'no-console': 'off',
 
     /**
      * @description Disallow `continue` statements

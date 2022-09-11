@@ -1,4 +1,4 @@
-const { markdownCodeRules, prettierRules } = require('./rules');
+const { markdownCodeRules, prettierRules } = require('./rules')
 
 module.exports = {
   root: true,
@@ -167,4 +167,4 @@ module.exports = {
     'yml/quotes': ['error', { prefer: 'single', avoidEscape: false }],
     'yml/no-empty-document': 'off'
   }
-};
+}

@@ -1,5 +1,5 @@
-const base = require('eslint-config-relaxed-base/base');
-const baseRules = require('eslint-config-relaxed-base/rules');
+const base = require('eslint-config-relaxed-base/base')
+const baseRules = require('eslint-config-relaxed-base/rules')
 
 module.exports = {
   plugins: ['@typescript-eslint'],
@@ -26,7 +26,19 @@ module.exports = {
   rules: {
     // TS
     '@typescript-eslint/consistent-type-definitions': ['error', 'interface'],
-    '@typescript-eslint/consistent-type-imports': ['error', { prefer: 'type-imports', disallowTypeAnnotations: false }],
+    '@typescript-eslint/consistent-type-imports': [
+      'error',
+      { prefer: 'type-imports', disallowTypeAnnotations: false }
+    ],
+    '@typescript-eslint/ban-types': [
+      'error',
+      {
+        extendDefaults: true,
+        types: {
+          '{}': false
+        }
+      }
+    ],
     '@typescript-eslint/no-empty-interface': [
       'error',
       {
@@ -40,10 +52,19 @@ module.exports = {
     'no-unused-vars': 'off',
     '@typescript-eslint/no-unused-vars': [
       'error',
-      { vars: 'all', args: 'all', ignoreRestSiblings: false, varsIgnorePattern: '^_', argsIgnorePattern: '^_' }
+      {
+        vars: 'all',
+        args: 'all',
+        ignoreRestSiblings: false,
+        varsIgnorePattern: '^_',
+        argsIgnorePattern: '^_'
+      }
     ],
     'no-use-before-define': 'off',
-    '@typescript-eslint/no-use-before-define': ['error', { functions: false, classes: false, variables: true }],
+    '@typescript-eslint/no-use-before-define': [
+      'error',
+      { functions: false, classes: false, variables: true }
+    ],
     'no-shadow': 'off',
     '@typescript-eslint/no-shadow': 'error',
 
@@ -53,4 +74,4 @@ module.exports = {
     '@typescript-eslint/no-non-null-assertion': 'off',
     '@typescript-eslint/no-var-requires': 'off'
   }
-};
+}
