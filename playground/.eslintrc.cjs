@@ -1,7 +1,13 @@
 module.exports = {
   root: true,
-  extends: ['relaxed-vue'],
+  extends: [
+    'prettier',
+    'relaxed-vue',
+    'plugin:prettier/recommended'
+  ],
+  plugins: ['prettier'],
   rules: {
-    "no-console": "warn"
+    'no-console': 'error',
+    semi: 'error'
   }
 }

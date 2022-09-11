@@ -194,8 +194,11 @@ importers:
       '@vitejs/plugin-vue': ^3.0.0
       '@vueuse/core': ^7.3.0
       eslint: ^8.23.0
-      eslint-config-relaxed-vue: ^1.0.8
+      eslint-config-prettier: ^8.5.0
+      eslint-config-relaxed-vue: workspace:^1.0.8
+      eslint-plugin-prettier: ^4.2.1
       naive-ui: ^2.33.2
+      prettier: ^2.7.1
       typescript: ^4.6.4
       vite: ^3.0.0
       vue: ^3.2.37
@@ -209,7 +212,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-vue': 3.1.0_vite@3.1.0+vue@3.2.38
       eslint: 8.23.0
+      eslint-config-prettier: 8.5.0_eslint@8.23.0
       eslint-config-relaxed-vue: link:../packages/eslint-vue3
+      eslint-plugin-prettier: 4.2.1_99a8c9fa965e983db7d4834c61fad511
+      prettier: 2.7.1
       typescript: 4.8.2
       vite: 3.1.0
       vue-tsc: 0.38.9_typescript@4.8.2
@@ -3575,7 +3581,6 @@ packages:
       eslint: '>=7.0.0'
     dependencies:
       eslint: 8.23.0
-    dev: false
 
   /eslint-import-resolver-alias/1.1.2_eslint-plugin-import@2.26.0:
     resolution: {integrity: sha512-WdviM1Eu834zsfjHtcGHtGfcu+F30Od3V7I9Fi57uhBEwPkjDcii7/yW8jAT+gOhn4P/vOxxNAXbFAKsrrc15w==}
@@ -3729,7 +3734,6 @@ packages:
       eslint-config-prettier: 8.5.0_eslint@8.23.0
       prettier: 2.7.1
       prettier-linter-helpers: 1.0.0
-    dev: false
 
   /eslint-plugin-promise/6.0.1_eslint@8.23.0:
     resolution: {integrity: sha512-uM4Tgo5u3UWQiroOyDEsYcVMOo7re3zmno0IZmB5auxoaQNIceAbXEkSt8RNrKtaYehARHG06pYK6K1JhtP0Zw==}
@@ -4044,7 +4048,6 @@ packages:
 
   /fast-diff/1.2.0:
     resolution: {integrity: sha512-xJuoT5+L99XlZ8twedaRf6Ax2TgQVxvgZOYoPKqZufmJib0tL2tegPBOZb1pVNgIhlqDlA0eO0c3wBvQcmzx4w==}
-    dev: false
 
   /fast-glob/3.2.11:
     resolution: {integrity: sha512-xrO3+1bxSo3ZVHAnqzyuewYT6aMFHRAd4Kcs92MAonjwQZLsK9d0SF1IyQ3k5PoirxTW0Oe/RqFgMQ6TcNE5Ew==}
@@ -6036,7 +6039,6 @@ packages:
     engines: {node: '>=6.0.0'}
     dependencies:
       fast-diff: 1.2.0
-    dev: false
 
   /prettier/2.7.1:
     resolution: {integrity: sha512-ujppO+MkdPqoVINuDFDRLClm7D78qbDt0/NR+wp5FqEZOoTNAjPHWj17QRhu7geIHJfcNhRk1XVQmF8Bp3ye+g==}
