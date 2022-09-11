@@ -1,4 +1,4 @@
-// const { prettierRules } = require('./rules')
+const { prettierRules } = require('./rules')
 const { rules: prettierRules } = require('eslint-config-prettier')
 
 module.exports = {
