@@ -55,8 +55,13 @@ module.exports = {
             position: 'before'
           },
           {
-            pattern: 'naive-ui',
-            group: 'external',
+            pattern: '@/store',
+            group: 'internal',
+            position: 'before'
+          },
+          {
+            pattern: '@/components',
+            group: 'internal',
             position: 'before'
           },
           {
@@ -90,22 +95,12 @@ module.exports = {
             position: 'before'
           },
           {
-            pattern: '@/components',
-            group: 'internal',
-            position: 'before'
-          },
-          {
             pattern: '@/router',
             group: 'internal',
             position: 'before'
           },
           {
             pattern: '@/service',
-            group: 'internal',
-            position: 'before'
-          },
-          {
-            pattern: '@/store',
             group: 'internal',
             position: 'before'
           },
@@ -140,12 +135,7 @@ module.exports = {
             position: 'before'
           }
         ],
-        pathGroupsExcludedImportTypes: [
-          'vue',
-          'vue-router',
-          'pinia',
-          'naive-ui'
-        ]
+        pathGroupsExcludedImportTypes: ['vue', 'vue-router', 'pinia']
       }
     ]
   }
