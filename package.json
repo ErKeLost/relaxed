@@ -36,6 +36,7 @@
     "cs:update": "node ./scripts/changeset.mjs",
     "cs:version": "changeset version",
     "cs:tag": "changeset tag",
+    "sync": "node ./script/sync.mjs",
     "prerelease": "pnpm build",
     "release": "changeset publish",
     "release:bumpp": "bumpp packages/*/package.json && pnpm publish -r"
