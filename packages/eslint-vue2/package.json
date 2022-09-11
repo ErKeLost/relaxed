@@ -1,0 +1,21 @@
+{
+  "name": "eslint-config-relaxed-vue2",
+  "version": "0.0.10",
+  "description": "relaxed's vue2 eslint config presets with prettier",
+  "author": "Soybean <honghuangdc@gmail.com> (https://github.com/honghuangdc)",
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint . --config=index.js"
+  },
+  "dependencies": {
+    "eslint-config-relaxed-ts": "workspace:*",
+    "eslint-plugin-vue": "^9.4.0"
+  },
+  "peerDependencies": {
+    "eslint": ">=7.4.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.23.0"
+  }
+}

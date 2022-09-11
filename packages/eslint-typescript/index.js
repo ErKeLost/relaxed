@@ -1,50 +1,56 @@
-const { defineConfig } = require('eslint-define-config')
-const basic = require('@relaxed/eslint-config-basic')
+const base = require('eslint-config-relaxed-base/base');
+const baseRules = require('eslint-config-relaxed-base/rules');
 
-module.exports = defineConfig({
+module.exports = {
+  plugins: ['@typescript-eslint'],
   extends: [
-    '@relaxed/eslint-config-basic',
-    'plugin:@typescript-eslint/recommended'
+    'relaxed-base/base',
+    'plugin:import/typescript',
+    'plugin:@typescript-eslint/recommended',
+    'relaxed-base/prettier'
   ],
-  ignorePatterns: ['auto-import.d.ts', 'components.d.ts'],
   overrides: [
-    ...basic.overrides,
+    ...base.overrides,
     {
-      files: ['*.ts'],
-      rules: {
-        'no-undef': 'off'
-      }
+      files: ['*.ts', '*.tsx', '*.mts', '*.cts'],
+      parser: '@typescript-eslint/parser'
     },
     {
-      files: ['*.d.ts'],
+      files: ['*.md.ts', '*.md.typescript'],
       rules: {
-        'import/no-duplicates': 'off'
-      }
-    },
-    {
-      files: ['*.js', '*.cjs'],
-      rules: {
-        '@typescript-eslint/no-var-requires': 'off'
+        ...baseRules.markdownCodeRules,
+        '@typescript-eslint/no-unused-vars': 'off'
       }
     }
   ],
   rules: {
-    'no-unused-vars': 'off',
-    '@typescript-eslint/no-unused-vars': 'error',
-    'no-redeclare': 'off',
-    '@typescript-eslint/no-redeclare': 'error',
-
-    '@typescript-eslint/ban-ts-comment': 'off',
-    '@typescript-eslint/ban-types': 'off',
-    '@typescript-eslint/consistent-type-imports': [
+    // TS
+    '@typescript-eslint/consistent-type-definitions': ['error', 'interface'],
+    '@typescript-eslint/consistent-type-imports': ['error', { prefer: 'type-imports', disallowTypeAnnotations: false }],
+    '@typescript-eslint/no-empty-interface': [
       'error',
       {
-        disallowTypeAnnotations: false
+        allowSingleExtends: true
       }
     ],
-    '@typescript-eslint/explicit-module-boundary-types': 'off',
+
+    // Override JS
+    'no-redeclare': 'off',
+    '@typescript-eslint/no-redeclare': 'error',
+    'no-unused-vars': 'off',
+    '@typescript-eslint/no-unused-vars': [
+      'error',
+      { vars: 'all', args: 'all', ignoreRestSiblings: false, varsIgnorePattern: '^_', argsIgnorePattern: '^_' }
+    ],
+    'no-use-before-define': 'off',
+    '@typescript-eslint/no-use-before-define': ['error', { functions: false, classes: false, variables: true }],
+    'no-shadow': 'off',
+    '@typescript-eslint/no-shadow': 'error',
+
+    // off
+    '@typescript-eslint/no-empty-function': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
     '@typescript-eslint/no-non-null-assertion': 'off',
-    '@typescript-eslint/prefer-as-const': 'warn'
+    '@typescript-eslint/no-var-requires': 'off'
   }
-})
+};

@@ -1,37 +1,22 @@
 {
-  "name": "@relaxed/eslint-config-ts",
-  "version": "1.0.6",
-  "description": "",
-  "keywords": [],
+  "name": "eslint-config-relaxed-ts",
+  "version": "0.0.10",
+  "description": "relaxed's base eslint config presets with prettier",
   "license": "MIT",
-  "homepage": "https://github.com/erkelost/eslint-config#readme",
-  "bugs": {
-    "url": "https://github.com/erkelost/eslint-config/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/erkelost/eslint-config.git"
-  },
-  "author": "erkelost <erkelost@relaxed.moe> (https://github.com/erkelost/)",
-  "files": [
-    "index.js"
-  ],
   "main": "index.js",
-  "publishConfig": {
-    "access": "public"
-  },
-  "peerDependencies": {
-    "eslint": ">=7.4.0",
-    "typescript": ">=3.9"
+  "scripts": {
+    "lint": "eslint . --config=index.js"
   },
   "dependencies": {
-    "@relaxed/eslint-config-basic": "workspace:*",
-    "@typescript-eslint/eslint-plugin": "^5.35.1",
-    "@typescript-eslint/parser": "^5.35.1",
-    "eslint-define-config": "^1.6.0",
-    "typescript": "^4.8.2"
+    "@typescript-eslint/eslint-plugin": "^5.36.1",
+    "@typescript-eslint/parser": "^5.36.1",
+    "eslint-config-relaxed-base": "workspace:*"
+  },
+  "peerDependencies": {
+    "eslint": ">=7.4.0"
   },
   "devDependencies": {
-    "eslint": "8.23.0"
+    "eslint": "^8.23.0",
+    "typescript": "^4.8.2"
   }
 }
