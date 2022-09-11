@@ -1,6 +1,6 @@
 {
   "name": "@relaxed/vue-directives",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "vue 兼容2 3 工具库 函数库",
   "main": "dist/index.js",
   "module": "dist/index.js",

@@ -1,6 +1,6 @@
 {
   "name": "@relaxed/eslint-config",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "relaxed's eslint config presets with prettier, it equal to relaxed-ts",
   "license": "MIT",
   "main": "index.js",
