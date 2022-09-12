@@ -15,6 +15,13 @@
     "type": "git",
     "url": "git+https://github.com/ErKeLost/relaxed.git"
   },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs"
+    }
+  },
   "keywords": [
     "vue-adny",
     "vue2",
