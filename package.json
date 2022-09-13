@@ -22,6 +22,7 @@
     "changeset": "changeset",
     "version-packages": "changeset version",
     "dev": "turbo run dev --parallel",
+    "dev:layout": "turbo run dev --filter=@erkelost/layout",
     "play": "pnpm dev --filter playground",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,js,vue,md}\"",

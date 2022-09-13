@@ -56,22 +56,22 @@
           :maxWidth="maxWidthDiv"
         >
           <slot></slot>
-          <layout-footer
-            v-if="footerVisible"
-            v-bind="commonProps"
-            :fixed="fixedFooter"
-            :z-index="footerZIndex"
-            :min-width="minWidth"
-            :height="footerHeight"
-            :padding-left="siderWidth"
-            :style="footerTransform"
-            :fixedSider="fixedSider"
-            :siderVisible="siderVisible"
-            :showFooter="footerVisible"
-          >
-            <slot name="footer"></slot>
-          </layout-footer>
         </layout-content>
+        <layout-footer
+          v-if="footerVisible"
+          v-bind="commonProps"
+          :fixed="fixedFooter"
+          :z-index="footerZIndex"
+          :min-width="minWidth"
+          :height="footerHeight"
+          :padding-left="siderWidth"
+          :style="footerTransform"
+          :fixedSider="fixedSider"
+          :siderVisible="siderVisible"
+          :showFooter="footerVisible"
+        >
+          <slot name="footer"></slot>
+        </layout-footer>
       </LayoutContainer>
     </LayoutContainer>
   </LayoutContainer>
@@ -155,12 +155,8 @@ const { cssRender } = useCssRender()
 // fixed布局时，应用translateX样式(水平方向出现滚动条，拖动滚动条时，fixed元素跟着滚动)
 const hasFixedEl = computed(() => props.fixedHeaderAndTab || props.fixedFooter)
 const transformStyle = useFixedTransformStyle(hasFixedEl)
-const headerAndTabTransform = computed(() =>
-  props.fixedHeaderAndTab ? transformStyle.value : ''
-)
-const footerTransform = computed(() =>
-  props.fixedFooter ? transformStyle.value : ''
-)
+const headerAndTabTransform = computed(() => (props.fixedHeaderAndTab ? transformStyle.value : ''))
+const footerTransform = computed(() => (props.fixedFooter ? transformStyle.value : ''))
 /** 各个子组件的公共属性 */
 const commonProps = computed(() => {
   const { transitionDuration, transitionTimingFunction } = props
@@ -193,15 +189,9 @@ const siderWidth = computed(() => {
   return props.siderVisible ? width : 0
 })
 // 各子组件的属性
-const headerPaddingLeft = computed(() =>
-  isVertical.value ? siderWidth.value : 0
-)
+const headerPaddingLeft = computed(() => (isVertical.value ? siderWidth.value : 0))
 const tabPaddingLeft = computed(() => {
-  return !isVertical.value
-    ? props.tabMoveable
-      ? siderWidth.value
-      : 0
-    : siderWidth.value
+  return !isVertical.value ? (props.tabMoveable ? siderWidth.value : 0) : siderWidth.value
 })
 const siderPaddingTop = computed(() =>
   !isVertical.value && props.headerVisible

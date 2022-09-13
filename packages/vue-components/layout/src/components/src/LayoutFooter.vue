@@ -51,9 +51,8 @@ const style = computed(() => {
   } = props
   const position = fixed ? 'fixed' : 'static'
   const marginLeft = fixed ? paddingLeft : 0
-
   // return `position: ${position};z-index: ${zIndex};min-width: ${minWidth}px;height: ${height}px;padding-left: ${paddingLeft}px;transition-duration: ${transitionDuration}ms;transition-timing-function: ${transitionTimingFunction};`;
-  return `position: ${position};z-index: ${zIndex};height: ${height}px;padding-left: ${marginLeft}px;transition-duration: ${transitionDuration}ms;transition-timing-function: ${transitionTimingFunction};`
+  return `position: ${position};z-index: ${zIndex};height: ${height}px;padding-left: ${paddingLeft}px;transition-duration: ${transitionDuration}ms;transition-timing-function: ${transitionTimingFunction};`
 })
 
 // css
