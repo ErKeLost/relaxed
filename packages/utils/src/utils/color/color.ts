@@ -175,12 +175,9 @@ export function RGBAtoHex(rgba: RGBA): Hex {
     return ('00'.substr(0, 2 - h.length) + h).toUpperCase()
   }
 
-  return `#${[
-    toHex(rgba.r),
-    toHex(rgba.g),
-    toHex(rgba.b),
-    toHex(Math.round(rgba.a * 255))
-  ].join('')}`
+  return `#${[toHex(rgba.r), toHex(rgba.g), toHex(rgba.b), toHex(Math.round(rgba.a * 255))].join(
+    ''
+  )}`
 }
 
 export function RGBtoHex(rgba: RGB): Hex {
@@ -472,9 +469,7 @@ export function extractColor(
         showAlpha ? ', ' + color.alpha : ''
       })`
     } else if (mode === 'rgb') {
-      return `${isShowAlpha(mode)}(${red}, ${green}, ${blue}${
-        showAlpha ? ', ' + color.alpha : ''
-      })`
+      return `${isShowAlpha(mode)}(${red}, ${green}, ${blue}${showAlpha ? ', ' + color.alpha : ''})`
     } else if (mode === 'hsv') {
       return `${isShowAlpha(mode)}(${hue}, ${hsvSaturation}, ${value}${
         showAlpha ? ', ' + color.alpha : ''
@@ -484,13 +479,10 @@ export function extractColor(
   }
 
   if (typeof input === 'object') {
-    const shouldStrip =
-      typeof input.a === 'number' && input.a === 0 ? !!input.a : !input.a
+    const shouldStrip = typeof input.a === 'number' && input.a === 0 ? !!input.a : !input.a
     if (has(input, ['r', 'g', 'b'])) return stripAlpha(color.rgba, shouldStrip)
-    else if (has(input, ['h', 's', 'l']))
-      return stripAlpha(color.hsla, shouldStrip)
-    else if (has(input, ['h', 's', 'v']))
-      return stripAlpha(color.hsva, shouldStrip)
+    else if (has(input, ['h', 's', 'l'])) return stripAlpha(color.hsla, shouldStrip)
+    else if (has(input, ['h', 's', 'v'])) return stripAlpha(color.hsva, shouldStrip)
   }
 }
 

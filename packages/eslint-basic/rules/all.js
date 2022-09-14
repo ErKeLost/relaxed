@@ -1227,7 +1227,11 @@ module.exports = {
       'always',
       {
         line: { markers: ['*package', '!', '/', ',', '='] },
-        block: { balanced: true, markers: ['*package', '!', ',', ':', '::', 'flow-include'], exceptions: ['*'] }
+        block: {
+          balanced: true,
+          markers: ['*package', '!', ',', ':', '::', 'flow-include'],
+          exceptions: ['*']
+        }
       }
     ],
 
@@ -1671,4 +1675,4 @@ module.exports = {
      */
     'yield-star-spacing': 'error'
   }
-};
+}

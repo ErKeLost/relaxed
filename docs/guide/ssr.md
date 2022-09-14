@@ -108,10 +108,7 @@ app.use('*', async (req, res, next) => {
 
   try {
     // 1. Read index.html
-    let template = fs.readFileSync(
-      path.resolve(__dirname, 'index.html'),
-      'utf-8'
-    )
+    let template = fs.readFileSync(path.resolve(__dirname, 'index.html'), 'utf-8')
 
     // 2. Apply Vite HTML transforms. This injects the Vite HMR client, and
     //    also applies HTML transforms from Vite plugins, e.g. global preambles

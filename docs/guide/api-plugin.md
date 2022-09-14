@@ -347,10 +347,7 @@ Vite plugins can also provide hooks that serve Vite-specific purposes. These hoo
     return {
       name: 'html-transform',
       transformIndexHtml(html) {
-        return html.replace(
-          /<title>(.*?)<\/title>/,
-          `<title>Title replaced!</title>`
-        )
+        return html.replace(/<title>(.*?)<\/title>/, `<title>Title replaced!</title>`)
       }
     }
   }
@@ -368,10 +365,7 @@ Vite plugins can also provide hooks that serve Vite-specific purposes. These hoo
       bundle?: import('rollup').OutputBundle
       chunk?: import('rollup').OutputChunk
     }
-  ) =>
-    | IndexHtmlTransformResult
-    | void
-    | Promise<IndexHtmlTransformResult | void>
+  ) => IndexHtmlTransformResult | void | Promise<IndexHtmlTransformResult | void>
 
   type IndexHtmlTransformResult =
     | string

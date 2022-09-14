@@ -2,19 +2,15 @@
 export const isArray = Array.isArray
 // 判断类型
 export const objectToString = Object.prototype.toString
-export const toTypeString = (value: unknown): string =>
-  objectToString.call(value)
+export const toTypeString = (value: unknown): string => objectToString.call(value)
 // 是否为map
-export const isMap = (val: unknown): val is Map<any, any> =>
-  toTypeString(val) === '[object Map]'
+export const isMap = (val: unknown): val is Map<any, any> => toTypeString(val) === '[object Map]'
 // 是否为set
-export const isSet = (val: unknown): val is Set<any> =>
-  toTypeString(val) === '[object Set]'
+export const isSet = (val: unknown): val is Set<any> => toTypeString(val) === '[object Set]'
 // 是否日期
 export const isDate = (val: unknown): val is Date => val instanceof Date
 // 是否函数
-export const isFunction = (val: unknown): val is Function =>
-  typeof val === 'function'
+export const isFunction = (val: unknown): val is Function => typeof val === 'function'
 // 是否string
 export const isString = (val: unknown): val is string => typeof val === 'string'
 // 是否symbol

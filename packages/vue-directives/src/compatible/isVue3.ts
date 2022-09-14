@@ -6,7 +6,6 @@ interface Vue2 {
   }
 }
 
-const isVue3 = (app: Vue2 | App): app is App =>
-  'config' in app && 'globalProperties' in app.config
+const isVue3 = (app: Vue2 | App): app is App => 'config' in app && 'globalProperties' in app.config
 
 export { isVue3 }

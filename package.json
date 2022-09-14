@@ -25,7 +25,7 @@
     "dev:layout": "turbo run dev --filter=@erkelost/layout",
     "play": "pnpm dev --filter playground",
     "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,js,vue,md}\"",
+    "format": "prettier --write \"**/**/*.{ts,tsx,js,vue,md}\"",
     "prettier": "prettier --write .",
     "prettier-watch": "onchange '**/*.js' -- prettier --write {{changed}}",
     "eslint": "eslint . --ext .ts,.vue,.js,.tsx",

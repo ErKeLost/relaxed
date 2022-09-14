@@ -1,7 +1,6 @@
 function isObject(originValue) {
   return (
-    (originValue !== null && typeof originValue === 'object') ||
-    typeof originValue === 'function'
+    (originValue !== null && typeof originValue === 'object') || typeof originValue === 'function'
   )
 }
 function deepClone(originValue, map = new WeakMap()) {

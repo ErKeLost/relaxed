@@ -10,11 +10,7 @@ import {
 } from './utils/ripple-count'
 import { IRippleDirectiveOptions } from './options'
 const MULTIPLE_NUMBER = 2.05
-const ripple = (
-  event: PointerEvent,
-  el: HTMLElement,
-  options: IRippleDirectiveOptions
-) => {
+const ripple = (event: PointerEvent, el: HTMLElement, options: IRippleDirectiveOptions) => {
   const rect = el.getBoundingClientRect()
   const computedStyles = window.getComputedStyle(el)
   const { x, y } = getRelativePointer(event, rect)

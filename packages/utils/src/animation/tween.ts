@@ -1,10 +1,6 @@
 import * as easing from './easing'
 
-export type easingType =
-  | 'easeOutCubic'
-  | 'linear'
-  | 'easeOutExpo'
-  | 'easeInOutExpo'
+export type easingType = 'easeOutCubic' | 'linear' | 'easeOutExpo' | 'easeInOutExpo'
 export interface startFunc {
   (key: number): number
 }
@@ -48,8 +44,7 @@ export class Tween {
   elapsed?: number
   keys?: any
   constructor(options: AnimationOptions) {
-    const { from, to, duration, delay, easing, onStart, onUpdate, onFinish } =
-      options
+    const { from, to, duration, delay, easing, onStart, onUpdate, onFinish } = options
     for (const key in from) {
       if (to[key] === undefined) {
         to[key] = from[key]
@@ -102,8 +97,7 @@ export class Tween {
     for (const key in this.to) {
       this.keys[key] =
         this.from[key] +
-        (this.to[key] - this.from[key]) *
-          easing[this.easing](this.elapsed / this.duration)
+        (this.to[key] - this.from[key]) * easing[this.easing](this.elapsed / this.duration)
     }
     if (!this.started) {
       this.onStart && this.onStart(this.keys)

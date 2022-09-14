@@ -1,9 +1,6 @@
 import { isClient } from '@vueuse/core'
 
-export const isInContainer = (
-  el?: Element,
-  container?: Element | Window
-): boolean => {
+export const isInContainer = (el?: Element, container?: Element | Window): boolean => {
   if (!isClient || !el || !container) return false
 
   const elRect = el.getBoundingClientRect()
@@ -39,10 +36,7 @@ export const getOffsetTop = (el: HTMLElement) => {
   return offset
 }
 
-export const getOffsetTopDistance = (
-  el: HTMLElement,
-  containerEl: HTMLElement
-) => {
+export const getOffsetTopDistance = (el: HTMLElement, containerEl: HTMLElement) => {
   return Math.abs(getOffsetTop(el) - getOffsetTop(containerEl))
 }
 

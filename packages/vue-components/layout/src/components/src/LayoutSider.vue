@@ -1,8 +1,5 @@
 <template>
-  <aside
-    :class="fixed ? 'adny-layout__fixedSider' : 'adny-layout__sider'"
-    :style="style"
-  >
+  <aside :class="fixed ? 'adny-layout__fixedSider' : 'adny-layout__sider'" :style="style">
     <slot />
   </aside>
 </template>

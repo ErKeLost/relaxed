@@ -15,8 +15,7 @@ export const createContainer = ({
   rippleContainer.style.pointerEvents = 'none'
 
   // 兼容 ie  苹果
-  rippleContainer.style.webkitMaskImage =
-    '-webkit-radial-gradient(white, black)'
+  rippleContainer.style.webkitMaskImage = '-webkit-radial-gradient(white, black)'
 
   return rippleContainer
 }

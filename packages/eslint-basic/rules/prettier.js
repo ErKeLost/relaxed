@@ -20,4 +20,4 @@ module.exports = {
   endOfLine: 'lf', // 换行符使用 lf
   embeddedLanguageFormatting: 'auto', // 格式化嵌入的内容
   singleAttributePerLine: false // Html, vue, jsx 中每个属性占一行
-};
+}

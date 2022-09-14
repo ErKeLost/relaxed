@@ -3,8 +3,7 @@ import { isObject } from '../shared/index'
 
 export const keysOf = <T>(arr: T) => Object.keys(arr) as Array<keyof T>
 export const entriesOf = <T>(arr: T) => Object.entries(arr) as Entries<T>
-export const classNameToArray = (cls = '') =>
-  cls.split(' ').filter((item) => !!item.trim())
+export const classNameToArray = (cls = '') => cls.split(' ').filter((item) => !!item.trim())
 
 export const hasClass = (el: Element, cls: string): boolean => {
   if (!el || !cls) return false
@@ -22,27 +21,18 @@ export const removeClass = (el: Element, cls: string) => {
   el.classList.remove(...classNameToArray(cls))
 }
 
-export const setStyle = (
-  element: HTMLElement,
-  styleName: any,
-  value?: string | number
-) => {
+export const setStyle = (element: HTMLElement, styleName: any, value?: string | number) => {
   if (!element || !styleName) return
 
   if (isObject(styleName)) {
-    entriesOf(styleName).forEach(([prop, value]) =>
-      setStyle(element, prop, value)
-    )
+    entriesOf(styleName).forEach(([prop, value]) => setStyle(element, prop, value))
   } else {
     const key = camelize(styleName)
     element.style[key] = value
   }
 }
 
-export const removeStyle = (
-  element: HTMLElement,
-  style: CSSProperties | keyof CSSProperties
-) => {
+export const removeStyle = (element: HTMLElement, style: CSSProperties | keyof CSSProperties) => {
   if (!element || !style) return
 
   if (isObject(style)) {

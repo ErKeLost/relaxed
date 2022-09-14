@@ -78,7 +78,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed, watch, onMounted } from 'vue-demi'
+import { computed } from 'vue-demi'
 import LayoutTab from './components/src/LayoutTab.vue'
 import LayoutContent from './components/src/LayoutContent.vue'
 import LayoutSider from './components/src/LayoutSider.vue'

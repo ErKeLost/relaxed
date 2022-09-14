@@ -23,20 +23,14 @@ interface ViteHotContext {
   accept(): void
   accept(cb: (mod: ModuleNamespace | undefined) => void): void
   accept(dep: string, cb: (mod: ModuleNamespace | undefined) => void): void
-  accept(
-    deps: readonly string[],
-    cb: (mods: Array<ModuleNamespace | undefined>) => void
-  ): void
+  accept(deps: readonly string[], cb: (mods: Array<ModuleNamespace | undefined>) => void): void
 
   dispose(cb: (data: any) => void): void
   decline(): void
   invalidate(): void
 
   // `InferCustomEventPayload` provides types for built-in Vite events
-  on<T extends string>(
-    event: T,
-    cb: (payload: InferCustomEventPayload<T>) => void
-  ): void
+  on<T extends string>(event: T, cb: (payload: InferCustomEventPayload<T>) => void): void
   send<T extends string>(event: T, data?: InferCustomEventPayload<T>): void
 }
 ```
@@ -90,12 +84,9 @@ if (import.meta.hot) {
   })
 
   // Can also accept an array of dep modules:
-  import.meta.hot.accept(
-    ['./foo.js', './bar.js'],
-    ([newFooModule, newBarModule]) => {
-      // the callback receives the updated modules in an Array
-    }
-  )
+  import.meta.hot.accept(['./foo.js', './bar.js'], ([newFooModule, newBarModule]) => {
+    // the callback receives the updated modules in an Array
+  })
 }
 ```
 

@@ -7,10 +7,7 @@ import {
   IRippleDirectiveOptionWithBinding
 } from './options'
 import { ripple } from './v-ripple'
-const optionMap = new WeakMap<
-  HTMLElement,
-  Partial<IRippleDirectiveOptions> | false
->()
+const optionMap = new WeakMap<HTMLElement, Partial<IRippleDirectiveOptions> | false>()
 interface Vue2 {
   default: {
     version: string
@@ -22,10 +19,7 @@ const globalOptions = {
 export const VRippleDirective = (app: App) => {
   const hooks = getHooks(app)
   app.directive('ripple', {
-    [hooks.mounted](
-      el: HTMLElement,
-      binding: IRippleDirectiveOptionWithBinding
-    ) {
+    [hooks.mounted](el: HTMLElement, binding: IRippleDirectiveOptionWithBinding) {
       optionMap.set(el, binding.value ?? {})
 
       el.addEventListener('pointerdown', (event) => {

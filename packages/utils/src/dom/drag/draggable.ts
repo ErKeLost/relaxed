@@ -68,10 +68,7 @@ export class DOMUtils {
    * @param element
    * @param options
    */
-  static triggerDragEvent(
-    element: HTMLElement,
-    options: DragEventOptions
-  ): void {
+  static triggerDragEvent(element: HTMLElement, options: DragEventOptions): void {
     let isDragging = false
 
     const moveFn = function (event: Event) {
@@ -107,11 +104,7 @@ export class DOMUtils {
   }
 
   static getBoundingClientRect(element: HTMLElement): DOMRect | null {
-    if (
-      element &&
-      isObject(element) &&
-      element.nodeType === NodeType.ELEMENT_NODE
-    ) {
+    if (element && isObject(element) && element.nodeType === NodeType.ELEMENT_NODE) {
       return element.getBoundingClientRect()
     }
 
@@ -190,11 +183,7 @@ export class DOMUtils {
    * @param className
    * @param force
    */
-  public static toggleClass(
-    element: HTMLElement,
-    className: string,
-    force?: boolean
-  ): void {
+  public static toggleClass(element: HTMLElement, className: string, force?: boolean): void {
     if (
       element &&
       isObject(element) &&
@@ -247,12 +236,7 @@ export class DOMUtils {
   }
 
   static getRootScrollTop(): number {
-    return (
-      window.pageYOffset ||
-      document.documentElement.scrollTop ||
-      document.body.scrollTop ||
-      0
-    )
+    return window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0
   }
 
   static setRootScrollTop(value: number): void {
@@ -265,9 +249,7 @@ export class DOMUtils {
       return 0
     }
 
-    const scrollTop = scroller
-      ? DOMUtils.getScrollTop(scroller)
-      : DOMUtils.getRootScrollTop()
+    const scrollTop = scroller ? DOMUtils.getScrollTop(scroller) : DOMUtils.getRootScrollTop()
     return el.getBoundingClientRect().top + scrollTop
   }
 

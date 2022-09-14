@@ -9,7 +9,7 @@ import { VClickoutside } from './directives/clickoutside'
 // import { VFormatTime } from './src/directives/formattime/src/v-format-time'
 // export default Adny
 export {
-  VClickoutside,
+  VClickoutside
   // VDebounce,
   // VLongPress,
   // VPermission,

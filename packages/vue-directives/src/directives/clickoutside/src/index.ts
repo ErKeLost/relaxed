@@ -5,11 +5,7 @@ export const isElement = (e: unknown): e is Element => {
 }
 
 export type Nullable<T> = null | T
-import type {
-  ComponentPublicInstance,
-  DirectiveBinding,
-  ObjectDirective
-} from 'vue'
+import type { ComponentPublicInstance, DirectiveBinding, ObjectDirective } from 'vue'
 
 type DocumentHandler = <T extends MouseEvent>(mouseup: T, mousedown: T) => void
 type FlushList = Map<
@@ -35,10 +31,7 @@ if (isClient) {
   })
 }
 
-function createDocumentHandler(
-  el: HTMLElement,
-  binding: DirectiveBinding
-): DocumentHandler {
+function createDocumentHandler(el: HTMLElement, binding: DirectiveBinding): DocumentHandler {
   let excludes: HTMLElement[] = []
   if (Array.isArray(binding.arg)) {
     excludes = binding.arg
@@ -56,17 +49,14 @@ function createDocumentHandler(
     const mouseDownTarget = mousedown?.target as Node
     const isBound = !binding || !binding.instance
     const isTargetExists = !mouseUpTarget || !mouseDownTarget
-    const isContainedByEl =
-      el.contains(mouseUpTarget) || el.contains(mouseDownTarget)
+    const isContainedByEl = el.contains(mouseUpTarget) || el.contains(mouseDownTarget)
     const isSelf = el === mouseUpTarget
 
     const isTargetExcluded =
-      (excludes.length &&
-        excludes.some((item) => item?.contains(mouseUpTarget))) ||
+      (excludes.length && excludes.some((item) => item?.contains(mouseUpTarget))) ||
       (excludes.length && excludes.includes(mouseDownTarget as HTMLElement))
     const isContainedByPopper =
-      popperRef &&
-      (popperRef.contains(mouseUpTarget) || popperRef.contains(mouseDownTarget))
+      popperRef && (popperRef.contains(mouseUpTarget) || popperRef.contains(mouseDownTarget))
     if (
       isBound ||
       isTargetExists ||
@@ -99,9 +89,7 @@ const ClickOutside: ObjectDirective = {
     }
 
     const handlers = nodeList.get(el)
-    const oldHandlerIndex = handlers.findIndex(
-      (item) => item.bindingFn === binding.oldValue
-    )
+    const oldHandlerIndex = handlers.findIndex((item) => item.bindingFn === binding.oldValue)
     const newHandler = {
       documentHandler: createDocumentHandler(el, binding),
       bindingFn: binding.value

@@ -1,9 +1,5 @@
 const withLog =
-  (date: {
-    getHours: () => any
-    getMinutes: () => any
-    getSeconds: () => any
-  }) =>
+  (date: { getHours: () => any; getMinutes: () => any; getSeconds: () => any }) =>
   (type: any) =>
   (data: any) => {
     console.log(

@@ -65,10 +65,7 @@ export const VClipBoardDirective = (app: App) => {
   })
 }
 
-export const toClipboard = (
-  text: string,
-  action: any = 'copy'
-): Promise<unknown> => {
+export const toClipboard = (text: string, action: any = 'copy'): Promise<unknown> => {
   return new Promise((resolve, reject) => {
     const fakeElement = document.createElement('button')
     const clipboard = new ClipboardJS(fakeElement, {

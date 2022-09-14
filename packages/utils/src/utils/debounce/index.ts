@@ -13,15 +13,13 @@ function debounce(
       // 判断是否需要立即执行
       if (headExection && !isInvoke) {
         const result = fn.apply(this, args)
-        if (resCallback && typeof resCallback === 'function')
-          resCallback(result)
+        if (resCallback && typeof resCallback === 'function') resCallback(result)
         resolve(result)
         isInvoke = true
       } else {
         timer = setTimeout(() => {
           const result = fn.apply(this, args)
-          if (resCallback && typeof resCallback === 'function')
-            resCallback(result)
+          if (resCallback && typeof resCallback === 'function') resCallback(result)
           resolve(result)
           isInvoke = false
         }, delay)

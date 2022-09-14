@@ -85,10 +85,7 @@ interface ViteDevServer {
    * Programmatically resolve, load and transform a URL and get the result
    * without going through the http request pipeline.
    */
-  transformRequest(
-    url: string,
-    options?: TransformOptions
-  ): Promise<TransformResult | null>
+  transformRequest(url: string, options?: TransformOptions): Promise<TransformResult | null>
   /**
    * Apply Vite built-in HTML transforms and any plugin HTML transforms.
    */
@@ -128,9 +125,7 @@ interface ViteDevServer {
 **Type Signature:**
 
 ```ts
-async function build(
-  inlineConfig?: InlineConfig
-): Promise<RollupOutput | RollupOutput[]>
+async function build(inlineConfig?: InlineConfig): Promise<RollupOutput | RollupOutput[]>
 ```
 
 **Example Usage:**

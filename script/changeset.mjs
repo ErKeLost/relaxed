@@ -10,7 +10,9 @@ const updateChangesetIgnore = () => {
   const changesetConfig = resolveJson(CHANGESET_CONFIG)
   changesetConfig.ignore = privatePkgNames
 
-  fs.writeFileSync(CHANGESET_CONFIG, JSON.stringify(changesetConfig, null, 2), { encoding: 'utf-8' })
+  fs.writeFileSync(CHANGESET_CONFIG, JSON.stringify(changesetConfig, null, 2), {
+    encoding: 'utf-8'
+  })
 }
 
 updateChangesetIgnore()
