@@ -22,7 +22,7 @@
     "changeset": "changeset",
     "version-packages": "changeset version",
     "dev": "turbo run dev --parallel",
-    "dev:layout": "turbo run dev --filter=@erkelost/layout",
+    "dev:layout": "turbo run dev --filter=@relaxed/vue-components",
     "play": "pnpm dev --filter playground",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/**/*.{ts,tsx,js,vue,md}\"",

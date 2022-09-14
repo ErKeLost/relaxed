@@ -89,7 +89,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import adnyLayout from '../components/layout/index.vue'
+import adnyLayout from '../components/layout/src/index.vue'
 
 type Mode = 'vertical' | 'horizontal'
 const mode = ref<Mode>('vertical')

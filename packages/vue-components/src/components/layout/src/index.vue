@@ -79,13 +79,13 @@
 
 <script setup lang="ts">
 import { computed } from 'vue-demi'
-import LayoutTab from './src/LayoutTab.vue'
-import LayoutContent from './src/LayoutContent.vue'
-import LayoutSider from './src/LayoutSider.vue'
-import LayoutHeader from './src/LayoutHeader.vue'
-import LayoutFooter from './src/LayoutFooter.vue'
-import LayoutContainer from './src/LayoutContainer.vue'
-import { useCssRender, useFixedTransformStyle } from '../../hooks'
+import LayoutTab from './LayoutTab.vue'
+import LayoutContent from './LayoutContent.vue'
+import LayoutSider from './LayoutSider.vue'
+import LayoutHeader from './LayoutHeader.vue'
+import LayoutFooter from './LayoutFooter.vue'
+import LayoutContainer from './LayoutContainer.vue'
+import { useCssRender, useFixedTransformStyle } from '../../../hooks'
 
 interface Props {
   maxWidth?: number
