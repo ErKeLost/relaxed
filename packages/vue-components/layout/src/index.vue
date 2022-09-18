@@ -85,7 +85,7 @@ import LayoutSider from './LayoutSider.vue'
 import LayoutHeader from './LayoutHeader.vue'
 import LayoutFooter from './LayoutFooter.vue'
 import LayoutContainer from './LayoutContainer.vue'
-import { useCssRender, useFixedTransformStyle } from '../../../hooks'
+import { useCssRender, useFixedTransformStyle } from './hooks'
 
 interface Props {
   maxWidth?: number

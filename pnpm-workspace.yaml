@@ -2,6 +2,7 @@ packages:
   - 'packages/**/**'
   - 'playground'
   - 'docs'
+  - 'vue-component/**'
 # packages:
 #   # all packages in subdirs of packages/ and components/
 #   - 'packages/**'

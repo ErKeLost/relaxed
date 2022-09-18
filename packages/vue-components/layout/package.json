@@ -1,0 +1,22 @@
+{
+  "name": "@relaxed/layout",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsx ./build.ts",
+    "tsup": "tsup"
+  },
+  "devDependencies": {
+    "css-render": "^0.15.11",
+    "tsup": "^6.2.3",
+    "tsx": "^3.9.0",
+    "unplugin-vue": "3.0.3-1",
+    "vue": "3.2.39",
+    "vue-demi": "^0.13.11"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

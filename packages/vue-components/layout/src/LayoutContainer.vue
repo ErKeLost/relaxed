@@ -5,7 +5,7 @@
 </template>
 <script setup lang="ts">
 import { computed } from 'vue-demi'
-import { useCssRender } from '@/hooks'
+import { useCssRender } from './hooks'
 interface Props {
   direction?: 'horizontal' | 'vertical'
 }
