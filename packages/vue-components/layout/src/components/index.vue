@@ -56,35 +56,35 @@
           :maxWidth="maxWidthDiv"
         >
           <slot></slot>
-          <layout-footer
-            v-if="footerVisible"
-            v-bind="commonProps"
-            :fixed="fixedFooter"
-            :z-index="footerZIndex"
-            :min-width="minWidth"
-            :height="footerHeight"
-            :padding-left="siderWidth"
-            :style="footerTransform"
-            :fixedSider="fixedSider"
-            :siderVisible="siderVisible"
-            :showFooter="footerVisible"
-          >
-            <slot name="footer"></slot>
-          </layout-footer>
         </layout-content>
+        <layout-footer
+          v-if="footerVisible"
+          v-bind="commonProps"
+          :fixed="fixedFooter"
+          :z-index="footerZIndex"
+          :min-width="minWidth"
+          :height="footerHeight"
+          :padding-left="siderWidth"
+          :style="footerTransform"
+          :fixedSider="fixedSider"
+          :siderVisible="siderVisible"
+          :showFooter="footerVisible"
+        >
+          <slot name="footer"></slot>
+        </layout-footer>
       </LayoutContainer>
     </LayoutContainer>
   </LayoutContainer>
 </template>
 
 <script setup lang="ts">
-import { computed, watch, onMounted } from 'vue-demi'
-import LayoutTab from './components/LayoutTab.vue'
-import LayoutContent from './components/LayoutContent.vue'
-import LayoutSider from './components/LayoutSider.vue'
-import LayoutHeader from './components/LayoutHeader.vue'
-import LayoutFooter from './components/LayoutFooter.vue'
-import LayoutContainer from './components/LayoutContainer.vue'
+import { computed } from 'vue-demi'
+import LayoutTab from './LayoutTab.vue'
+import LayoutContent from './LayoutContent.vue'
+import LayoutSider from './LayoutSider.vue'
+import LayoutHeader from './LayoutHeader.vue'
+import LayoutFooter from './LayoutFooter.vue'
+import LayoutContainer from './LayoutContainer.vue'
 import { useCssRender, useFixedTransformStyle } from '@/hooks'
 
 interface Props {

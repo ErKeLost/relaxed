@@ -1,12 +1,12 @@
 import type { App } from 'vue-demi'
-import RelaxedLayout from './src/index.vue'
+import AdnyLayout from './index.vue'
 
 function install(app: App) {
-  app.component('RelaxedLayout', RelaxedLayout)
+  app.component('AdnyLayout', AdnyLayout)
 }
 
-RelaxedLayout.install = install
-RelaxedLayout.name = 'RelaxedLayout'
+AdnyLayout.install = install
+AdnyLayout.name = 'AdnyLayout'
 export interface LayoutProps {
   // 第三种布局 tab 不跟 header 一起变 的 顶部菜单布局
   tabMoveable?: boolean
@@ -44,4 +44,4 @@ export interface LayoutProps {
   transitionTimingFunction?: string
 }
 
-export default RelaxedLayout
+export default AdnyLayout

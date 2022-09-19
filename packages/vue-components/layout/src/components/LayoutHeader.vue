@@ -6,7 +6,7 @@
 
 <script setup lang="ts">
 import { computed } from 'vue-demi'
-import { useCssRender } from './hooks'
+import { useCssRender } from '@/hooks'
 interface Props {
   /** 开启fixed布局 */
   fixed?: boolean

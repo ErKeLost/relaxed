@@ -6,7 +6,7 @@
 
 <script setup lang="ts">
 import { computed, watch } from 'vue-demi'
-import { useCssRender } from './hooks'
+import { useCssRender } from '@/hooks'
 interface Props {
   top?: number
   holdHeaderFixedSider?: boolean
