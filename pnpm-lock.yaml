@@ -138,10 +138,7 @@ importers:
   packages/utils:
     specifiers: {}
 
-  packages/vue-components/icon:
-    specifiers: {}
-
-  packages/vue-components/layout:
+  packages/vue-components:
     specifiers:
       '@vitejs/plugin-vue': ^2.2.0
       '@vitejs/plugin-vue-jsx': ^1.3.9

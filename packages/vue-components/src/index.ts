@@ -1,5 +1,5 @@
 import type { App } from 'vue-demi'
-import AdnyLayout from './index.vue'
+import AdnyLayout from './components/layout/index.vue'
 
 function install(app: App) {
   app.component('AdnyLayout', AdnyLayout)
