@@ -1,6 +1,6 @@
 {
   "name": "@relaxed/layout",
-  "version": "2.9.3",
+  "version": "2.9.5",
   "main": "dist/index.umd.js",
   "module": "dist/index.es.js",
   "types": "dist/index.d.ts",

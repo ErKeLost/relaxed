@@ -2,7 +2,7 @@ import type { App } from 'vue-demi'
 import RelaxedLayout from './components/layout/index.vue'
 
 function install(app: App) {
-  app.component('AdnyLayout', RelaxedLayout)
+  app.component('RelaxedLayout', RelaxedLayout)
 }
 
 RelaxedLayout.install = install
