@@ -1,5 +1,5 @@
 import { isClient } from '@vueuse/core'
-import { isObject } from '../shared/index'
+import { isObject } from '../../../shared/index'
 
 export const keysOf = <T>(arr: T) => Object.keys(arr) as Array<keyof T>
 export const entriesOf = <T>(arr: T) => Object.entries(arr) as Entries<T>

@@ -1,4 +1,4 @@
-import { isObject, isString } from '../../shared'
+import { isObject, isString } from '../../../../shared'
 export const enum NodeType {
   ELEMENT_NODE = 1,
   ATTRIBUTE_NODE = 2,
