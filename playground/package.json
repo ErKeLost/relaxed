@@ -14,6 +14,7 @@
     "@relaxed/utils": "workspace:*",
     "@relaxed/vue-directives": "workspace:*",
     "@vueuse/core": "^7.3.0",
+    "date-fns": "^2.29.3",
     "naive-ui": "^2.33.2",
     "vue": "^3.2.37"
   },
