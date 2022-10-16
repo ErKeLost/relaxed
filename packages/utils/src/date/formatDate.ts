@@ -3,7 +3,7 @@
  * @module date
  */
 
-import { format } from 'date-fns';
+import { format } from 'date-fns'
 
 /**
  * @author zxyue25
@@ -25,8 +25,8 @@ import { format } from 'date-fns';
 
 export const formatDate = (date: number | Date, formatStr = 'yyyy-MM-dd HH:mm') => {
   if (typeof date === 'number' && date.toString().length === 10) {
-    return format(date * 1000, formatStr);
+    return format(date * 1000, formatStr)
   } else {
-    return format(date, formatStr);
+    return format(date, formatStr)
   }
-};
+}

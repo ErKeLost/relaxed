@@ -3,7 +3,7 @@
  * @module date
  */
 
-import { getUnixTime } from 'date-fns';
+import { getUnixTime } from 'date-fns'
 
 /**
  * @author zxyue25
@@ -22,4 +22,4 @@ import { getUnixTime } from 'date-fns';
  * ```
  */
 
-export const getTimestamp = (date: number | Date = new Date()): number => getUnixTime(date);
+export const getTimestamp = (date: number | Date = new Date()): number => getUnixTime(date)

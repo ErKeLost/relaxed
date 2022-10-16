@@ -3,9 +3,9 @@
  * @module date
  */
 
-import { formatDuration } from 'date-fns';
+import { formatDuration } from 'date-fns'
 
-import { LANGUAGE_DATE_FNS_MAP } from './locale';
+import { LANGUAGE_DATE_FNS_MAP } from './locale'
 
 /**
  * @author zxyue25
@@ -29,28 +29,28 @@ import { LANGUAGE_DATE_FNS_MAP } from './locale';
  */
 
 type OptionType = {
-  locale?: Locale;
-  zero?: boolean;
-  delimiter?: string;
-  format?: Array<string>;
-  lang?: keyof typeof LANGUAGE_DATE_FNS_MAP;
-};
+  locale?: Locale
+  zero?: boolean
+  delimiter?: string
+  format?: Array<string>
+  lang?: keyof typeof LANGUAGE_DATE_FNS_MAP
+}
 
 export const formatDateDuration = (second: number, options?: OptionType) => {
-  const hours = Math.floor(second / 3600);
-  const minutes = Math.floor((second % 3600) / 60);
-  const seconds = Math.floor(second % 60);
+  const hours = Math.floor(second / 3600)
+  const minutes = Math.floor((second % 3600) / 60)
+  const seconds = Math.floor(second % 60)
 
   return formatDuration(
     {
       hours,
       minutes,
-      seconds,
+      seconds
     },
     {
       zero: options?.zero || false,
       locale: options?.locale || LANGUAGE_DATE_FNS_MAP[options?.lang || 'en'],
-      ...options,
-    },
-  ).replace(/ /g, '');
-};
+      ...options
+    }
+  ).replace(/ /g, '')
+}

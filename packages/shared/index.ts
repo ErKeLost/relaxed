@@ -10,6 +10,7 @@ export const isSet = (val: unknown): val is Set<any> => toTypeString(val) === '[
 // 是否日期
 export const isDate = (val: unknown): val is Date => val instanceof Date
 // 是否函数
+// eslint-disable-next-line @typescript-eslint/ban-types
 export const isFunction = (val: unknown): val is Function => typeof val === 'function'
 // 是否string
 export const isString = (val: unknown): val is string => typeof val === 'string'
@@ -31,8 +32,6 @@ export const isDef = (val: unknown) => val === undefined
 
 export const isEmpty = (val: unknown) => {
   return (
-    (!val && val !== 0 && val !== '') ||
-    (isArray(val) && !val.length) ||
-    (isObject(val) && !Object.keys(val).length)
+    (!val && val !== 0 && val !== '') || (isArray(val) && !val.length) || (isObject(val) && !Object.keys(val).length)
   )
 }

@@ -3,10 +3,10 @@
  * @module date
  */
 
-import { formatDistance } from 'date-fns';
+import { formatDistance } from 'date-fns'
 
-import { getMilliTimestamp } from './getMilliTimestamp';
-import { LANGUAGE_DATE_FNS_MAP } from './locale';
+import { getMilliTimestamp } from './getMilliTimestamp'
+import { LANGUAGE_DATE_FNS_MAP } from './locale'
 
 /**
  * @author zxyue25
@@ -28,27 +28,27 @@ import { LANGUAGE_DATE_FNS_MAP } from './locale';
  * ```
  */
 
-type OptionType = {
-  locale?: Locale;
-  addSuffix?: boolean;
-  lang?: keyof typeof LANGUAGE_DATE_FNS_MAP;
-};
+interface OptionType {
+  locale?: Locale
+  addSuffix?: boolean
+  lang?: keyof typeof LANGUAGE_DATE_FNS_MAP
+}
 
 export const formatDateDistance = (
-  date: Date | number = 0,
-  baseDate: Date | number = new Date(),
   options?: OptionType,
+  date: Date | number = 0,
+  baseDate: Date | number = new Date()
 ): string => {
   const initOptions = {
     addSuffix: options?.addSuffix || true,
     locale: options?.locale || LANGUAGE_DATE_FNS_MAP[options?.lang || 'en'],
-    ...options,
-  };
+    ...options
+  }
   if (
     (typeof date === 'number' && date.toString().length === 10) ||
     (typeof baseDate === 'number' && baseDate.toString().length === 10)
   ) {
-    return formatDistance(getMilliTimestamp(date), getMilliTimestamp(baseDate), initOptions);
+    return formatDistance(getMilliTimestamp(date), getMilliTimestamp(baseDate), initOptions)
   }
-  return formatDistance(date, baseDate, initOptions);
-};
+  return formatDistance(date, baseDate, initOptions)
+}

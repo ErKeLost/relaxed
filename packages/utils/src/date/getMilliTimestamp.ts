@@ -3,7 +3,7 @@
  * @module date
  */
 
-import { getTime } from 'date-fns';
+import { getTime } from 'date-fns'
 
 /**
  * @author zxyue25
@@ -24,16 +24,16 @@ import { getTime } from 'date-fns';
  */
 export const getMilliTimestamp = (date?: number | Date): number => {
   if (!date) {
-    return getTime(new Date());
+    return getTime(new Date())
   } else {
     if (date instanceof Date) {
-      return getTime(date);
+      return getTime(date)
     } else {
       if (date.toString().length === 10) {
-        return getTime(date * 1000);
+        return getTime(date * 1000)
       } else {
-        return date;
+        return date
       }
     }
   }
-};
+}

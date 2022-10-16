@@ -35,19 +35,11 @@
         </div>
         <div class="pt-24px">
           <span class="pr-8px">fixedHeaderAndTab</span>
-          <input
-            type="checkbox"
-            :checked="fixedHeaderAndTab"
-            @change="setFixedHeaderAndTab"
-          />
+          <input type="checkbox" :checked="fixedHeaderAndTab" @change="setFixedHeaderAndTab" />
         </div>
         <div class="pt-24px">
           <span class="pr-8px">tabMoveable</span>
-          <input
-            type="checkbox"
-            :checked="tabMoveable"
-            @change="setTabMoveable"
-          />
+          <input type="checkbox" :checked="tabMoveable" @change="setTabMoveable" />
         </div>
         <div class="pt-24px">
           <span class="pr-8px">不占据header高度fixed</span>
@@ -59,11 +51,7 @@
         </div>
         <div class="pt-24px">
           <span class="pr-8px">FixedSider</span>
-          <input
-            type="checkbox"
-            :checked="fixedSider"
-            @change="setFixedSider"
-          />
+          <input type="checkbox" :checked="fixedSider" @change="setFixedSider" />
         </div>
         <div class="pt-24px">
           <span class="pr-8px">展示sider</span>
@@ -75,19 +63,11 @@
         </div>
         <div class="pt-24px">
           <span class="pr-8px">固定footer</span>
-          <input
-            type="checkbox"
-            :checked="fixedFooter"
-            @change="setFixedFooter"
-          />
+          <input type="checkbox" :checked="fixedFooter" @change="setFixedFooter" />
         </div>
         <div class="pt-24px">
           <span class="pr-8px">siderCollapse</span>
-          <input
-            type="checkbox"
-            :checked="siderCollapse"
-            @change="setSiderCollapse"
-          />
+          <input type="checkbox" :checked="siderCollapse" @change="setSiderCollapse" />
         </div>
         <!-- <div v-for="i in 100" :key="i" class="text-center">
           {{ i }}

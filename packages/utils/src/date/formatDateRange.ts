@@ -3,7 +3,7 @@
  * @module date
  */
 
-import { formatDate } from './formatDate';
+import { formatDate } from './formatDate'
 
 /**
  * @author zxyue25
@@ -28,5 +28,9 @@ export const formatDateRange = (
   startDate: number | Date,
   endDate: number | Date,
   formatStr = 'yyyy/MM/dd',
-  joinStr = '-',
-) => `${formatDate(startDate, formatStr || 'yyyy/MM/dd')} ${joinStr} ${formatDate(endDate, formatStr || 'yyyy/MM/dd')}`;
+  joinStr = '-'
+) =>
+  `${formatDate(startDate, formatStr || 'yyyy/MM/dd')} ${joinStr} ${formatDate(
+    endDate,
+    formatStr || 'yyyy/MM/dd'
+  )}`
