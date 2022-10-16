@@ -35,9 +35,9 @@ interface OptionType {
 }
 
 export const formatDateDistance = (
-  options?: OptionType,
   date: Date | number = 0,
-  baseDate: Date | number = new Date()
+  baseDate: Date | number = new Date(),
+  options?: OptionType
 ): string => {
   const initOptions = {
     addSuffix: options?.addSuffix || true,

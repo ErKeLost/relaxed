@@ -5,14 +5,14 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc --noEmit && vite build",
+    "build:ts": "vue-tsc --noEmit && vite build",
+    "build": "vite build",
     "preview": "vite preview",
     "format": "prettier --write \"**/*.{ts,tsx,js,vue,md}\"",
     "eslint": "eslint . --ext .ts,.vue,.js,.tsx"
   },
   "dependencies": {
     "@relaxed/utils": "workspace:*",
-    "@relaxed/vue-directives": "workspace:*",
     "@vueuse/core": "^7.3.0",
     "date-fns": "^2.29.3",
     "naive-ui": "^2.33.2",

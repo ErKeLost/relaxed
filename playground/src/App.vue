@@ -1,16 +1,14 @@
 <script setup lang="ts">
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-import { ref } from 'vue'
+import { formatDateDistance } from '@relaxed/utils'
 import HelloWorld from './components/HelloWorld.vue'
 import ScopeSlot from './components/ScopeSlot.vue'
-const music = ref<string[]>()
-const a = ['123', '456']
-function click() {}
-function clickReactive() {
-  music.value = a
+function clickSlot() {
+  console.log('clickSlot')
+  const res = formatDateDistance({ lang: 'zh-CN' }, 1658320372161, 1658717927699)
+  console.log(res)
 }
-console.log(666)
 </script>
 
 <template>
@@ -19,22 +17,16 @@ console.log(666)
       <img src="/vite.svg" class="logo" alt="Vite logo" />
     </a>
     <a href="https://vuejs.org/" target="_blank">
-      <img
-        src="./assets/vue.svg"
-        class="logo vue"
-        alt="Vue logo"
-      />
+      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
     </a>
   </div>
-  {{ music }}
-  <n-button @click="clickReactive">clickReactive</n-button>
   <ScopeSlot
     :item="{
       name: 'erkelost'
     }"
   >
     <template #a>
-      <n-button @click="click">clickOutSide</n-button>
+      <n-button @click="clickSlot">clickOutSide</n-button>
     </template>
     <template #b="{ item }">
       <n-button>{{ item }}</n-button>
