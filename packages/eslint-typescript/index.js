@@ -26,10 +26,7 @@ module.exports = {
   rules: {
     // TS
     '@typescript-eslint/consistent-type-definitions': ['error', 'interface'],
-    '@typescript-eslint/consistent-type-imports': [
-      'error',
-      { prefer: 'type-imports', disallowTypeAnnotations: false }
-    ],
+    '@typescript-eslint/consistent-type-imports': ['error', { prefer: 'type-imports', disallowTypeAnnotations: false }],
     '@typescript-eslint/ban-types': [
       'error',
       {
@@ -61,10 +58,7 @@ module.exports = {
       }
     ],
     'no-use-before-define': 'off',
-    '@typescript-eslint/no-use-before-define': [
-      'error',
-      { functions: false, classes: false, variables: true }
-    ],
+    '@typescript-eslint/no-use-before-define': ['error', { functions: false, classes: false, variables: true }],
     'no-shadow': 'off',
     '@typescript-eslint/no-shadow': 'error',
 
