@@ -11,7 +11,7 @@
     "plop": "plop & rimraf ./plopfile.mjs",
     "postplop": "pnpm i",
     "prebuild": "rimraf packages/*/dist",
-    "build": "turbo run build --ignore='packages/**/*'",
+    "build": "turbo run build --filter=@relaxed/*",
     "build:docs": "pnpm build --filter docs",
     "build:components": "pnpm build --filter components",
     "build:utils": "pnpm build --filter utils",
