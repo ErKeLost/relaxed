@@ -1,5 +1,5 @@
 {
-  "name": "eslint-config-relaxed-ts",
+  "name": "eslint-config-relaxed-prettier",
   "version": "1.0.11",
   "description": "relaxed's base eslint config presets with prettier",
   "license": "MIT",
@@ -14,15 +14,16 @@
     "lint": "eslint . --config=index.js"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.36.1",
-    "@typescript-eslint/parser": "^5.36.1",
-    "eslint-config-relaxed-base": "workspace:*"
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-define-config": "^1.7.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-yml": "^1.2.0",
+    "prettier": "^2.7.1"
   },
   "peerDependencies": {
     "eslint": ">=7.4.0"
   },
   "devDependencies": {
-    "eslint": "^8.23.0",
-    "typescript": "^4.8.2"
+    "eslint": "^8.25.0"
   }
 }
