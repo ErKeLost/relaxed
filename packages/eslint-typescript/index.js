@@ -2,6 +2,7 @@ const base = require('eslint-config-relaxed-base/base')
 const baseRules = require('eslint-config-relaxed-base/rules')
 
 module.exports = {
+  root: true,
   plugins: ['@typescript-eslint'],
   extends: [
     'relaxed-base/base',

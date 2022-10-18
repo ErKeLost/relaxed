@@ -198,7 +198,6 @@ importers:
   playground:
     specifiers:
       '@relaxed/utils': workspace:*
-      '@relaxed/vue-directives': workspace:*
       '@vitejs/plugin-vue': ^3.0.0
       '@vueuse/core': ^7.3.0
       date-fns: ^2.29.3
@@ -214,7 +213,6 @@ importers:
       vue-tsc: ^0.38.4
     dependencies:
       '@relaxed/utils': link:../packages/utils
-      '@relaxed/vue-directives': link:../packages/vue-directives
       '@vueuse/core': 7.7.1_vue@3.2.38
       date-fns: 2.29.3
       naive-ui: 2.33.2_vue@3.2.38

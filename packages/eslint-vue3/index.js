@@ -1,4 +1,5 @@
 module.exports = {
+  root: true,
   extends: ['plugin:vue/vue3-recommended', 'relaxed-ts'],
   overrides: [
     {
