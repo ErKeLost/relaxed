@@ -6,7 +6,11 @@ import HelloWorld from './components/HelloWorld.vue'
 import ScopeSlot from './components/ScopeSlot.vue'
 function clickSlot() {
   console.log('clickSlot')
-  const res = formatDateDistance({ lang: 'zh-CN' }, 1658320372161, 1658717927699)
+  const res = formatDateDistance(
+    { lang: 'zh-CN' },
+    1658320372161,
+    1658717927699
+  )
   console.log(res)
 }
 </script>
@@ -17,7 +21,11 @@ function clickSlot() {
       <img src="/vite.svg" class="logo" alt="Vite logo" />
     </a>
     <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
+      <img
+        src="./assets/vue.svg"
+        class="logo vue"
+        alt="Vue logo"
+      />
     </a>
   </div>
   <ScopeSlot

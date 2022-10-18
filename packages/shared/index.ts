@@ -17,7 +17,8 @@ export const isString = (val: unknown): val is string => typeof val === 'string'
 // 是否symbol
 export const isSymbol = (val: unknown): val is symbol => typeof val === 'symbol'
 // 是否object
-export const isObject = (val: unknown): val is Record<any, any> => val !== null && typeof val === 'object'
+export const isObject = (val: unknown): val is Record<any, any> =>
+  val !== null && typeof val === 'object'
 export const toRawType = (value: unknown): string => {
   return toTypeString(value).slice(8, -1)
 }
@@ -32,6 +33,8 @@ export const isDef = (val: unknown) => val === undefined
 
 export const isEmpty = (val: unknown) => {
   return (
-    (!val && val !== 0 && val !== '') || (isArray(val) && !val.length) || (isObject(val) && !Object.keys(val).length)
+    (!val && val !== 0 && val !== '') ||
+    (isArray(val) && !val.length) ||
+    (isObject(val) && !Object.keys(val).length)
   )
 }
