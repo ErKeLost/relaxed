@@ -1,12 +1,12 @@
 {
   "name": "@relaxed/utils",
-  "version": "1.0.11",
+  "version": "1.0.1",
   "description": "",
   "main": "index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:rollup": "rollup -c",
-    "build": "tsup"
+    "build": "tsup --watch"
   },
   "keywords": [],
   "author": "",
@@ -26,6 +26,7 @@
   },
   "license": "ISC",
   "devDependencies": {
-    "date-fns": "^2.29.3"
+    "date-fns": "^2.29.3",
+    "esno": "^0.16.3"
   }
 }
