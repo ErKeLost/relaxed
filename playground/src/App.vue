@@ -1,28 +1,126 @@
+<!-- eslint-disable no-console -->
 <script setup lang="ts">
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
+import { ref } from 'vue'
 import { formatDateDistance, arrayToTree } from '@relaxed/utils'
+import { useStrategy } from '@relaxed/design-pattern'
 import HelloWorld from './components/HelloWorld.vue'
 import ScopeSlot from './components/ScopeSlot.vue'
 function clickSlot() {
   console.log('clickSlot')
-  const res = formatDateDistance({ lang: 'zh-CN' }, 1658320372161, 1658717927699)
+  const res = formatDateDistance(1658320372161, 1658717927699, { lang: 'zh-CN' })
   console.log(res)
 }
-/** 数组结构数据 */
-const flatArr = [
-  { id: '01', parentId: 0, name: '节点1' },
-  { id: '011', parentId: '01', name: '节点1-1' },
-  { id: '0111', parentId: '011', name: '节点1-1-1' },
-  { id: '02', parentId: 0, name: '节点2' },
-  { id: '022', parentId: '02', name: '节点2-2' },
-  { id: '023', parentId: '02', name: '节点2-3' },
-  { id: '0222', parentId: '022', name: '节点2-2-2' },
-  { id: '03', parentId: 0, name: '节点3' }
-]
+const loginSuccess = ref(true)
+const initialPassword = ref(false)
+// // useStrategy(loginSuccess, initialPassword)
+// const handlerLoginLogic = (loginSuccess: boolean, initialPassword?: boolean | null) => {
+//   let action = [...loginLogic()].filter(
+//     ([key, value]) => key.loginSuccess === loginSuccess && key.initialPassword === initialPassword
+//   )
+//   console.log(action)
+//   console.log(this)
 
-const result = arrayToTree(flatArr, 0)
-console.log('result', result)
+//   action.forEach(([key, value]) => {
+//     value.call(this)
+//   })
+// }
+// handlerLoginLogic(true, true)
+function loginLogic() {
+  const loginMap = new Map([
+    [
+      {
+        loginSuccess: true,
+        ww: true
+      },
+      () => {
+        console.log('现在是登录成功 并且密码是初始化')
+      }
+    ],
+    [
+      {
+        loginSuccess: true,
+        ww: false
+      },
+      async () => {
+        console.log('现在是登录成功 进入公司首页')
+      }
+    ],
+    [
+      {
+        loginSuccess: false,
+        ww: false
+      },
+      () => {
+        console.log('现在登录失败 出现error')
+      }
+    ]
+  ])
+  return loginMap
+}
+// [...args].map((item) => key.item === item)
+
+function useStrategya(aaa: any, ...args: any) {
+  const action = [...aaa()]
+  let index = 0
+  const res = action.map((item) => item[0])
+  const b = res.map((item) => Object.values(item))
+  const c = b.filter((item, index) => scalarArrayEquals(item, [...args]))
+  console.log(b)
+  console.log(c)
+  const ind = b.findIndex((item) => {
+    item.filter((i, index) => {
+      return i === c[index]
+    })
+  })
+  console.log(ind)
+
+  // const ii = arrayHasElement(b, c[0])
+  // console.log(ii)
+  getFlat(c, b)
+
+  // console.log(action[2])
+  const d = action[2]
+  ;[d].forEach(([key, value]) => {
+    value.call(this)
+  })
+}
+function scalarArrayEquals(array1, array2) {
+  return (
+    array1.length === array2.length &&
+    array1.every(function (v, i) {
+      return v === array2[i]
+    })
+  )
+}
+function getFlat(arr, main) {
+  main.forEach((item) => {
+    // console.log(item)
+    item.forEach((i, index) => {
+      arr[0].forEach((j, ind) => {
+        if (item[ind] === j) {
+          console.log(item)
+        }
+      })
+    })
+  })
+}
+useStrategya(loginLogic, true, true)
+/** 数组结构数据 */
+// const flatArr = [
+//   { id: '01', parentId: 0, name: '节点1' },
+//   { id: '011', parentId: '01', name: '节点1-1' },
+//   { id: '0111', parentId: '011', name: '节点1-1-1' },
+//   { id: '02', parentId: 0, name: '节点2' },
+//   { id: '022', parentId: '02', name: '节点2-2' },
+//   { id: '023', parentId: '02', name: '节点2-3' },
+//   { id: '0222', parentId: '022', name: '节点2-2-2' },
+//   { id: '03', parentId: 0, name: '节点3' }
+// ]
+
+// const result = arrayToTree(flatArr, 0)
+// console.log('result', result)
 </script>
 
 <template>

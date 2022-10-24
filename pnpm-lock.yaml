@@ -58,6 +58,9 @@ importers:
   packages/axios:
     specifiers: {}
 
+  packages/design-pattern:
+    specifiers: {}
+
   packages/eslint-basic:
     specifiers:
       '@html-eslint/parser': ^0.13.2
@@ -218,7 +221,8 @@ importers:
 
   playground:
     specifiers:
-      '@relaxed/utils': workspace:1.0.11
+      '@relaxed/design-pattern': workspace:*
+      '@relaxed/utils': workspace:^1.0.11
       '@vitejs/plugin-vue': ^3.0.0
       '@vueuse/core': ^7.3.0
       date-fns: ^2.29.3
@@ -235,6 +239,7 @@ importers:
       naive-ui: 2.33.2_vue@3.2.38
       vue: 3.2.38
     devDependencies:
+      '@relaxed/design-pattern': link:../packages/design-pattern
       '@relaxed/utils': link:../packages/utils
       '@vitejs/plugin-vue': 3.1.0_vite@3.1.0+vue@3.2.38
       eslint: 8.23.0
