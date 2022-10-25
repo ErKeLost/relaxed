@@ -221,7 +221,7 @@ importers:
 
   playground:
     specifiers:
-      '@relaxed/design-pattern': workspace:*
+      '@relaxed/design-pattern': workspace:0.0.1
       '@relaxed/utils': workspace:^1.0.11
       '@vitejs/plugin-vue': ^3.0.0
       '@vueuse/core': ^7.3.0

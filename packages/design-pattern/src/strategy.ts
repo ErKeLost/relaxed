@@ -1,49 +1,26 @@
-// const handlerLoginLogic = (loginSuccess: boolean, initialPassword?: boolean | null) => {
-//   let action = [...loginLogic()].filter(
-//     ([key, value]) => key.loginSuccess === loginSuccess && key.initialPassword === initialPassword
-//   )
-//   action.forEach(([key, value]) => {
-//     value.call(this)
-//   })
-// }
-export function useStrategy(args, loginLogic) {
-  const action = [...loginLogic()].filter(([key, value]) => {
-    return [...args].map((item) => key.item === item)
-  })
-  action.forEach(([key, value]) => {
-    value.call(this)
-  })
+export function useStrategy(aaa: any, ...args: any) {
+  try {
+    const action = [...aaa()]
+    const res = action.map((item) => item[0])
+    const b = res.map((item) => Object.values(item))
+    const c = b.filter((item) => scalarArrayEquals(item, [...args]))
+    const [arr] = c
+    let ind: number
+    b.forEach((item, oo) => {
+      const result = item.every((_i, index) => item[index] === arr[index])
+      if (result) {
+        ind = oo
+      }
+    })
+    const d = action[ind]
+    ;[d].forEach(([, value]) => {
+      // eslint-disable-next-line no-invalid-this
+      value.call(this)
+    })
+  } catch (err) {
+    console.warn('@relaxed/design-pattern 参数传递错误', err)
+  }
 }
-// function loginLogic() {
-
-//   const loginMap = new Map([
-//     [
-//       {
-//         loginSuccess: true,
-//         initialPassword: true
-//       },
-//       () => {
-//         console.log('现在是登录成功 并且密码是初始化')
-//       }
-//     ],
-//     [
-//       {
-//         loginSuccess: true,
-//         initialPassword: false
-//       },
-//       async () => {
-//         console.log('现在是登录成功 进入公司首页')
-//       }
-//     ],
-//     [
-//       {
-//         loginSuccess: false,
-//         initialPassword: false
-//       },
-//       () => {
-//         console.log('现在登录失败 出现error')
-//       }
-//     ]
-//   ])
-//   return loginMap
-// }
+function scalarArrayEquals(array1, array2) {
+  return array1.length === array2.length && array1.every((v, i) => v === array2[i])
+}

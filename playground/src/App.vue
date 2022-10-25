@@ -12,8 +12,6 @@ function clickSlot() {
   const res = formatDateDistance(1658320372161, 1658717927699, { lang: 'zh-CN' })
   console.log(res)
 }
-const loginSuccess = ref(true)
-const initialPassword = ref(false)
 // // useStrategy(loginSuccess, initialPassword)
 // const handlerLoginLogic = (loginSuccess: boolean, initialPassword?: boolean | null) => {
 //   let action = [...loginLogic()].filter(
@@ -59,41 +57,7 @@ function loginLogic() {
   ])
   return loginMap
 }
-// [...args].map((item) => key.item === item)
-
-function useStrategya(aaa: any, ...args: any) {
-  const action = [...aaa()]
-  let index = 0
-  const res = action.map((item) => item[0])
-  const b = res.map((item) => Object.values(item))
-  const c = b.filter((item, index) => scalarArrayEquals(item, [...args]))
-  console.log(b)
-  console.log(c)
-  const [arr] = c
-  let ind
-  b.forEach((item, oo) => {
-    const res = item.every((i, index) => {
-      return item[index] === arr[index]
-    })
-    if (res) {
-      ind = oo
-    }
-  })
-  console.log(ind)
-  const d = action[ind]
-  ;[d].forEach(([key, value]) => {
-    value.call(this)
-  })
-}
-function scalarArrayEquals(array1, array2) {
-  return (
-    array1.length === array2.length &&
-    array1.every(function (v, i) {
-      return v === array2[i]
-    })
-  )
-}
-useStrategya(loginLogic, true, true)
+useStrategy(loginLogic, true, 11321)
 /** 数组结构数据 */
 // const flatArr = [
 //   { id: '01', parentId: 0, name: '节点1' },
