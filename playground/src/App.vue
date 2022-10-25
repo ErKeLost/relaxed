@@ -69,19 +69,18 @@ function useStrategya(aaa: any, ...args: any) {
   const c = b.filter((item, index) => scalarArrayEquals(item, [...args]))
   console.log(b)
   console.log(c)
-  const ind = b.findIndex((item) => {
-    item.filter((i, index) => {
-      return i === c[index]
+  const [arr] = c
+  let ind
+  b.forEach((item, oo) => {
+    const res = item.every((i, index) => {
+      return item[index] === arr[index]
     })
+    if (res) {
+      ind = oo
+    }
   })
   console.log(ind)
-
-  // const ii = arrayHasElement(b, c[0])
-  // console.log(ii)
-  getFlat(c, b)
-
-  // console.log(action[2])
-  const d = action[2]
+  const d = action[ind]
   ;[d].forEach(([key, value]) => {
     value.call(this)
   })
@@ -93,18 +92,6 @@ function scalarArrayEquals(array1, array2) {
       return v === array2[i]
     })
   )
-}
-function getFlat(arr, main) {
-  main.forEach((item) => {
-    // console.log(item)
-    item.forEach((i, index) => {
-      arr[0].forEach((j, ind) => {
-        if (item[ind] === j) {
-          console.log(item)
-        }
-      })
-    })
-  })
 }
 useStrategya(loginLogic, true, true)
 /** 数组结构数据 */
