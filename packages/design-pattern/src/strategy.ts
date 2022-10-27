@@ -12,6 +12,7 @@ export function useStrategy(fun: any, ...args: any) {
         ind = index
       }
     })
+    // @ts-ignore
     const currentActions = action[ind]
     ;[currentActions].forEach(([, value]) => {
       // eslint-disable-next-line no-invalid-this
