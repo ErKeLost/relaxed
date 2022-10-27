@@ -1,19 +1,19 @@
-export function useStrategy(aaa: any, ...args: any) {
+export function useStrategy(fun: any, ...args: any) {
   try {
-    const action = [...aaa()]
+    const action = [...fun()]
     const res = action.map((item) => item[0])
-    const b = res.map((item) => Object.values(item))
-    const c = b.filter((item) => scalarArrayEquals(item, [...args]))
-    const [arr] = c
+    const allCondition = res.map((item) => Object.values(item))
+    const currentCondition = allCondition.filter((item) => scalarArrayEquals(item, [...args]))
+    const [arr] = currentCondition
     let ind: number
-    b.forEach((item, oo) => {
+    allCondition.forEach((item, index) => {
       const result = item.every((_i, index) => item[index] === arr[index])
       if (result) {
-        ind = oo
+        ind = index
       }
     })
-    const d = action[ind]
-    ;[d].forEach(([, value]) => {
+    const currentActions = action[ind]
+    ;[currentActions].forEach(([, value]) => {
       // eslint-disable-next-line no-invalid-this
       value.call(this)
     })
