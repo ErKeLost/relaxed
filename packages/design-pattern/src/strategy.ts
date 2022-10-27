@@ -1,3 +1,5 @@
+// 策略模式
+
 export function useStrategy(fun: any, ...args: any) {
   try {
     const action = [...fun()]
