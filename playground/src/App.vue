@@ -30,7 +30,7 @@ function loginLogic() {
     [
       {
         loginSuccess: true,
-        ww: true
+        passwordVerify: true
       },
       () => {
         console.log('现在是登录成功 并且密码是初始化')
@@ -39,7 +39,7 @@ function loginLogic() {
     [
       {
         loginSuccess: true,
-        ww: false
+        passwordVerify: false
       },
       async () => {
         console.log('现在是登录成功 进入公司首页')
@@ -48,7 +48,7 @@ function loginLogic() {
     [
       {
         loginSuccess: false,
-        ww: false
+        passwordVerify: false
       },
       () => {
         console.log('现在登录失败 出现error')
@@ -57,7 +57,7 @@ function loginLogic() {
   ])
   return loginMap
 }
-useStrategy(loginLogic, true, 11321)
+useStrategy(loginLogic, true, false)
 /** 数组结构数据 */
 // const flatArr = [
 //   { id: '01', parentId: 0, name: '节点1' },
