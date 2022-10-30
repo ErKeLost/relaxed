@@ -1,0 +1,23 @@
+{
+  "name": "@relaxed/event-bus",
+  "version": "1.0.0",
+  "description": "",
+  "module": "dist/index.mjs",
+  "main": "dist/index.js",
+  "jsnext:main": "dist/index.mjs",
+  "source": "src/index.ts",
+  "typings": "index.d.ts",
+  "exports": {
+    "types": "./index.d.ts",
+    "import": "./dist/mitt.mjs",
+    "require": "./dist/mitt.js",
+    "default": "./dist/mitt.mjs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsup"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
