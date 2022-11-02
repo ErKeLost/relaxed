@@ -223,7 +223,7 @@ importers:
 
   playground:
     specifiers:
-      '@relaxed/design-pattern': workspace:0.0.1
+      '@relaxed/design-pattern': workspace:*
       '@relaxed/utils': workspace:^1.0.11
       '@vitejs/plugin-vue': ^3.0.0
       '@vueuse/core': ^7.3.0
@@ -8456,7 +8456,7 @@ packages:
         optional: true
     dependencies:
       esbuild: 0.14.54
-      postcss: 8.4.16
+      postcss: 8.4.18
       resolve: 1.22.1
       rollup: 2.77.3
       sass: 1.54.9

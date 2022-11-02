@@ -7,24 +7,12 @@ import { formatDateDistance, arrayToTree } from '@relaxed/utils'
 import { useStrategy } from '@relaxed/design-pattern'
 import HelloWorld from './components/HelloWorld.vue'
 import ScopeSlot from './components/ScopeSlot.vue'
+import { sub } from 'date-fns'
+import { subscribe } from './eventbus'
 function clickSlot() {
-  console.log('clickSlot')
   const res = formatDateDistance(1658320372161, 1658717927699, { lang: 'zh-CN' })
-  console.log(res)
+  subscribe.emit('sell', [123, 4564, 'aoteman'])
 }
-// // useStrategy(loginSuccess, initialPassword)
-// const handlerLoginLogic = (loginSuccess: boolean, initialPassword?: boolean | null) => {
-//   let action = [...loginLogic()].filter(
-//     ([key, value]) => key.loginSuccess === loginSuccess && key.initialPassword === initialPassword
-//   )
-//   console.log(action)
-//   console.log(this)
-
-//   action.forEach(([key, value]) => {
-//     value.call(this)
-//   })
-// }
-// handlerLoginLogic(true, true)
 function loginLogic() {
   const loginMap = new Map([
     [
@@ -42,7 +30,7 @@ function loginLogic() {
         passwordVerify: false
       },
       async () => {
-        console.log('现在是登录成功 进入公司首页')
+        // console.log('现在是登录成功 进入公司首页')
       }
     ],
     [
@@ -58,20 +46,9 @@ function loginLogic() {
   return loginMap
 }
 useStrategy(loginLogic, true, false)
-/** 数组结构数据 */
-// const flatArr = [
-//   { id: '01', parentId: 0, name: '节点1' },
-//   { id: '011', parentId: '01', name: '节点1-1' },
-//   { id: '0111', parentId: '011', name: '节点1-1-1' },
-//   { id: '02', parentId: 0, name: '节点2' },
-//   { id: '022', parentId: '02', name: '节点2-2' },
-//   { id: '023', parentId: '02', name: '节点2-3' },
-//   { id: '0222', parentId: '022', name: '节点2-2-2' },
-//   { id: '03', parentId: 0, name: '节点3' }
-// ]
-
-// const result = arrayToTree(flatArr, 0)
-// console.log('result', result)
+subscribe.on('by', () => {
+  console.log('app组件中订阅')
+})
 </script>
 
 <template>
@@ -89,10 +66,10 @@ useStrategy(loginLogic, true, false)
     }"
   >
     <template #a>
-      <n-button @click="clickSlot">clickOutSide</n-button>
+      <n-button @click="clickSlot">App组件</n-button>
     </template>
     <template #b="{ item }">
-      <n-button>{{ item }}</n-button>
+      <!-- <n-button>{{ item }}</n-button> -->
     </template>
   </ScopeSlot>
   <HelloWorld msg="Vite + Vue" />

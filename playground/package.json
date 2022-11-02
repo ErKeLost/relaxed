@@ -18,7 +18,7 @@
     "vue": "^3.2.37"
   },
   "devDependencies": {
-    "@relaxed/design-pattern": "workspace:0.0.1",
+    "@relaxed/design-pattern": "workspace:*",
     "@relaxed/utils": "workspace:^1.0.11",
     "@vitejs/plugin-vue": "^3.0.0",
     "eslint": "^8.23.0",
