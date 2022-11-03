@@ -10,6 +10,9 @@
     "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
+  "peerDependencies": {
+    "axios": ">=0.26.1"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC"
