@@ -6,6 +6,7 @@ import { ref } from 'vue'
 import { formatDateDistance, arrayToTree } from '@relaxed/utils'
 import { useStrategy } from '@relaxed/design-pattern'
 import HelloWorld from './components/HelloWorld.vue'
+import Test from './components/Test.vue'
 import ScopeSlot from './components/ScopeSlot.vue'
 import { sub } from 'date-fns'
 import { subscribe } from './eventbus'
@@ -52,6 +53,7 @@ subscribe.on('by', () => {
 </script>
 
 <template>
+  <Test />
   <div>
     <a href="https://vitejs.dev" target="_blank">
       <img src="/vite.svg" class="logo" alt="Vite logo" />

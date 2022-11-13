@@ -1,1 +1,6 @@
 export * from './structure'
+export * from './array'
+export * from './is'
+export * from './object'
+export * from './promise'
+export * from './groupby'
