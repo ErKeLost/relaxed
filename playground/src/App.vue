@@ -1,5 +1,6 @@
 <!-- eslint-disable no-console -->
 <script setup lang="ts">
+import { greet } from 'hello-wasm-test'
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
 import { ref } from 'vue'
@@ -9,6 +10,8 @@ import HelloWorld from './components/HelloWorld.vue'
 import ScopeSlot from './components/ScopeSlot.vue'
 import { sub } from 'date-fns'
 import { subscribe } from './eventbus'
+greet('我是 wasm rust 包 芜湖～～～')
+
 function clickSlot() {
   const res = formatDateDistance(1658320372161, 1658717927699, { lang: 'zh-CN' })
   subscribe.emit('sell', [123, 4564, 'aoteman'])
