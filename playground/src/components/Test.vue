@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <div></div>
 </template>
 
@@ -12,4 +12,4 @@ console.log(mergeArrayable([12313212], [1231, [4564]], 12314564));
 
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped></style> -->

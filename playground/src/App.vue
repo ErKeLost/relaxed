@@ -1,6 +1,7 @@
 <!-- eslint-disable no-console -->
 <script setup lang="ts">
 import { greet } from 'hello-wasm-test'
+import * as rust from 'rust-imagemin'
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
 import { ref } from 'vue'
@@ -11,7 +12,8 @@ import Test from './components/Test.vue'
 import ScopeSlot from './components/ScopeSlot.vue'
 import { sub } from 'date-fns'
 import { subscribe } from './eventbus'
-greet('我是 wasm rust 包 芜湖～～～')
+// greet('我是 wasm rust 包 芜湖～～～'÷)
+rust.get_image_view()
 
 function clickSlot() {
   const res = formatDateDistance(1658320372161, 1658717927699, { lang: 'zh-CN' })
@@ -56,7 +58,7 @@ subscribe.on('by', () => {
 </script>
 
 <template>
-  <Test />
+  <!-- <Test /> -->
   <div>
     <a href="https://vitejs.dev" target="_blank">
       <img src="/vite.svg" class="logo" alt="Vite logo" />

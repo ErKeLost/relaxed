@@ -16,15 +16,16 @@
     "date-fns": "^2.29.3",
     "hello-wasm-test": "^0.1.0",
     "naive-ui": "^2.33.2",
+    "rust-imagemin": "^0.1.8",
     "vite-plugin-wasm": "^3.1.0",
     "vue": "^3.2.37"
   },
   "devDependencies": {
     "@relaxed/design-pattern": "workspace:*",
-    "@relaxed/utils": "workspace:^1.0.11",
+    "@relaxed/utils": "workspace:*",
     "@vitejs/plugin-vue": "^3.0.0",
     "eslint": "^8.23.0",
-    "eslint-config-relaxed-vue": "workspace:^1.0.8",
+    "eslint-config-relaxed-vue": "workspace:*",
     "typescript": "^4.6.4",
     "vite": "^3.0.0",
     "vue-tsc": "^0.38.4"

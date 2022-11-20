@@ -221,14 +221,15 @@ importers:
   playground:
     specifiers:
       '@relaxed/design-pattern': workspace:*
-      '@relaxed/utils': workspace:^1.0.11
+      '@relaxed/utils': workspace:*
       '@vitejs/plugin-vue': ^3.0.0
       '@vueuse/core': ^7.3.0
       date-fns: ^2.29.3
       eslint: ^8.23.0
-      eslint-config-relaxed-vue: workspace:^1.0.8
+      eslint-config-relaxed-vue: workspace:*
       hello-wasm-test: ^0.1.0
       naive-ui: ^2.33.2
+      rust-imagemin: ^0.1.8
       typescript: ^4.6.4
       vite: ^3.0.0
       vite-plugin-wasm: ^3.1.0
@@ -239,6 +240,7 @@ importers:
       date-fns: 2.29.3
       hello-wasm-test: 0.1.0
       naive-ui: 2.33.2_vue@3.2.38
+      rust-imagemin: 0.1.8
       vite-plugin-wasm: 3.1.0
       vue: 3.2.38
     devDependencies:
@@ -7346,6 +7348,10 @@ packages:
     resolution: {integrity: sha512-5l4VyZR86LZ/lDxZTR6jqL8AFE2S0IFLMP26AbjsLVADxHdhB/c0GUsH+y39UfCi3dzz8OlQuPmnaJOMoDHQBA==}
     dependencies:
       queue-microtask: 1.2.3
+
+  /rust-imagemin/0.1.8:
+    resolution: {integrity: sha512-qv8eeldajAO7tp1znD8y71fPE/Qe49Nl6LAKykzfPc6paZvKDzK+nmvtJTe5+6OwlpoFI8kTnqj3RGXtHsUQwA==}
+    dev: false
 
   /rxjs/6.6.7:
     resolution: {integrity: sha512-hTdwr+7yYNIT5n4AMYp85KA6yw2Va0FLa3Rguvbpa4W3I5xynaBZo41cM3XM+4Q6fRMj3sBYIR1VAmZMXYJvRQ==}
