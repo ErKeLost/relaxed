@@ -1,12 +1,13 @@
 {
   "name": "@relaxed/design-pattern",
-  "version": "0.0.2",
+  "version": "2.0.1",
   "description": "",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsup --watch"
+    "build:w": "tsup --watch",
+    "build": "tsup"
   },
   "publishConfig": {
     "access": "public",
