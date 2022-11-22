@@ -1,5 +1,6 @@
 packages:
   - 'packages/**/**'
+  - 'imagemin/**/**'
   - 'playground'
   - 'docs'
   - 'vue-component/**'
