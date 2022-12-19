@@ -10,7 +10,8 @@ module.exports = {
         extraFileExtensions: ['.vue']
       },
       rules: {
-        'no-undef': 'off'
+        'no-undef': 'off',
+        'vue/html-self-closing': 'off'
       }
     },
     {
