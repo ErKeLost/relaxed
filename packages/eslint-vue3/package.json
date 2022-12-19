@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-relaxed-vue",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "relaxed's vue3 eslint config presets with prettier",
   "license": "MIT",
   "main": "index.js",
