@@ -216,12 +216,5 @@ const contentPaddingTop = computed(() => {
 const contentPaddingBottom = computed(() =>
   props.fixedFooter && props.footerVisible ? props.footerHeight : 0
 )
-// css
-cssRender('.soybean-admin-layout', {
-  display: 'flex',
-  flexDirection: 'column',
-  width: '100%',
-  height: '100%'
-})
 </script>
 <style></style>
