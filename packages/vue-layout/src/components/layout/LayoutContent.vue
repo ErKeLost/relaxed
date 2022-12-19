@@ -64,11 +64,11 @@ const style = computed(() => {
 
 // css
 cssRender('.adny-layout__main', {
-  flexGrow: 1,
-  boxSizing: 'border-box',
-  width: '100%',
-  marginRight: 'auto',
-  marginLeft: 'auto'
+  // flexGrow: 1,
+  // boxSizing: 'border-box',
+  // width: '100%',
+  // marginRight: 'auto',
+  // marginLeft: 'auto'
   // overflowY: 'scroll'
   // transitionProperty: 'padding-left'
 })

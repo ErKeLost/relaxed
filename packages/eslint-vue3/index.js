@@ -27,6 +27,7 @@ module.exports = {
         ignores: ['index']
       }
     ],
+    'vue/html-self-closing': 'off',
     'import/order': [
       'error',
       {

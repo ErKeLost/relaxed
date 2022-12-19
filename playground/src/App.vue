@@ -1,97 +1,23 @@
-<!-- eslint-disable no-console -->
-<script setup lang="ts">
-import { greet } from 'hello-wasm-test'
-import * as rust from 'rust-imagemin'
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-import { ref } from 'vue'
-import { formatDateDistance, arrayToTree } from '@relaxed/utils'
-import { useStrategy } from '@relaxed/design-pattern'
-import HelloWorld from './components/HelloWorld.vue'
-import Test from './components/Test.vue'
-import ScopeSlot from './components/ScopeSlot.vue'
-import { sub } from 'date-fns'
-import { subscribe } from './eventbus'
-// greet('我是 wasm rust 包 芜湖～～～'÷)
-rust.get_image_view()
-
-function clickSlot() {
-  const res = formatDateDistance(1658320372161, 1658717927699, { lang: 'zh-CN' })
-  subscribe.emit('sell', [123, 4564, 'aoteman'])
-}
-function loginLogic() {
-  const loginMap = new Map([
-    [
-      {
-        loginSuccess: true,
-        passwordVerify: true
-      },
-      () => {
-        console.log('现在是登录成功 并且密码是初始化')
-      }
-    ],
-    [
-      {
-        loginSuccess: true,
-        passwordVerify: false
-      },
-      async () => {
-        // console.log('现在是登录成功 进入公司首页')
-      }
-    ],
-    [
-      {
-        loginSuccess: false,
-        passwordVerify: false
-      },
-      () => {
-        console.log('现在登录失败 出现error')
-      }
-    ]
-  ])
-  return loginMap
-}
-useStrategy(loginLogic, true, false)
-subscribe.on('by', () => {
-  console.log('app组件中订阅')
-})
-</script>
-
 <template>
-  <!-- <Test /> -->
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
-  </div>
-  <ScopeSlot
-    :item="{
-      name: 'erkelost'
-    }"
-  >
-    <template #a>
-      <n-button @click="clickSlot">App组件</n-button>
+  <RelaxedLayout fixed-sider :siderVisible="false">
+    <template #header>
+      <div class="flex-center h-full bg-#bfd">Header</div>
     </template>
-    <template #b="{ item }">
-      <!-- <n-button>{{ item }}</n-button> -->
+    <template #tab>
+      <div class="flex-center h-full bg-#6DCB6C">Tab</div>
     </template>
-  </ScopeSlot>
-  <HelloWorld msg="Vite + Vue" />
+    <!-- <template #sider>
+      <div class="h-full bg-#6CCBC8">
+        <div class="flex-center h-56px">Sider</div>
+      </div>
+    </template> -->
+    <template #footer>
+      <div class="flex-center h-full bg-#bfa">Footer</div>
+    </template>
+    <div class="text-center bg-#D061D8">
+      <div v-for="i in 50" :key="i" class="text-center">{{ i }}</div>
+    </div>
+  </RelaxedLayout>
 </template>
 
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
-</style>
+<script setup lang="ts"></script>
