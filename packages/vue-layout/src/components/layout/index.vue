@@ -188,6 +188,7 @@ const siderWidth = computed(() => {
   const width = siderCollapse ? siderCollapsedWidth : siderWidth
   return props.siderVisible ? width : 0
 })
+
 // 各子组件的属性
 const headerPaddingLeft = computed(() => (isVertical.value ? siderWidth.value : 0))
 const tabPaddingLeft = computed(() => {
