@@ -16,6 +16,9 @@
     "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
+  "files": [
+    "dist"
+  ],
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
