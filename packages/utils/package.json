@@ -1,6 +1,6 @@
 {
   "name": "@relaxed/utils",
-  "version": "2.0.7",
+  "version": "2.0.8",
   "description": "",
   "main": "index.ts",
   "scripts": {
@@ -8,7 +8,7 @@
     "build:rollup": "rollup -c",
     "build:w": "tsup --watch",
     "build": "tsup",
-    "prepublishOnly": "npm run build:rollup"
+    "prepublishOnly": "npm run build"
   },
   "keywords": [],
   "author": "",
