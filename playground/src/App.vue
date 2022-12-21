@@ -8,7 +8,7 @@
     </template>
     <template #sider>
       <div class="h-full bg-#6CCBC8">
-        <div class="flex-center h-56px">Sider</div>
+        <div class="flex-center h-56px">vue-directiveSider</div>
       </div>
     </template>
     <template #footer>
@@ -20,4 +20,7 @@
   </RelaxedLayout>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import * as utils from '@relaxed/utils'
+console.log(utils)
+</script>
