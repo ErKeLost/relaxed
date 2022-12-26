@@ -1,0 +1,43 @@
+export function padEnd(str: string, length: number, char = '0') {
+  return str + char.repeat(Math.max(0, length - str.length))
+}
+export function chunk(str: string, size = 1): string[] {
+  const chunked: string[] = []
+  let index = 0
+  while (index < str.length) {
+    chunked.push(str.substr(index, size))
+    index += size
+  }
+  return chunked
+}
+export function mergeObjects(source: any, target: any): any {
+  return Object.assign(source, target)
+}
+// export function parseHex(value: string): number {
+//   return parseInt(value, 16)
+// }
+export const clamp = (value: number, min: number, max: number) =>
+  min < max
+    ? value < min
+      ? min
+      : value > max
+      ? max
+      : value
+    : value < max
+    ? max
+    : value > min
+    ? min
+    : value
+export const upperCase = (word: string) => word.toLocaleUpperCase()
+export const lowerCase = (word: string) => word.toLocaleLowerCase()
+export function splitStr(str: string, chars: string): string {
+  return str.split(chars)[0]
+}
+// 保留小数工具
+export function keepDecimal(value: number, digits = 0): number {
+  const COUNT_VALUE = 10 ** digits
+  return Math.round(value * COUNT_VALUE) / COUNT_VALUE
+}
+export function has(obj: any, key: string[]) {
+  return key.every((k) => obj.hasOwnProperty(k))
+}
