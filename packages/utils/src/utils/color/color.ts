@@ -387,8 +387,7 @@ export function parseColor(color: any, oldColor?: ColorPickerColor | null) {
     if (oldColor && hex === oldColor.hexa) {
       return oldColor
     }
-      return fromHexa(hex)
-
+    return fromHexa(hex)
   }
 
   if (typeof color === 'object') {
@@ -399,9 +398,9 @@ export function parseColor(color: any, oldColor?: ColorPickerColor | null) {
     if (has(color, ['r', 'g', 'b'])) {
       if (oldColor && color === oldColor.rgba) return oldColor
       return fromRGBA({
-          ...color,
-          a
-        })
+        ...color,
+        a
+      })
     } else if (has(color, ['h', 's', 'l'])) {
       if (oldColor && color === oldColor.hsla) return oldColor
       return fromHSLA({

@@ -19,8 +19,6 @@
     "build:hooks": "turbo run build --filter hooks",
     "docs:dev": "vitepress dev docs",
     "clear": "rimraf 'packages/*/{lib,node_modules}' && rimraf node_modules",
-    "changeset": "changeset",
-    "version-packages": "changeset version",
     "dev": "turbo run dev --parallel --no-deps --no-cache",
     "dev:layout": "turbo run dev --filter=@relaxed/vue-components",
     "play": "pnpm dev --filter playground",
@@ -33,14 +31,9 @@
     "commit": "git add . && cz",
     "preinstall": "npx only-allow pnpm",
     "clean": "rimraf node_modules **/*/node_modules",
-    "cs": "changeset",
-    "cs:update": "node ./scripts/changeset.mjs",
-    "cs:version": "changeset version",
-    "cs:tag": "changeset tag",
     "sync": "node ./script/sync.mjs",
     "prerelease": "pnpm build",
-    "release": "changeset publish",
-    "release:bumpp": "bumpp packages/*/package.json && pnpm publish -r"
+    "bumpp": "bumpp packages/*/package.json && pnpm publish -r"
   },
   "devDependencies": {
     "@changesets/cli": "^2.23.0",
