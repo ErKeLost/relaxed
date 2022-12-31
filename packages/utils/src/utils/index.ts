@@ -1,6 +1,6 @@
 export * from './debounce'
 export * from './throttle'
-export * from './deepClone'
+// export * from './deepClone'
 export * from './format'
 export * from './color'
 export * from './common'
