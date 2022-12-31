@@ -8,6 +8,7 @@
     "./config": "./src/vitepress/config/baseConfig.js",
     "./highlight": "./src/vitepress/config/highlight.js"
   },
+  "private": true,
   "files": [
     "src",
     "types"
@@ -60,6 +61,5 @@
         "@types/react"
       ]
     }
-  },
-  "private": "true"
+  }
 }
