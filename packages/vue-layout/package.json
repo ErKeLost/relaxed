@@ -5,7 +5,7 @@
   "module": "dist/index.es.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "dev": "vite",
+    "dev:preview": "vite",
     "tsc-build": "vue-tsc --noEmit && vite build",
     "build": "vite build",
     "preview": "vite preview"
