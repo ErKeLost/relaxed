@@ -60,5 +60,6 @@
         "@types/react"
       ]
     }
-  }
+  },
+  "private": "true"
 }

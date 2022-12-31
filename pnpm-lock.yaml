@@ -55,9 +55,6 @@ importers:
       zx: 7.0.8
 
   docs:
-    specifiers: {}
-
-  docs-new:
     specifiers:
       '@docsearch/css': ^3.3.0
       '@docsearch/js': ^3.3.0
@@ -627,13 +624,6 @@ packages:
       chalk: 2.4.2
       js-tokens: 4.0.0
 
-  /@babel/parser/7.18.13:
-    resolution: {integrity: sha512-dgXcIfMuQ0kgzLB2b9tRZs7TTFFaGM2AbtA4fJgUUYukzGH4jwsS7hzQHEGs67jdehpm22vkgKwvbU+aEflgwg==}
-    engines: {node: '>=6.0.0'}
-    hasBin: true
-    dependencies:
-      '@babel/types': 7.18.13
-
   /@babel/parser/7.19.1:
     resolution: {integrity: sha512-h7RCSorm1DdTVGJf3P2Mhj3kdnkmF/EiysUkzS2TdgAYqyjFdMQJbVuXOBej2SBJaXan/lIVtT6KkGbyyq753A==}
     engines: {node: '>=6.0.0'}
@@ -717,14 +707,6 @@ packages:
     transitivePeerDependencies:
       - supports-color
     dev: true
-
-  /@babel/types/7.18.13:
-    resolution: {integrity: sha512-ePqfTihzW0W6XAU+aMw2ykilisStJfDnsejDCXRchCcMJ4O0+8DhPXf2YUbZ6wjBlsEmZwLK/sPweWtu8hcJYQ==}
-    engines: {node: '>=6.9.0'}
-    dependencies:
-      '@babel/helper-string-parser': 7.18.10
-      '@babel/helper-validator-identifier': 7.18.6
-      to-fast-properties: 2.0.0
 
   /@babel/types/7.19.0:
     resolution: {integrity: sha512-YuGopBq3ke25BVSiS6fgF49Ul9gH1x70Bcr6bqRLjWCkcX8Hre1/5+z+IiWOIerRMSSEfGZVB9z9kyq7wVs9YA==}
@@ -2200,9 +2182,9 @@ packages:
     dependencies:
       '@volar/code-gen': 0.38.9
       '@volar/source-map': 0.38.9
-      '@vue/compiler-core': 3.2.39
-      '@vue/compiler-dom': 3.2.39
-      '@vue/shared': 3.2.39
+      '@vue/compiler-core': 3.2.45
+      '@vue/compiler-dom': 3.2.45
+      '@vue/shared': 3.2.45
     dev: true
 
   /@volar/vue-typescript/0.38.9:
@@ -2211,8 +2193,8 @@ packages:
       '@volar/code-gen': 0.38.9
       '@volar/source-map': 0.38.9
       '@volar/vue-code-gen': 0.38.9
-      '@vue/compiler-sfc': 3.2.39
-      '@vue/reactivity': 3.2.38
+      '@vue/compiler-sfc': 3.2.45
+      '@vue/reactivity': 3.2.45
     dev: true
 
   /@vue/babel-helper-vue-transform-on/1.0.2:
@@ -2239,7 +2221,7 @@ packages:
   /@vue/compiler-core/3.2.38:
     resolution: {integrity: sha512-/FsvnSu7Z+lkd/8KXMa4yYNUiqQrI22135gfsQYVGuh5tqEgOB0XqrUdb/KnCLa5+TmQLPwvyUnKMyCpu+SX3Q==}
     dependencies:
-      '@babel/parser': 7.18.13
+      '@babel/parser': 7.19.1
       '@vue/shared': 3.2.38
       estree-walker: 2.0.2
       source-map: 0.6.1
@@ -2281,7 +2263,7 @@ packages:
   /@vue/compiler-sfc/3.2.38:
     resolution: {integrity: sha512-KZjrW32KloMYtTcHAFuw3CqsyWc5X6seb8KbkANSWt3Cz9p2qA8c1GJpSkksFP9ABb6an0FLCFl46ZFXx3kKpg==}
     dependencies:
-      '@babel/parser': 7.18.13
+      '@babel/parser': 7.19.1
       '@vue/compiler-core': 3.2.38
       '@vue/compiler-dom': 3.2.38
       '@vue/compiler-ssr': 3.2.38
@@ -2295,7 +2277,7 @@ packages:
   /@vue/compiler-sfc/3.2.39:
     resolution: {integrity: sha512-fqAQgFs1/BxTUZkd0Vakn3teKUt//J3c420BgnYgEOoVdTwYpBTSXCMJ88GOBCylmUBbtquGPli9tVs7LzsWIA==}
     dependencies:
-      '@babel/parser': 7.18.13
+      '@babel/parser': 7.19.1
       '@vue/compiler-core': 3.2.39
       '@vue/compiler-dom': 3.2.39
       '@vue/compiler-ssr': 3.2.39
@@ -2317,7 +2299,7 @@ packages:
       '@vue/shared': 3.2.45
       estree-walker: 2.0.2
       magic-string: 0.25.9
-      postcss: 8.4.18
+      postcss: 8.4.20
       source-map: 0.6.1
 
   /@vue/compiler-ssr/3.2.38:
@@ -2357,7 +2339,7 @@ packages:
   /@vue/reactivity-transform/3.2.38:
     resolution: {integrity: sha512-3SD3Jmi1yXrDwiNJqQ6fs1x61WsDLqVk4NyKVz78mkaIRh6d3IqtRnptgRfXn+Fzf+m6B1KxBYWq1APj6h4qeA==}
     dependencies:
-      '@babel/parser': 7.18.13
+      '@babel/parser': 7.19.1
       '@vue/compiler-core': 3.2.38
       '@vue/shared': 3.2.38
       estree-walker: 2.0.2
@@ -8010,7 +7992,7 @@ packages:
     resolution: {integrity: sha512-/Y0z9IzhJ8nD9nbceORCqu6NgT9X6I8Fk8c3SICHI5NbZRLdZYFaB233gwct9sU0vvSypyaL/qaKvzyQGJBZSw==}
     dependencies:
       jsonc-parser: 3.2.0
-      vscode-oniguruma: 1.6.2
+      vscode-oniguruma: 1.7.0
       vscode-textmate: 5.2.0
     dev: false
 
@@ -9266,13 +9248,8 @@ packages:
       vue: 3.2.38
     dev: false
 
-  /vscode-oniguruma/1.6.2:
-    resolution: {integrity: sha512-KH8+KKov5eS/9WhofZR8M8dMHWN2gTxjMsG4jd04YhpbPR91fUj7rYQ2/XjeHCJWbg7X++ApRIU9NUwM2vTvLA==}
-    dev: false
-
   /vscode-oniguruma/1.7.0:
     resolution: {integrity: sha512-L9WMGRfrjOhgHSdOYgCt/yRMsXzLDJSL7BPrOZt73gU0iWO4mpqzqQzOz5srxqTvMBaR0XZTSrVWo4j55Rc6cA==}
-    dev: true
 
   /vscode-textmate/5.2.0:
     resolution: {integrity: sha512-Uw5ooOQxRASHgu6C7GVvUxisKXfSgW4oFlO+aa+PAkgmH89O3CXxEEzNRNtHSqtXFTl0nAC1uYj0GMSH27uwtQ==}
