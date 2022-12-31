@@ -1,6 +1,6 @@
 packages:
   - 'packages/**/**'
-  - 'playground'
+  # - 'playground'
   - 'docs'
   - '!**/vue-layout/**'
 # packages:
