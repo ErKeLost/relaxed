@@ -4,4 +4,4 @@
 
 [build]
   publish = "docs/jzzx/.vitepress/dist"
-  command = "npx pnpm i --store=node_modules/.pnpm-store --no-frozen-lockfile && npm run build"
+  command = "npx pnpm i --store=node_modules/.pnpm-store && npm run build"
