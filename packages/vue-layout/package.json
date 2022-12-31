@@ -21,15 +21,6 @@
     "unocss": "^0.30.11",
     "vite-plugin-dts": "^1.0.5"
   },
-  "peerDependencies": {
-    "@vue/composition-api": "^1.4.6",
-    "vue": "^2.0.0 || >=3.0.0"
-  },
-  "peerDependenciesMeta": {
-    "@vue/composition-api": {
-      "optional": true
-    }
-  },
   "keywords": [
     "admin",
     "layout",
