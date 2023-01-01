@@ -22,5 +22,4 @@
 
 <script setup lang="ts">
 import * as utils from '@relaxed/utils'
-console.log(utils)
 </script>
