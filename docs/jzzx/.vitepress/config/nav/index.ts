@@ -27,7 +27,7 @@ export const nav = [
     text: 'Playground',
     items: [
       {
-        text: 'Jzzx-Playground',
+        text: 'Playground',
         link: 'https://jzzx-playground.netlify.app'
       },
       {
@@ -127,19 +127,19 @@ export const nav = [
     activeMatch: `^/community/`,
     items: [
       {
-        text: 'jzzx-components',
+        text: 'vue-components-pro',
         items: [
           {
-            text: 'jzzx-layout-pro',
-            link: '/jzzx-components/layout-pro/index'
+            text: 'layout-pro',
+            link: '/vue-components/layout-pro/index'
           },
           {
-            text: 'jzzx-colorPicker-pro',
-            link: '/jzzx-components/layout-pro/index'
+            text: 'colorPicker-pro',
+            link: '/vue-components/layout-pro/index'
           },
           {
-            text: 'jzzx-statistic-pro',
-            link: '/jzzx-components/layout-pro/index'
+            text: 'statistic-pro',
+            link: '/vue-components/layout-pro/index'
           }
           // {
           //   text: 'Contribution Guide',
