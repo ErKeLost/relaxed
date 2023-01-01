@@ -25,7 +25,7 @@ importers:
       tsup: ^6.2.3
       turbo: ^1.5.6
       typescript: ^4.7.4
-      vite: ^3.2.0
+      vite: ^4.0.3
       vitepress: ^1.0.0-alpha.13
       zx: ^7.0.8
     devDependencies:
@@ -50,7 +50,7 @@ importers:
       tsup: 6.5.0_z6wznmtyb6ovnulj6iujpct7um
       turbo: 1.6.3
       typescript: 4.9.4
-      vite: 3.2.5_@types+node@17.0.45
+      vite: 4.0.3_@types+node@17.0.45
       vitepress: 1.0.0-alpha.33_@types+node@17.0.45
       zx: 7.1.1
 
@@ -233,18 +233,14 @@ importers:
     specifiers:
       '@vitejs/plugin-vue': ^2.2.0
       '@vitejs/plugin-vue-jsx': ^1.3.9
-      '@vue/composition-api': ^1.4.6
       css-render: ^0.15.8
       sass: ^1.49.9
       unocss: ^0.30.11
       vite-plugin-dts: ^1.0.5
-      vue: ^2.0.0 || >=3.0.0
       vue-demi: ^0.12.1
     dependencies:
-      '@vue/composition-api': 1.7.1_vue@3.2.45
       css-render: 0.15.12
-      vue: 3.2.45
-      vue-demi: 0.12.5_y3dbsgppqv4jnxjxtdjaj42kje
+      vue-demi: 0.12.5_vue@3.2.45
     devDependencies:
       '@vitejs/plugin-vue': 2.3.4_vite@2.9.15+vue@3.2.45
       '@vitejs/plugin-vue-jsx': 1.3.10
@@ -255,7 +251,7 @@ importers:
   playground:
     specifiers:
       '@relaxed/design-pattern': workspace:*
-      '@relaxed/layout': workspace:*
+      '@relaxed/layout': latest
       '@relaxed/utils': workspace:*
       '@unocss/preset-attributify': ^0.47.6
       '@unocss/preset-uno': ^0.47.5
@@ -272,7 +268,6 @@ importers:
       typescript: ^4.6.4
       unplugin-auto-import: ^0.12.1
       unplugin-vue-components: ^0.22.12
-      vite: ^3.0.0
       vite-plugin-wasm: ^3.1.0
       vue: ^3.2.37
       vue-tsc: ^0.38.4
@@ -298,7 +293,6 @@ importers:
       typescript: 4.9.4
       unplugin-auto-import: 0.12.1_@vueuse+core@7.7.1
       unplugin-vue-components: 0.22.12_vue@3.2.45
-      vite: 3.2.5
       vue-tsc: 0.38.9_typescript@4.9.4
 
 packages:
@@ -2225,14 +2219,6 @@ packages:
     dependencies:
       '@vue/compiler-dom': 3.2.45
       '@vue/shared': 3.2.45
-
-  /@vue/composition-api/1.7.1_vue@3.2.45:
-    resolution: {integrity: sha512-xDWoEtxGXhH9Ku3ROYX/rzhcpt4v31hpPU5zF3UeVC/qxA3dChmqU8zvTUYoKh3j7rzpNsoFOwqsWG7XPMlaFA==}
-    peerDependencies:
-      vue: '>= 2.5 < 2.7'
-    dependencies:
-      vue: 3.2.45
-    dev: false
 
   /@vue/devtools-api/6.4.5:
     resolution: {integrity: sha512-JD5fcdIuFxU4fQyXUu3w2KpAJHzTVdN+p4iOX2lMWSHMOoQdMAcpFLZzm9Z/2nmsoZ1a96QEhZ26e50xLBsgOQ==}
@@ -8660,40 +8646,6 @@ packages:
     optionalDependencies:
       fsevents: 2.3.2
 
-  /vite/3.2.5_@types+node@17.0.45:
-    resolution: {integrity: sha512-4mVEpXpSOgrssFZAOmGIr85wPHKvaDAcXqxVxVRZhljkJOMZi1ibLibzjLHzJvcok8BMguLc7g1W6W/GqZbLdQ==}
-    engines: {node: ^14.18.0 || >=16.0.0}
-    hasBin: true
-    peerDependencies:
-      '@types/node': '>= 14'
-      less: '*'
-      sass: '*'
-      stylus: '*'
-      sugarss: '*'
-      terser: ^5.4.0
-    peerDependenciesMeta:
-      '@types/node':
-        optional: true
-      less:
-        optional: true
-      sass:
-        optional: true
-      stylus:
-        optional: true
-      sugarss:
-        optional: true
-      terser:
-        optional: true
-    dependencies:
-      '@types/node': 17.0.45
-      esbuild: 0.15.18
-      postcss: 8.4.20
-      resolve: 1.22.1
-      rollup: 2.79.1
-    optionalDependencies:
-      fsevents: 2.3.2
-    dev: true
-
   /vite/4.0.3:
     resolution: {integrity: sha512-HvuNv1RdE7deIfQb8mPk51UKjqptO/4RXZ5yXSAvurd5xOckwS/gg8h9Tky3uSbnjYTgUm0hVCet1cyhKd73ZA==}
     engines: {node: ^14.18.0 || >=16.0.0}
@@ -8835,7 +8787,7 @@ packages:
     resolution: {integrity: sha512-AFbieoL7a5LMqcnOF04ji+rpXadgOXnZsxQr//r83kLPr7biP7am3g9zbaZIaBGwBRWeSvoMD4mgPdX3e4NWBg==}
     dev: true
 
-  /vue-demi/0.12.5_y3dbsgppqv4jnxjxtdjaj42kje:
+  /vue-demi/0.12.5_vue@3.2.45:
     resolution: {integrity: sha512-BREuTgTYlUr0zw0EZn3hnhC3I6gPWv+Kwh4MCih6QcAeaTlaIX0DwOVN0wHej7hSvDPecz4jygy/idsgKfW58Q==}
     engines: {node: '>=12'}
     hasBin: true
@@ -8847,7 +8799,6 @@ packages:
       '@vue/composition-api':
         optional: true
     dependencies:
-      '@vue/composition-api': 1.7.1_vue@3.2.45
       vue: 3.2.45
     dev: false
 
