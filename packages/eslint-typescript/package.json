@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-relaxed-ts",
-  "version": "2.0.10",
+  "version": "2.0.11",
   "description": "relaxed's base eslint config presets with prettier",
   "license": "MIT",
   "files": [
