@@ -31,7 +31,7 @@
     "preinstall": "npx only-allow pnpm",
     "clean": "rimraf node_modules **/*/node_modules",
     "sync": "node ./script/sync.mjs",
-    "prerelease": "pnpm build",
+    "prepublishOnly": "npm run build",
     "release": "bumpp packages/*/package.json && pnpm publish -r"
   },
   "devDependencies": {
