@@ -1,5 +1,23 @@
 {
-    "cSpell.words": [
-        "Arrayable"
-    ]
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "cSpell.words": [
+    "Arrayable",
+    "bumpp",
+    "docsearch",
+    "gsap",
+    "Hexa",
+    "outfile",
+    "plopfile",
+    "postplop",
+    "preplop",
+    "shiki",
+    "vitepress",
+    "ERKELOST",
+    "instanceof",
+    "jzzx",
+    "Microtask",
+    "pnpm",
+    "vite",
+    "vitepress"
+  ]
 }

@@ -1,7 +1,7 @@
 <template>
-  <RelaxedLayout fixed-sider>
+  <RelaxedLayout>
     <template #header>
-      <div class="flex-center h-full bg-#bfd">Header</div>
+      <div class="flex-center h-full bg-#D0A245FF">Header</div>
     </template>
     <template #tab>
       <div class="flex-center h-full bg-#6DCB6C">Tab</div>
@@ -12,12 +12,14 @@
       </div>
     </template>
     <template #footer>
-      <div class="flex-center h-full bg-#bfa">Footer</div>
+      <div class="flex-center h-full bg-#D061D8">Footer</div>
     </template>
-    <div class="text-center bg-#D061D8">
-      <div v-for="i in 50" :key="i" class="text-center">{{ i }}</div>
+    <div v-for="i in 50" :key="i" class="text-center">
+      {{ i }}
     </div>
   </RelaxedLayout>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import * as utils from '@relaxed/utils'
+</script>

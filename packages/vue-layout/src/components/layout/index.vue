@@ -129,7 +129,6 @@ interface Props {
 }
 const props = withDefaults(defineProps<Props>(), {
   contentBg: '#f5f6f9',
-  // maxWidth: 1920,
   tabMoveable: true,
   mode: 'vertical',
   holdHeaderFixedSider: false,

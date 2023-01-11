@@ -1,12 +1,19 @@
 {
   "name": "@relaxed/tsconfig",
-  "version": "2.0.3",
+  "version": "2.0.13",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "files": [
+    "base.json"
+  ]
 }

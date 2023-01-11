@@ -1,4 +1,5 @@
-import {
+/* eslint-disable no-param-reassign */
+import type {
   ColorPickerColor,
   ColorInt,
   HSV,
@@ -11,9 +12,9 @@ import {
   Hexa,
   Color
 } from './color-types'
-import { chunk, padEnd, has, keepDecimal } from './color-utils'
+import { chunk, padEnd, has, keepDecimal } from '../common/common'
 export function isCssColor(color?: string | false): boolean {
-  return !!color && !!color.match(/^(#|var\(--|(rgb|hsl)a?\()/)
+  return Boolean(color) && Boolean((color as any).match(/^(#|var\(--|(rgb|hsl)a?\()/))
 }
 export function colorToInt(color: Color): ColorInt {
   let rgb
@@ -33,8 +34,8 @@ export function colorToInt(color: Color): ColorInt {
     rgb = parseInt(c, 16)
   } else {
     throw new TypeError(
-      `Colors can only be numbers or strings, recieved ${
-        color == null ? color : color.constructor.name
+      `Colors can only be numbers or strings, received ${
+        color === null ? color : color.constructor.name
       } instead`
     )
   }
@@ -54,7 +55,7 @@ export function intToHex(color: ColorInt): string {
 
   if (hexColor.length < 6) hexColor = '0'.repeat(6 - hexColor.length) + hexColor
 
-  return '#' + hexColor
+  return `#${hexColor}`
 }
 
 export function colorToHex(color: Color): string {
@@ -73,6 +74,7 @@ export function HSVAtoRGBA(hsva: HSVA): RGBA {
     return v - v * s * Math.max(Math.min(k, 4 - k, 1), 0)
   }
 
+  // eslint-disable-next-line @typescript-eslint/no-shadow
   const rgb = [f(5), f(3), f(1)].map((v) => Math.round(v * 255))
 
   return {
@@ -115,7 +117,7 @@ export function RGBAtoHSVA(rgba: RGBA): HSVA {
     }
   }
 
-  if (h < 0) h = h + 360
+  if (h < 0) h += 360
 
   const s = max === 0 ? 0 : (max - min) / max
   const hsv = [h, s, max]
@@ -133,11 +135,11 @@ export function HSVAtoHSLA(hsva: HSVA): HSLA {
 
   const l = v - (v * s) / 2
 
-  const sprime = l === 1 || l === 0 ? 0 : (v - l) / Math.min(l, 1 - l)
+  const sprite = l === 1 || l === 0 ? 0 : (v - l) / Math.min(l, 1 - l)
 
   return {
     h,
-    s: sprime,
+    s: sprite,
     l,
     a
   }
@@ -148,11 +150,11 @@ export function HSLAtoHSVA(hsl: HSLA): HSVA {
 
   const v = l + s * Math.min(l, 1 - l)
 
-  const sprime = v === 0 ? 0 : 2 - (2 * l) / v
+  const sprite = v === 0 ? 0 : 2 - (2 * l) / v
 
   return {
     h,
-    s: sprime,
+    s: sprite,
     v,
     a
   }
@@ -233,6 +235,7 @@ export function parseHex(hex: string): Hex {
 }
 
 export function RGBtoInt(rgba: RGBA): ColorInt {
+  // eslint-disable-next-line no-bitwise
   return (rgba.r << 16) + (rgba.g << 8) + rgba.b
 }
 
@@ -383,9 +386,8 @@ export function parseColor(color: any, oldColor?: ColorPickerColor | null) {
     const hex = parseHex(color)
     if (oldColor && hex === oldColor.hexa) {
       return oldColor
-    } else {
-      return fromHexa(hex)
     }
+    return fromHexa(hex)
   }
 
   if (typeof color === 'object') {
@@ -395,25 +397,22 @@ export function parseColor(color: any, oldColor?: ColorPickerColor | null) {
 
     if (has(color, ['r', 'g', 'b'])) {
       if (oldColor && color === oldColor.rgba) return oldColor
-      else
-        return fromRGBA({
-          ...color,
-          a
-        })
+      return fromRGBA({
+        ...color,
+        a
+      })
     } else if (has(color, ['h', 's', 'l'])) {
       if (oldColor && color === oldColor.hsla) return oldColor
-      else
-        return fromHSLA({
-          ...color,
-          a
-        })
+      return fromHSLA({
+        ...color,
+        a
+      })
     } else if (has(color, ['h', 's', 'v'])) {
       if (oldColor && color === oldColor.hsva) return oldColor
-      else
-        return fromHSVA({
-          ...color,
-          a
-        })
+      return fromHSVA({
+        ...color,
+        a
+      })
     }
   }
 

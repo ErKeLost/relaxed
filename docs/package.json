@@ -1,16 +1,65 @@
 {
   "name": "docs",
-  "version": "0.0.1",
-  "description": "",
-  "private": true,
-  "main": "index.js",
-  "scripts": {
-    "dev": "vitepress dev docs",
-    "build": "vitepress build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "version": "1.0.0",
+  "description": "Value Online - The Value Online Front end architecture.",
+  "main": "src/index.ts",
+  "exports": {
+    ".": "./src/index.ts",
+    "./config": "./src/vitepress/config/baseConfig.js",
+    "./highlight": "./src/vitepress/config/highlight.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "packageManager": "pnpm@7.2.1"
+  "private": true,
+  "files": [
+    "src",
+    "types"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/erkelost/jzzx.git"
+  },
+  "keywords": [
+    "cli",
+    "Front end architecture"
+  ],
+  "author": "ERKELOST",
+  "license": "MIT",
+  "homepage": "https://github.com/erkelost",
+  "bugs": {
+    "url": "https://github.com/erkelost/jzzx/issues"
+  },
+  "scripts": {
+    "lint": "prettier --check --write --parser typescript \"{__tests__,docs,src,types}/**/*.ts\"",
+    "lint:fail": "prettier --check --parser typescript \"{__tests__,docs,src,types}/**/*.ts\"",
+    "type": "tsc --noEmit",
+    "test": "yarn lint && yarn type",
+    "dev": "vitepress dev jzzx",
+    "build": "vitepress build jzzx",
+    "serve": "yarn jzzx-build && vitepress serve jzzx"
+  },
+  "dependencies": {
+    "@docsearch/css": "^3.3.0",
+    "@docsearch/js": "^3.3.0",
+    "@vueuse/core": "^9.6.0",
+    "body-scroll-lock": "^3.1.5",
+    "gsap": "^3.9.1",
+    "normalize.css": "^8.0.1",
+    "shiki": "^0.9.15"
+  },
+  "devDependencies": {
+    "@types/body-scroll-lock": "^2.6.1",
+    "prettier": "^2.4.1",
+    "typescript": "~4.3.5",
+    "vitepress": "1.0.0-alpha.33",
+    "vue": "^3.2.26"
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "@algolia/client-search",
+        "react",
+        "react-dom",
+        "@types/react"
+      ]
+    }
+  }
 }

@@ -3,7 +3,7 @@ function isObject(originValue) {
     (originValue !== null && typeof originValue === 'object') || typeof originValue === 'function'
   )
 }
-function deepClone(originValue, map = new WeakMap()) {
+export function deepClone(originValue, map = new WeakMap()) {
   // 循环引用
   // const map = new Map();
 
@@ -38,4 +38,13 @@ function deepClone(originValue, map = new WeakMap()) {
   }
   return target
 }
-export { deepClone }
+
+export function deepCloneSync(originObj) {
+  return new Promise((resolve) => {
+    const { port1, port2 } = new MessageChannel()
+    port1.postMessage(originObj)
+    port2.onmessage = (msg) => {
+      resolve(msg.data)
+    }
+  })
+}
