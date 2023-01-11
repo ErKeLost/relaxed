@@ -9,3 +9,5 @@ export const isObject = (val: any): val is object => toString(val) === '[object 
 export const isWindow = (val: any): boolean =>
   typeof window !== 'undefined' && toString(val) === '[object Window]'
 export const isBrowser = typeof window !== 'undefined'
+
+export const nullValue = (val: any): boolean => val === '' || val === null || val === undefined
