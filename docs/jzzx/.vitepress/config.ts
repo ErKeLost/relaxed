@@ -33,9 +33,12 @@ module.exports = (async () => {
       // logo: '/img/logo-vue.svg',
 
       algolia: {
-        indexName: 'search_jzzx',
-        appId: 'GRSW61FNDF',
-        apiKey: '3e07faffcb963f53968c19521786d2d5'
+        indexName: 'relaxed-adny',
+        appId: 'OJPCLF4RYC',
+        apiKey: 'b6a6026b9ca3bb7826445ffcb764d724'
+        // searchParameters: {
+        //   facetFilters: ['version:v3']
+        // }
       },
 
       carbonAds: {
