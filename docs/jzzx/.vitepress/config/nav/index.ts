@@ -13,7 +13,7 @@ export const nav = [
           // { text: "JavaScript算法解析", link: "/algorithm/index" },
           { text: 'Typescript', link: '/typescript/learn/basics' },
           { text: 'JavaScript', link: '/javascript/this/index' },
-          { text: 'Algorithm', link: '/algorithm/index' }
+          { text: 'Algorithm', link: '/algorithm/cpu' }
         ]
       }
     ]
