@@ -168,7 +168,9 @@ export const sidebar = {
       text: 'JavaScript算法与数据结构',
       items: [
         { text: 'CPU， 寄存器， 内存', link: '/algorithm/cpu' },
-        { text: '二分查找法', link: '/algorithm/binarySearch' }
+        { text: '二分查找法', link: '/algorithm/binarySearch' },
+        { text: '插入排序', link: '/algorithm/insertSort' },
+        { text: '冒泡排序', link: '/algorithm/bubblingSort' }
       ]
     }
   ],
