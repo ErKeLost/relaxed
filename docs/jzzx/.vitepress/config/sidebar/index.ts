@@ -222,6 +222,10 @@ export const sidebar = {
         {
           text: 'TypeScript高级进阶',
           link: '/typescript/learn/advanced'
+        },
+        {
+          text: 'TypeScript项目实战',
+          link: '/typescript/learn/actualCombat'
         }
       ]
     }
@@ -237,6 +241,14 @@ export const sidebar = {
         {
           text: 'ES6 - ES12',
           link: '/javascript/es6/index'
+        },
+        {
+          text: 'constructor function & class',
+          link: '/javascript/constructorFunction/index'
+        },
+        {
+          text: 'extend & polymorphism',
+          link: '/javascript/constructorFunction/extend'
         },
         {
           text: 'Promise',
