@@ -45,6 +45,10 @@ export const nav = [
     ]
   },
   {
+    text: 'NestJS',
+    link: '/nest/thought/index'
+  },
+  {
     text: 'Vue规范',
     activeMatch: `^/vue/`,
     items: [

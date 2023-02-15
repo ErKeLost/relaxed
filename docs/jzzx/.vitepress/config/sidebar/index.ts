@@ -174,6 +174,17 @@ export const sidebar = {
       ]
     }
   ],
+  '/nest': [
+    {
+      text: 'NestJS 设计与实战',
+      items: [
+        { text: '编程思想', link: '/nest/thought/index' },
+        { text: '核心概念', link: '/nest/thought/concept' },
+        { text: 'MVC', link: '/nest/thought/mvc' }
+        // { text: '冒泡排序', link: '/algorithm/bubblingSort' }
+      ]
+    }
+  ],
   '/vue': [
     {
       text: '权衡的艺术',
