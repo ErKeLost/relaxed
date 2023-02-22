@@ -251,7 +251,7 @@ export const sidebar = {
           link: '/javascript/constructorFunction/index'
         },
         {
-          text: 'extend & polymorphism',
+          text: 'prototype chain & extend & polymorphism',
           link: '/javascript/constructorFunction/extend'
         },
         {
