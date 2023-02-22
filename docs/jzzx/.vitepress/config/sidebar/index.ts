@@ -170,6 +170,8 @@ export const sidebar = {
         { text: 'CPU， 寄存器， 内存', link: '/algorithm/cpu' },
         { text: 'TypeScript实现十大排序算法(一): 冒泡排序', link: '/algorithm/bubblingSort2' },
         { text: 'TypeScript实现十大排序算法(二) - 选择排序', link: '/algorithm/selection' },
+        { text: 'TypeScript实现十大排序算法(三) - 插入排序', link: '/algorithm/insertSort2' },
+        { text: 'TypeScript实现十大排序算法(二) - 选择排序', link: '/algorithm/selection' },
         { text: '二分查找法', link: '/algorithm/binarySearch' },
         { text: '插入排序', link: '/algorithm/insertSort' },
         { text: '冒泡排序', link: '/algorithm/bubblingSort' }

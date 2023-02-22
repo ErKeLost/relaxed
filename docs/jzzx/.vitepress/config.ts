@@ -25,13 +25,13 @@ module.exports = (async () => {
 
     lang: 'zh-CN',
     title: 'Value Online',
-    lastUpdated: '最近更新',
+    lastUpdated: true,
     repo: 'https://github.com/ErKeLost/jzzx-docs',
     description: 'Value Online - The Value Online Front end architecture',
     head,
     themeConfig: {
       // logo: '/img/logo-vue.svg',
-
+      lastUpdatedText: '上次更新',
       algolia: {
         indexName: 'relaxed-adny',
         appId: 'OJPCLF4RYC',

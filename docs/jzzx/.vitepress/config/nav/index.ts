@@ -45,6 +45,14 @@ export const nav = [
     ]
   },
   {
+    text: 'Rust',
+    link: '/rust'
+  },
+  {
+    text: 'C Language',
+    link: '/c'
+  },
+  {
     text: 'NestJS',
     link: '/nest/thought/index'
   },
