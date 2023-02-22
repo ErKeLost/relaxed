@@ -36,7 +36,7 @@ enum Direction {
 ```
 
 :::warning 枚举类型默认值
-枚举类型默认值从 0 开始 可以重新赋值  
+枚举类型默认值从 0 开始 可以重新赋值
 :::
 
 ## 泛型
@@ -114,10 +114,43 @@ function identity<T, U>(value: T, message: U): [T, U] {
 :::warning useState 的练习 react
 
 ```ts
+function useState<T>(initialState: T): [T, (newState: T) => void] {
+  let state = initialState
+  function setState(newState) {
+    state = newState
+  }
+  return [state, setState]
+}
+// 类型参数化
+const [count, setCount] = useState<number>(100)
+const [message, setMessage] = useState<string>('adny')
+const [arr, setArr] = useState<string[]>(['erkelost'])
+
+// ts 会进行类型推导 所以
+const [count, setCount] = useState(100)
+const [message, setMessage] = useState('adny')
+const [arr, setArr] = useState(['erkelost'])
 
 ```
 
 :::
+
+泛型支持传入多个类型
+
+```ts
+function foo<T, E>(arg1: T, arg2: E) {
+
+}
+foo(10, 20)
+foo(10, 'abc')
+```
+
+平时 我们可能在开发中运用到的一些常用名称
+
+- T: Type 类型
+- K V Key & Value 键值对
+- E Element 元素
+- O Object 对象
 
 ### 泛型接口
 
@@ -126,7 +159,7 @@ function identity<T, U>(value: T, message: U): [T, U] {
 ```ts
 interface Identities<V M> {
   value: V
-  message:
+  message: M
 }
 ```
 
@@ -143,6 +176,50 @@ function identity<T, U>(value: T, message: U): Identities<T, U> {
 
 console.log(identity(68, 'Semlinker'))
 ```
+
+动态灵活的定义接口
+
+```ts
+interface Adny<T> {
+  name: T
+  age: number
+  job: T
+}
+const one: Adny<string> = {
+  name: 'w',
+  age: 99,
+  job: 'prog'
+}
+
+const one: Adny<number> = {
+  name: 66,
+  age: 99,
+  job: 88
+}
+
+// 类型添加默认值 跟参数一样的
+interface Adny<T = string> {
+  name: T
+  age: number
+  job: T
+}
+
+```
+
+### 泛型类
+
+```ts
+class Point<T = string> {
+  x: T
+  y: T
+  constructor(x: T, y: T) {
+    this.x = x
+    this.y = y
+  }
+}
+```
+
+
 
 ### 泛型约束
 
