@@ -7,6 +7,7 @@
     "packages/*"
   ],
   "scripts": {
+    "bootstrap": "pnpm install && pnpm dev",
     "preplop": "esbuild --bundle ./plopfile.ts --format=esm --outfile=./plopfile.mjs --platform=node",
     "plop": "plop & rimraf ./plopfile.mjs",
     "postplop": "pnpm i",
@@ -57,7 +58,6 @@
     "turbo": "^1.8.1",
     "typescript": "^4.9.5",
     "vite": "^4.1.3",
-    "vitepress": "^1.0.0-alpha.47",
     "zx": "^7.1.1"
   },
   "engines": {
