@@ -1,6 +1,6 @@
 {
   "name": "@relaxed/utils",
-  "version": "2.0.13",
+  "version": "2.0.14",
   "description": "",
   "main": "index.ts",
   "scripts": {
