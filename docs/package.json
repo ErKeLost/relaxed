@@ -49,7 +49,7 @@
     "@types/body-scroll-lock": "^2.6.1",
     "prettier": "^2.4.1",
     "typescript": "^4.9.5",
-    "vitepress": "1.0.0-alpha.47",
+    "vitepress": "1.0.0-alpha.48",
     "vue": "^3.2.26"
   },
   "pnpm": {

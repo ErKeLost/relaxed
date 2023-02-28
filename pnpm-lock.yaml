@@ -64,7 +64,7 @@ importers:
       prettier: ^2.4.1
       shiki: ^0.9.15
       typescript: ^4.9.5
-      vitepress: 1.0.0-alpha.47
+      vitepress: 1.0.0-alpha.48
       vue: ^3.2.26
     dependencies:
       '@docsearch/css': 3.3.3
@@ -78,7 +78,7 @@ importers:
       '@types/body-scroll-lock': 2.6.2
       prettier: 2.8.4
       typescript: 4.9.5
-      vitepress: 1.0.0-alpha.47
+      vitepress: 1.0.0-alpha.48
       vue: 3.2.47
 
   packages/design-pattern:
@@ -86,7 +86,7 @@ importers:
 
   packages/eslint-basic:
     specifiers:
-      '@html-eslint/parser': ^0.13.2
+      '@html-eslint/parser': ^0.16.0
       eslint: ^8.23.0
       eslint-config-prettier: ^8.5.0
       eslint-define-config: ^1.7.0
@@ -103,7 +103,7 @@ importers:
       prettier: ^2.7.1
       yaml-eslint-parser: ^1.1.0
     dependencies:
-      '@html-eslint/parser': 0.13.2
+      '@html-eslint/parser': 0.16.0
       eslint-config-prettier: 8.6.0_eslint@8.34.0
       eslint-define-config: 1.15.0
       eslint-import-resolver-alias: 1.1.2_5rfvta7qn57kxm7ir36ta6fixq
@@ -1584,9 +1584,11 @@ packages:
     transitivePeerDependencies:
       - supports-color
 
-  /@html-eslint/parser/0.13.2:
-    resolution: {integrity: sha512-DESYDCWOo8JkpLCLpSgoTd437ReTxA955T//dGm7+dnW1UnVs6M2Axpd40smF7ucyBqjTUj7YaE/eMRjlLMoPg==}
+  /@html-eslint/parser/0.16.0:
+    resolution: {integrity: sha512-lXVC98WX79L7C/GP5oP233x5IwON9yaV2+rnyYy44wXde5PC+EOPLDItVZpt+aNlYl4RJgkBPcOSwe3yzpSqZA==}
     engines: {node: '>=8.10.0'}
+    dependencies:
+      es-html-parser: 0.0.8
     dev: false
 
   /@humanwhocodes/config-array/0.11.8:
@@ -3263,8 +3265,8 @@ packages:
     engines: {node: '>=10'}
     hasBin: true
     dependencies:
-      JSONStream: 1.3.5
       is-text-path: 1.0.1
+      JSONStream: 1.3.5
       lodash: 4.17.21
       meow: 8.1.2
       split2: 3.2.2
@@ -3671,6 +3673,10 @@ packages:
       typed-array-length: 1.0.4
       unbox-primitive: 1.0.2
       which-typed-array: 1.1.9
+
+  /es-html-parser/0.0.8:
+    resolution: {integrity: sha512-kjMH23xhvTBw/7Ve1Dtb/7yZdFajfvwOpdsgRHmnyt8yvTsDJnkFjUgEEaMZFW+e1OhN/eoZrvF9wehq+waTGg==}
+    dev: false
 
   /es-set-tostringtag/2.0.1:
     resolution: {integrity: sha512-g3OMbtlwY3QewlqAiMLI47KywjWZoEytKr8pf6iTC8uJq5bIAH52Z9pnQ8pVL6whrCto53JZDuUIsifGeLorTg==}
@@ -8968,8 +8974,8 @@ packages:
       fsevents: 2.3.2
     dev: true
 
-  /vitepress/1.0.0-alpha.47:
-    resolution: {integrity: sha512-vj+LOY0WJtKSk98HV4qqG6p4MofmF+C8yrWHiiw+GCMfr6C+610U5D7oD2OruroIafsON6F4nBDWGK8ZyGIpXQ==}
+  /vitepress/1.0.0-alpha.48:
+    resolution: {integrity: sha512-vu9J6Eg1l+o33lfDAMD9+cxomMNQGNQEW/GPu32tkffagMBxoBqhzxfqjaOqtTQ2VdS+dauOdROtrWQrElyivw==}
     hasBin: true
     dependencies:
       '@docsearch/css': 3.3.3
