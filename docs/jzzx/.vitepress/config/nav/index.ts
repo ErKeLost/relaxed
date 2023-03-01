@@ -49,6 +49,10 @@ export const nav = [
     link: '/rust'
   },
   {
+    text: 'Go',
+    link: '/go/index'
+  },
+  {
     text: 'C Language',
     link: '/c'
   },
