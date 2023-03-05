@@ -14,6 +14,7 @@ export const nav = [
           { text: 'Typescript', link: '/typescript/learn/basics' },
           { text: 'JavaScript', link: '/javascript/this/index' },
           { text: 'Algorithm', link: '/algorithm/cpu' }
+          { text: '数据结构与算法', link: '/dataStruct/index' }
         ]
       }
     ]
