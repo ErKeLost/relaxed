@@ -1,3 +1,20 @@
+<script setup lang="ts">
+import pLimit, { sleep } from '@relaxed/promise'
+
+const limit = pLimit(2)
+
+const input = [
+  limit(() => sleep(1000, () => console.log('第一次并发'))),
+  limit(() => sleep(5000, () => console.log('第二次并发'))),
+  limit(() => sleep(1000, () => console.log('第三次并发')))
+]
+async function aa() {
+  const res = await Promise.all(input)
+  console.log(res)
+}
+aa()
+</script>
+
 <template>
   <RelaxedLayout>
     <template #header>
@@ -19,7 +36,3 @@
     </div>
   </RelaxedLayout>
 </template>
-
-<script setup lang="ts">
-import * as utils from '@relaxed/utils'
-</script>

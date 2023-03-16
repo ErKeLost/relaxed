@@ -147,6 +147,7 @@ module.exports = {
     }
   ],
   rules: {
+    'no-console': 'off',
     'no-plusplus': 'off',
     // import
     'import/no-mutable-exports': 'error',

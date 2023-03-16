@@ -272,6 +272,7 @@ importers:
     specifiers:
       '@relaxed/design-pattern': workspace:*
       '@relaxed/layout': workspace:*
+      '@relaxed/promise': workspace:*
       '@relaxed/utils': workspace:*
       '@unocss/preset-attributify': ^0.47.6
       '@unocss/preset-uno': ^0.47.5
@@ -294,6 +295,7 @@ importers:
     devDependencies:
       '@relaxed/design-pattern': link:../packages/design-pattern
       '@relaxed/layout': link:../packages/vue-layout
+      '@relaxed/promise': link:../packages/promise
       '@relaxed/utils': link:../packages/utils
       '@unocss/preset-attributify': 0.47.6
       '@unocss/preset-uno': 0.47.6
