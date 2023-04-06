@@ -21,6 +21,7 @@
     "@relaxed/design-pattern": "workspace:*",
     "@relaxed/utils": "workspace:*",
     "@relaxed/layout": "workspace:*",
+    "@relaxed/promise": "workspace:*",
     "@vitejs/plugin-vue": "^3.0.0",
     "eslint": "^8.23.0",
     "eslint-config-relaxed-vue": "workspace:*",
