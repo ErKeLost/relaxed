@@ -40,6 +40,8 @@
     "@commitlint/config-conventional": "^17.4.4",
     "@relaxed/eslint-config": "workspace:*",
     "@types/node": "^17.0.45",
+    "@vitejs/plugin-vue": "^4.1.0",
+    "@vue/compiler-sfc": "^3.2.47",
     "bumpp": "^8.2.1",
     "commitizen": "^4.3.0",
     "commitlint": "^17.5.1",
