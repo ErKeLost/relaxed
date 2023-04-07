@@ -22,7 +22,7 @@
     "@relaxed/utils": "workspace:*",
     "@relaxed/layout": "workspace:*",
     "@relaxed/promise": "workspace:*",
-    "@vitejs/plugin-vue": "^3.0.0",
+    "@vitejs/plugin-vue": "^4.0.0",
     "eslint": "^8.23.0",
     "eslint-config-relaxed-vue": "workspace:*",
     "@unocss/preset-attributify": "^0.47.6",

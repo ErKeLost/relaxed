@@ -17,6 +17,7 @@
     "postplop",
     "preplop",
     "shiki",
+    "subdirs",
     "vite",
     "vitepress"
   ]

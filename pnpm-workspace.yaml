@@ -2,8 +2,6 @@ packages:
   - 'packages/**/**'
   - 'playground'
   - 'docs'
-  - 'algorithm-playground'
-  # - '!**/vue-layout/**'
 # packages:
 #   # all packages in subdirs of packages/ and components/
 #   - 'packages/**'
