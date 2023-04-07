@@ -182,6 +182,16 @@ export const sidebar = {
       ]
     }
   ],
+  'dataStruct': [
+    {
+      text: 'JavaScript算法与数据结构',
+      items: [
+        {
+          text: '线性 数组 栈结构', link: '/dataStruct/stack'
+        }
+      ]
+    }
+  ],
   '/nest': [
     {
       text: 'NestJS 设计与实战',
