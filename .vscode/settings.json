@@ -3,8 +3,10 @@
   "cSpell.words": [
     "Arrayable",
     "bumpp",
+    "commitlint",
     "docsearch",
     "ERKELOST",
+    "esno",
     "gsap",
     "Hexa",
     "instanceof",
@@ -15,9 +17,11 @@
     "plusplus",
     "pnpm",
     "postplop",
+    "preinstall",
     "preplop",
     "shiki",
     "subdirs",
+    "tsup",
     "vite",
     "vitepress"
   ]
