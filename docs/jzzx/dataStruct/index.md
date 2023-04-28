@@ -26,3 +26,39 @@
 :::tip 鄙视题
 6,5,4,3,2,1 从栈顶到栈底依次入栈，那么出栈的顺序是什么？
 :::
+
+
+#### 栈结构的实践
+
+栈结构的实现有两种方式，一种是基于数组实现，一种是基于链表实现。基于数组实现的栈结构叫做顺序栈，基于链表实现的栈结构叫做链式栈。
+
+数组实现
+```ts
+class ArrayStack<T> {
+    private data: T[] = []
+
+    push(el: T) {
+        this.data.push(el)
+    }
+
+    pop(): T | undefined {
+        if (this.data.length !== 0) {
+            return this.data.pop()
+        }
+    }
+
+    peek(): T | undefined {
+        if (this.data.length !== 0) {
+            return this.data[this.data.length - 1]
+        }
+    }
+
+    isEmpty():T {
+        return this.data.length === 0
+    }
+
+    size():T {
+        return this.data.length
+    }
+}
+```
