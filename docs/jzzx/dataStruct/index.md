@@ -62,3 +62,94 @@ class ArrayStack<T> {
     }
 }
 ```
+
+:::warning
+封装接口 为了以后可能使用链表结构
+:::
+
+```ts
+interface IStack<T> {
+    push(el: T): void
+    pop(): T | undefined
+    peek(): T | undefined
+    isEmpty(): boolean
+    size(): number
+}
+
+class ArrayStack<T> implements IStack<T> {
+    private data: T[] = []
+
+    push(el: T) {
+        this.data.push(el)
+    }
+
+    pop(): T | undefined {
+        if (this.data.length !== 0) {
+            return this.data.pop()
+        }
+    }
+
+    peek(): T | undefined {
+        if (this.data.length !== 0) {
+            return this.data[this.data.length - 1]
+        }
+    }
+
+    isEmpty(): boolean {
+        return this.data.length === 0
+    }
+
+    size(): number {
+        return this.data.length
+    }
+}
+```
+
+
+:::tip
+十进制转二进制面试题
+:::
+
+```ts
+function decimalToBinary(decNumber: number): string {
+    const stack = new ArrayStack<number>()
+    let binary = ""
+    while(decNumber !== 0) {
+        stack.push(decNumber % 2)
+        decNumber = Math.floor(decNumber / 2)
+    }
+
+    while(!stack.isEmpty()) {
+        binary += stack.pop()
+    }
+    return binary
+}
+```
+
+:::tip
+判断有效的括号 相同类型的括号要一一对应
+:::
+
+```ts
+function isValid(s: string): boolean {
+    const stack = new ArrayStack<string>()
+    for (let i =0; i < s.length; i++) {
+        switch s[i] {
+            case "(":
+                stack.push(")")
+                break
+            case "[":
+                stack.push("]")
+                break
+            case "{":
+                stack.push("}")
+                break
+            default:
+                if (stack.isEmpty() || stack.pop() !== s[i]) {
+                    return false
+                }
+        }
+    }
+    return stack.isEmpty()
+}
+```
