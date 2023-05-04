@@ -182,12 +182,25 @@ export const sidebar = {
       ]
     }
   ],
-  'dataStruct': [
+  dataStruct: [
     {
       text: 'JavaScript算法与数据结构',
       items: [
         {
-          text: '线性 数组 栈结构', link: '/dataStruct/stack'
+          text: '线性 数组 栈结构',
+          link: '/dataStruct/stack'
+        },
+        {
+          text: '队列结构',
+          link: '/dataStruct/queue'
+        },
+        {
+          text: '链表结构',
+          link: '/dataStruct/link-list'
+        },
+        {
+          text: '线性 数组 栈结构',
+          link: '/dataStruct/stack'
         }
       ]
     }
