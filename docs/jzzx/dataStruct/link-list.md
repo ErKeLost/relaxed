@@ -18,3 +18,106 @@
 
 
 ### 实现一个链表
+
+
+封装两个类
+
+- Node类：表示节点
+- LinkedList类：提供插入节点、删除节点、显示列表元素的方法
+
+:::tip
+链表中的常见操作
+- append(element)：向列表尾部添加一个新的项
+- insert(position, element)：向列表的特定位置插入一个新的项
+- get(position)：获取对应位置的元素
+- indexOf(element)：返回元素在列表中的索引。如果列表中没有该元素则返回-1
+- update(position, element)：修改某个位置的元素
+- removeAt(position)：从列表的特定位置移除一项
+- remove(element)：从列表中移除一项
+- isEmpty()：如果链表中不包含任何元素，返回true，如果链表长度大于0则返回false
+- size()：返回链表包含的元素个数
+- toString()：由于列表项使用了Node类，就需要重写继承自JavaScript对象默认的toString方法，让其只输出元素的值
+- print()：打印链表
+- getHead()：获取链表的头部
+- getTail()：获取链表的尾部
+:::
+
+
+```js
+// Node类
+class Node<T> {
+  public value: T;
+  next: Node<T> | null;
+
+  constructor(value: T) {
+    this.value = value;
+    this.next = null;
+  }
+}
+```
+
+```js
+// LinkedList类
+class LinkedList<T> {
+  private head: Node<T> | null = null;
+  private size: number = 0;
+
+  append(value: T) {
+    const node = new Node(value);
+    if (this.head === null) {
+      this.head = node;
+    } else {
+      let current = this.head;
+      while (current.next) {
+        current = current.next;
+      }
+      current.next = node;
+    }
+    this.size++;
+  }
+
+  traverse(callback: (node: Node<T>) => void) {
+    let current = this.head;
+    while (current) {
+      callback(current);
+      current = current.next;
+    }
+  }
+
+  insert(position: number, value: T) {
+    if (position < 0 || position > this.size) {
+      return false
+    }
+    const node = new Node(value);
+    if (position === 0) {
+      node.next = this.head;
+      this.head = node;
+    } else {
+      let current = this.head;
+      let previous = null;
+      let index = 0;
+      while (index++ < position) {
+        previous = current;
+        current = current.next;
+      }
+      node.next = current;
+      previous.next = node;
+    }
+    this.size++;
+    return true;
+  }
+
+  get length() {
+    return this.size
+  }
+}
+```
+
+```ts
+const link = new LinkedList<number>();
+link.append(1);
+link.append(2);
+link.traverse((node) => {
+  console.log(node.value);
+});
+```
