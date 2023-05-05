@@ -88,6 +88,7 @@ class LinkedList<T> {
     if (position < 0 || position > this.size) {
       return false
     }
+    // 双指针做法
     const node = new Node(value);
     if (position === 0) {
       node.next = this.head;
@@ -105,6 +106,75 @@ class LinkedList<T> {
     }
     this.size++;
     return true;
+  }
+
+  remove(value: T) {
+    const index = this.indexOf(value);
+    return this.removeAt(index);
+  }
+
+  removeAt(position: number) {
+    if (position < 0 || position >= this.size) {
+      return null;
+    }
+    let current = this.head;
+    if (position === 0) {
+      this.head = this.head.next;
+    } else {
+      let previous = null;
+      let index = 0;
+      while (index++ < position) {
+        previous = current;
+        current = current.next;
+      }
+      previous!.next = current?.next ?? null;
+    }
+    this.size--;
+    // value :: undefined
+    return current.value ?? null;
+  }
+
+  update(position: number, value: T) {
+    if (position < 0 || position >= this.size) {
+      return false;
+    }
+    let current = this.head;
+    let index = 0;
+    while (index++ < position) {
+      current = current!.next;
+    }
+    current!.value = value;
+    return true;
+  }
+
+  indexOf(value: T) {
+    let current = this.head;
+    let index = 0;
+    while (current) {
+      if (current.value === value) {
+        return index;
+      }
+      current = current.next;
+      index++;
+    }
+    return -1;
+  }
+
+  isEmpty() {
+    return this.size === 0;
+  }
+
+
+  get(position: number): T | null {
+    if (position < 0 || position >= this.size) {
+      return null;
+    }
+    let current = this.head;
+    let index = 0;
+    while (index++ < position) {
+      current = current!.next;
+    }
+    return current!.value;
   }
 
   get length() {
