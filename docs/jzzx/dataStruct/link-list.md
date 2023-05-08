@@ -191,3 +191,72 @@ link.traverse((node) => {
   console.log(node.value);
 });
 ```
+## 删除 node 节点
+
+```ts
+// 删除节点
+class ListNode {
+  val: number;
+  next: ListNode | null;
+  constructor(val?: number, next?: ListNode |null) {
+    this.val = val
+    this.next = next
+  }
+}
+
+function deleteNode(node: ListNode | null): void {
+  node!.val = node!.next.val
+  node.next = node.next.next
+}
+```
+
+## 反转列表
+
+### 栈结构方式 入栈出栈
+
+```ts
+class ListNode {
+  val: number;
+  next: ListNode | null;
+  constructor(val?: number, next?: ListNode |null) {
+    this.val = val
+    this.next = next
+  }
+}
+
+function reverseList(head: ListNode | null): ListNode | null {
+  if (!head) return null
+  if (!head.next) return null
+
+  // 使用栈结构
+  const stack: ListNode[] = []
+  let current: ListNode | null = head
+  while(current) {
+    stack.push(current)
+    current = current.next
+  }
+
+  // 取出元素
+  const newHead = ListNode | null = stack.pop()
+  let newHeadCurrent = newHead
+  while(stack.length) {
+    newHeadCurrent.next = stack.pop()
+    newHeadCurrent = newHeadCurrent.next
+  }
+  newHeadCurrent.next = null
+  return newHead
+}
+```
+
+### 非递归的方式
+
+```ts
+function reverseList(head: ListNode | null): ListNode | null {
+  if (!head || !head.next) return null
+
+  // 反转列表
+
+  let newHead: ListNode | null = null
+}
+
+```

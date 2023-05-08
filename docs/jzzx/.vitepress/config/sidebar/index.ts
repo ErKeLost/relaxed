@@ -199,8 +199,8 @@ export const sidebar = {
           link: '/dataStruct/link-list'
         },
         {
-          text: '线性 数组 栈结构',
-          link: '/dataStruct/stack'
+          text: '大 O 表示法',
+          link: '/dataStruct/gig-o-representation'
         }
       ]
     }
