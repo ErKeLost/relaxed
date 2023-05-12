@@ -51,7 +51,7 @@ module.exports = {
     'no-redeclare': 'off',
     '@typescript-eslint/no-redeclare': 'error',
     'no-unused-vars': 'off',
-    'import/no-unresolved': 'warn',
+    'import/no-unresolved': 'off',
     '@typescript-eslint/no-unused-vars': 'warn',
     'no-use-before-define': 'off',
     '@typescript-eslint/no-use-before-define': [
