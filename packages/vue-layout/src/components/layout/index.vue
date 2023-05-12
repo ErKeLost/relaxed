@@ -181,7 +181,6 @@ const allProps = computed(() => {
 /** 水平布局 */
 const isVertical = computed(() => props.mode === 'vertical')
 // fixed布局时的层级
-const tabZIndex = 999
 const siderZIndex = computed(() => (isVertical.value ? 1002 : 1000))
 const footerZIndex = 999
 const maxWidthDiv = computed(() => props.maxWidth)
