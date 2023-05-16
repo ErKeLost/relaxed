@@ -6,8 +6,8 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "dev": "vite",
-    "tsc-build": "vue-tsc --noEmit && vite build",
-    "build": "vite build",
+    "tsc-build": "vue-tsc --noEmit && vite build -w",
+    "build": "vite build -w",
     "prepublishOnly": "npm run build",
     "preview": "vite preview"
   },

@@ -8,7 +8,7 @@
     :siderVisible="showSider"
     :fixedFooter="fixedFooter"
     :footerVisible="showFooter"
-    :tabMoveable="tabMoveable"
+    :tabMoveable="false"
   >
     <template #header>
       <div text-red class="flex-center h-full bg-[#abf]">Header</div>
