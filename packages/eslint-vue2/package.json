@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-relaxed-vue2",
-  "version": "2.0.31",
+  "version": "2.0.32",
   "description": "relaxed's vue2 eslint config presets with prettier",
   "license": "MIT",
   "main": "index.js",
