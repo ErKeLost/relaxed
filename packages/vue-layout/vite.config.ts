@@ -8,8 +8,6 @@ import Unocss from 'unocss/vite'
 
 // https://vitejs.dev/config/
 export default defineConfig(async (env) => {
-  console.log(env.mode)
-
   return {
     resolve: {
       extensions: ['.tsx', '.vue', '.jsx', '.ts', '.js'],

@@ -22,7 +22,6 @@ cssRender('.adny-layout__container', {
   flex: 1,
   flexBasis: 'auto',
   boxSizing: 'border-box',
-  minWidth: 0,
   transitionProperty: 'all'
 })
 </script>

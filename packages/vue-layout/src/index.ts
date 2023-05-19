@@ -16,10 +16,12 @@ export interface LayoutProps {
   minWidth?: number
   /** 头部可见 */
   headerVisible?: boolean
+  headerZIndex?: number
   /** 头部高度 */
   headerHeight?: number
   /** 标签可见 */
   tabVisible?: boolean
+  tabZIndex?: number
   /** 标签页高度 */
   tabHeight?: number
   /** 固定头部和标签 */

@@ -8,7 +8,7 @@
     :siderVisible="showSider"
     :fixedFooter="fixedFooter"
     :footerVisible="showFooter"
-    :tabMoveable="tabMoveable"
+    :tabMoveable="false"
   >
     <template #header>
       <div text-red class="flex-center h-full bg-[#abf]">Header</div>
@@ -89,7 +89,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import adnyLayout from '../index.vue'
+import adnyLayout from '../components/layout/index.vue'
 
 type Mode = 'vertical' | 'horizontal'
 const mode = ref<Mode>('vertical')

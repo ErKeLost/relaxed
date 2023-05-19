@@ -400,7 +400,7 @@ module.exports = {
      * @description Require `return` statements to either always or never specify values
      * @link https://eslint.org/docs/latest/rules/consistent-return
      */
-    'consistent-return': 'error',
+    'consistent-return': 'off',
 
     /**
      * @description Enforce consistent naming when capturing the current execution context
@@ -969,7 +969,7 @@ module.exports = {
      * @description Disallow dangling underscores in identifiers
      * @link https://eslint.org/docs/latest/rules/no-underscore-dangle
      */
-    'no-underscore-dangle': 'error',
+    'no-underscore-dangle': 'off',
 
     /**
      * @description Disallow ternary operators when simpler alternatives exist

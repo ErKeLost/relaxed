@@ -102,8 +102,11 @@ interface Props {
   headerVisible?: boolean
   /** 头部高度 */
   headerHeight?: number
+  headerZIndex?: number
+
   /** 标签可见 */
   tabVisible?: boolean
+  tabZIndex?: number
   /** 标签页高度 */
   tabHeight?: number
   /** 固定头部和标签 */
@@ -132,6 +135,8 @@ const props = withDefaults(defineProps<Props>(), {
   tabMoveable: true,
   mode: 'vertical',
   holdHeaderFixedSider: false,
+  headerZIndex: 1001,
+  tabZIndex: 1001,
   fixedSider: false,
   minWidth: 1200,
   headerVisible: true,
@@ -176,8 +181,6 @@ const allProps = computed(() => {
 /** 水平布局 */
 const isVertical = computed(() => props.mode === 'vertical')
 // fixed布局时的层级
-const headerZIndex = 1001
-const tabZIndex = 999
 const siderZIndex = computed(() => (isVertical.value ? 1002 : 1000))
 const footerZIndex = 999
 const maxWidthDiv = computed(() => props.maxWidth)

@@ -23,7 +23,7 @@ module.exports = {
   ],
   rules: {
     'vue/multi-word-component-names': [
-      'error',
+      'off',
       {
         ignores: ['index']
       }
