@@ -8,6 +8,7 @@
     "dev:preview": "vite",
     "tsc-build": "vue-tsc --noEmit && vite build",
     "build": "vite build",
+    "watch": "vite build -w",
     "preview": "vite preview"
   },
   "dependencies": {
