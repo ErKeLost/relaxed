@@ -226,7 +226,7 @@ class ListNode {
 
 function reverseList(head: ListNode | null): ListNode | null {
   if (!head) return null
-  if (!head.next) return null
+  if (!head.next) return head
 
   // 使用栈结构
   const stack: ListNode[] = []
@@ -236,7 +236,7 @@ function reverseList(head: ListNode | null): ListNode | null {
     current = current.next
   }
 
-  // 取出元素
+  // 从栈中取出元素 重新组成链表 返回 head 节点
   const newHead = ListNode | null = stack.pop()
   let newHeadCurrent = newHead
   while(stack.length) {
@@ -252,11 +252,36 @@ function reverseList(head: ListNode | null): ListNode | null {
 
 ```ts
 function reverseList(head: ListNode | null): ListNode | null {
+  // 判断节点为空或者只有一个节点 直接返回 head
   if (!head || !head.next) return null
 
   // 反转列表
-
   let newHead: ListNode | null = null
+
+  // 第一步 让一个 current 节点指向 head 的下一个节点 目的是保留着下一个节点的引用 防止被销毁
+
+  // 第二部 改变head 当前指向的节点的指向 让其指向 newHead 对于第一个节点来说 指向 newHead 就是 null
+
+  // 第三步 让 newHead 指向 head 目的是下一次遍历时 第二部操作可以让下一个节点 指向 第一个节点
+
+  // 第四步 让 head 指向 current 目的是下一次遍历时 第二部操作可以让下一个节点 指向 第一个节点
+
+  while(head) {
+    let current = head.next
+
+    head.next = newHead
+
+    newHead = head
+
+    head = current
+  }
+
+  return newHead
+
 }
 
 ```
+
+:::tip
+![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/afa7c3bd1de44497bd7c483eb8450a05~tplv-k3u1fbpfcp-watermark.image?)
+:::
