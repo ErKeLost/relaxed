@@ -285,3 +285,7 @@ function reverseList(head: ListNode | null): ListNode | null {
 :::tip
 ![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/afa7c3bd1de44497bd7c483eb8450a05~tplv-k3u1fbpfcp-watermark.image?)
 :::
+
+
+
+## 非递归的方式
