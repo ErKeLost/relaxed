@@ -212,8 +212,8 @@ export const sidebar = {
         { text: '编程思想', link: '/nest/thought/index' },
         { text: '核心概念', link: '/nest/thought/concept' },
         { text: 'MVC', link: '/nest/thought/mvc' },
-        { text: 'http 数据传输', link: '/nest/thought/http' }
-        // { text: '冒泡排序', link: '/algorithm/bubblingSort' }
+        { text: 'http 数据传输', link: '/nest/thought/http' },
+        { text: 'ioc 解决的问题', link: '/nest/thought/ioc' }
       ]
     }
   ],
