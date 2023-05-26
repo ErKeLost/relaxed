@@ -211,7 +211,8 @@ export const sidebar = {
       items: [
         { text: '编程思想', link: '/nest/thought/index' },
         { text: '核心概念', link: '/nest/thought/concept' },
-        { text: 'MVC', link: '/nest/thought/mvc' }
+        { text: 'MVC', link: '/nest/thought/mvc' },
+        { text: 'http 数据传输', link: '/nest/thought/http' }
         // { text: '冒泡排序', link: '/algorithm/bubblingSort' }
       ]
     }
