@@ -25,7 +25,7 @@
     "@vitejs/plugin-vue": "^4.0.0",
     "eslint": "^8.23.0",
     "eslint-config-relaxed-vue": "workspace:*",
-    "@unocss/preset-attributify": "^0.47.6",
+    "@unocss/preset-attributify": "^0.55.0",
     "@unocss/preset-uno": "^0.47.5",
     "@unocss/vite": "^0.47.5",
     "unplugin-auto-import": "^0.12.1",
