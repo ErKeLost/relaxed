@@ -26,7 +26,7 @@
     "eslint": "^8.23.0",
     "eslint-config-relaxed-vue": "workspace:*",
     "@unocss/preset-attributify": "^0.47.6",
-    "@unocss/preset-uno": "^0.47.5",
+    "@unocss/preset-uno": "^0.55.0",
     "@unocss/vite": "^0.47.5",
     "unplugin-auto-import": "^0.12.1",
     "unplugin-vue-components": "^0.22.12",
