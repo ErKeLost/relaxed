@@ -47,7 +47,7 @@
     "commitlint-config-cz": "^0.13.3",
     "cz-conventional-changelog": "^3.3.0",
     "cz-customizable": "^6.9.2",
-    "esbuild": "^0.15.18",
+    "esbuild": "^0.24.0",
     "eslint": "^8.37.0",
     "esno": "^0.16.3",
     "husky": "^8.0.3",
