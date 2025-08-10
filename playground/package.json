@@ -30,6 +30,6 @@
     "@unocss/vite": "^0.47.5",
     "unplugin-auto-import": "^0.12.1",
     "unplugin-vue-components": "^0.22.12",
-    "vue-tsc": "^0.38.4"
+    "vue-tsc": "^0.40.0"
   }
 }
