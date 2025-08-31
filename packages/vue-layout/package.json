@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "css-render": "^0.15.8",
-    "vue-demi": "^0.12.1"
+    "vue-demi": "^0.14.0"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.2.0",
