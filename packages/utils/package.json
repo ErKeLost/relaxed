@@ -30,7 +30,7 @@
   },
   "license": "ISC",
   "devDependencies": {
-    "esno": "^0.16.3"
+    "esno": "^0.17.0"
   },
   "dependencies": {
     "date-fns": "^2.29.3"
